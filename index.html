@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harvest Hub</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!--FONTAWESOME ICONS-->
+    <script
+      src="https://kit.fontawesome.com/3ce7f5ba6a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="sticky-top w-100">
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container container-md-fluid w-100">
+          <!-----------------logo-------------->
+          <div class="fw-bold" id="logo">
+            <i class="fa-solid fa-tractor"></i>
+            <a href="index.html" class="text-decoration-none" id="logo"
+              ><span>H</span>arvest <span>H</span>ub</a
+            >
+          </div>
+          <!------------------menu icon--------------->
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-text-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+
+          <!-----------navbar list for Laptop size--------->
+          <div
+            class="collapse navbar-collapse gap-4"
+            id="navbarToggleExternalContent"
+          >
+            <ul class="navbar-nav gap-4 ms-auto">
+              <li class="nav-item">
+                <div class="dropdown d-flex">
+                  <a
+                    href="#"
+                    class="text-decoration-none d-flex justify-content-center align-items-center"
+                    >About Us
+                    <p class="mb-0">
+                      <!-- <i class="fa-solid fa-caret-down"></i> -->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-chevron-down"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </p>
+                  </a>
+                  <div class="menu">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Mission and Vision</a
+                    >
+                    <a href="#" class="text-decoration-none text-dark"
+                      >The Concept</a
+                    >
+                    <a href="#" class="text-decoration-none text-dark"
+                      >How it Works</a
+                    >
+                    <a href="#" class="text-decoration-none text-dark"
+                      >The Team</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="text-decoration-none">Marketplace</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="text-decoration-none">Farmers</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="text-decoration-none">Partner With Us</a>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown d-flex">
+                  <a
+                    href="#"
+                    class="text-decoration-none d-flex justify-content-center align-items-center"
+                    >Help Center
+                    <p class="mb-0">
+                      <!-- <i class="fa-solid fa-caret-down"></i> -->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-chevron-down"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </p>
+                  </a>
+                  <div class="menu">
+                    <a href="#" class="text-decoration-none text-dark">FAQ</a>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Contact Us
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <!------------------sign up area------------->
+            <div class="signupAndLoginButtons">
+              <a href="#" class="text-decoration-none btn" id="signupButton"
+                >SIGN-UP</a
+              >
+              <a href="#" class="text-decoration-none btn" id="loginButton"
+                >LOGIN</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-----------------main area--------------->
+
+    <main>
+      <!-------------------Home section-------------------->
+      <section class="home relative" id="home">
+        <div class="container content__home mb-5">
+          <div class="row">
+            <div class="col">
+              <div class="title">
+                <h1 class="title1">
+                  Nourishing Communities, <br />
+                  One Harvest at a Time
+                </h1>
+                <h2 class="title2">
+                  Connect with Local Farmers and Build Community Through Our
+                  ONE-STOP Farm to Table Online Marketplace
+                </h2>
+              </div>
+              <div class="CTA">
+                <button class="btn">Shop Now</button>
+                <button class="btn buttonFind">Find Local Farmers</button>
+              </div>
+            </div>
+            <div class="col"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-------------------featured products section-------------------->
+
+      <section class="about position-relative mb-5" id="about">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+
+        <div class="container">
+          <div
+            class="proportion d-flex justify-content-between align-items-center py-2 p-lg-5"
+          >
+            <span>Fresh</span>
+            <span>Local</span>
+            <span>Sustainable</span>
+          </div>
+
+          <div class="featuredProducts">
+            <h2>Featured Products</h2>
+            <div class="row featured-container mb-5">
+              <div class="col featured_item">
+                <img src="assets/bg-5.jpg" alt="sample" class="" />
+              </div>
+              <div class="col featured_item">
+                <img src="assets/bg-6.jpg" alt="sample" class="" />
+              </div>
+              <div class="col featured_item">
+                <img src="assets/bg.jpg" alt="sample" class="" />
+              </div>
+            </div>
+
+            <div
+              class="button d-flex justify-content-center align-items-center"
+            >
+              <button class="btn buttonViewAll">View All</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!---------------------------Why buy local? -------------------->
+
+      <section class="whyByLocal">
+        <div class="container whyBuyLocal-container">
+          <h2>Why Buy Local?</h2>
+          <div class="row my-5">
+            <div class="col d-flex justify-content-center align-items-center">
+              <p>
+                explaining the benefits of buying from local farmers with bullet
+                points and/or infographics
+              </p>
+            </div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col WBL1">
+                  <img src="assets/bg2.jpg" alt="sample" />
+                </div>
+
+                <div class="col-5 WBL2">
+                  <img src="assets/bg4.jpg" alt="sample" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="text-center py-5">Testimonial from Satisfied Consumers</h2>
+
+          <div
+            class="row px-4 flex-column d-flex flex-md-row client-card-say gap-4 position-relative"
+          >
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="col client">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-quote"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"
+                />
+              </svg>
+              <p class="text-dark">
+                I absolutely love shopping at my local farm-to-table
+                marketplace. The produce is always so fresh and flavorful, and I
+                feel good knowing that I'm supporting local farmers and the
+                economy. Plus, it's a great way to connect with my community and
+                learn more about where my food comes from.
+              </p>
+              <div class="client-profile">
+                <img src="assets/jasp (2).jpg" alt="profile" />
+                <span class="fw-medium">@ChrisjohnAndoyo</span>
+              </div>
+            </div>
+
+            <div class="col client">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-quote"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"
+                />
+              </svg>
+              <p class="text-dark">
+                Since I started shopping at the farm-to-table marketplace, I've
+                noticed a huge improvement in the quality of the food I'm
+                eating. Everything is so fresh and delicious, and I love that I
+                can talk to the farmers and learn more about their growing
+                practices. Plus, it feels good to know that I'm supporting local
+                businesses and helping to reduce my environmental impact.
+              </p>
+              <div class="client-profile">
+                <img src="assets/jasp (2).jpg" alt="profile" />
+                <span class="fw-medium">@MarkAbano</span>
+              </div>
+            </div>
+
+            <div class="col client">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-quote"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"
+                />
+              </svg>
+              <p class="text-dark">
+                I can't say enough good things about the farm-to-table
+                marketplace. The selection of products is amazing, and I love
+                that I can find unique items that I can't get anywhere else.
+                Plus, it's so convenient to have everything in one place, and I
+                always leave feeling inspired to cook and create delicious meals
+                with my fresh, local ingredients.
+              </p>
+              <div class="client-profile">
+                <img src="assets/jasp (2).jpg" alt="profile" />
+                <span class="fw-medium">@EjPinoliad</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
