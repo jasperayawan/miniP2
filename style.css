@@ -25,13 +25,13 @@ body {
 }
 #logo > span {
   color: var(--background-color);
-  font-size: 26px;
+  font-size: 24px;
 }
 .navbar-nav li {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
+  font-weight: 550;
 }
 .navbar-nav li > a {
   color: rgb(68, 68, 68);
@@ -97,12 +97,10 @@ body {
 .signupAndLoginButtons #signupButton {
   border: 1px solid var(--background-color);
   color: var(--background-color);
-  font-weight: bold;
 }
 .signupAndLoginButtons #loginButton {
   background-color: var(--background-color);
   color: #fff;
-  font-weight: bold;
 }
 
 /* ---------------------Home styling------------------ */
