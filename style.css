@@ -365,12 +365,12 @@ body {
 .fa-solid,
 .fa-brands {
   font-size: 30px;
-  color: #5edb12;
+  color: #5bbb1f;
 }
 /*----------------------become a vendor--------------------*/
 
 .becomeAVendor {
-  background: rgba(0, 0, 0, 0.7)
+  background: rgba(33, 34, 34, 0.7)
     url("assets/pexels-viktoria-slowikowska-5677799.jpg");
   background-position: center;
   background-size: cover;
