@@ -266,7 +266,7 @@ body {
 
 /*------------------------why buy local styling-------------------*/
 
-.whyByLocal{
+.whyByLocal {
   overflow: hidden;
   padding-bottom: 5rem;
 }
@@ -303,7 +303,7 @@ body {
   background-color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.1)
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 .client-profile img {
   width: 30px;
@@ -316,7 +316,7 @@ body {
   height: 600px;
   bottom: -300px;
   right: -80px;
-  border:1px solid #79db40;
+  border: 1px solid #79db40;
   border-radius: 50%;
   z-index: -2;
 }
@@ -331,38 +331,72 @@ body {
   z-index: -1;
 }
 
+/*----------------------section counter--------------------*/
+
+.section-page {
+  justify-content: center;
+  margin: 2% 2%;
+}
+
+/* Float four columns side by side */
+.section-1 {
+  float: left;
+  width: 20%;
+}
+
+/* This will Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.section {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #ffffff;
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+.fa,
+.fa-solid,
+.fa-brands {
+  font-size: 30px;
+  color: #5edb12;
+}
 /*----------------------become a vendor--------------------*/
 
-.becomeAVendor{
-  background: rgba(0,0,0,0.7)url('assets/pexels-viktoria-slowikowska-5677799.jpg');
+.becomeAVendor {
+  background: rgba(0, 0, 0, 0.7)
+    url("assets/pexels-viktoria-slowikowska-5677799.jpg");
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
   padding: 5rem 0;
 }
-.becomeAVendor button{
+.becomeAVendor button {
   background: var(--background-color);
   color: #fff;
   margin-top: 1rem;
 }
-.form-container{
+.form-container {
   display: flex;
   flex-direction: column;
 }
-form input{
-  padding: .6rem 5rem .6rem .4rem;
+form input {
+  padding: 0.6rem 5rem 0.6rem 0.4rem;
   border-radius: 5px;
   border: none;
 }
 /*----------------------footer styling---------------------*/
 
-
-.footer{
+.footer {
   background-color: #fff;
 }
-.footer ul li a{
+.footer ul li a {
   font-family: "Maven Pro", sans-serif;
   font-weight: bold;
 }
-
-
