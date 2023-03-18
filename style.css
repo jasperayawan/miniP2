@@ -297,6 +297,35 @@ body {
   border-radius: 5px;
 }
 
+.partfarms-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 64px 0;
+  background: rgba(201, 226, 101, 0.2);
+  padding: 0 50px 20px;
+  padding-top: 0px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+}
+
+.farm-partners {
+  position: relative;
+  padding: 10px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 500px;
+}
+
+.button-partfarm {
+  background-color: var(--background-color);
+  color: #fff;
+}
+
 /*--------------------testomial from consumers---------------------*/
 
 .client {
