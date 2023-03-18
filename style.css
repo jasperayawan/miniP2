@@ -210,7 +210,7 @@ body {
 }
 .featured_item {
   width: 300px;
-  height: 200px;
+  height: 450px;
   overflow: hidden;
 }
 .featured_item img {
@@ -226,6 +226,10 @@ body {
 
 /*------------------------why buy local styling-------------------*/
 
+.whyByLocal{
+  overflow: hidden;
+  padding-bottom: 5rem;
+}
 .whyBuyLocal-container {
   position: relative;
 }
@@ -259,6 +263,7 @@ body {
   background-color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 5px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1)
 }
 .client-profile img {
   width: 30px;
@@ -271,7 +276,7 @@ body {
   height: 600px;
   bottom: -300px;
   right: -80px;
-  background-color: #79db40;
+  border:1px solid #79db40;
   border-radius: 50%;
   z-index: -2;
 }
@@ -285,3 +290,39 @@ body {
   border-radius: 50%;
   z-index: -1;
 }
+
+/*----------------------become a vendor--------------------*/
+
+.becomeAVendor{
+  background: rgba(0,0,0,0.7)url('assets/pexels-viktoria-slowikowska-5677799.jpg');
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: darken;
+  padding: 5rem 0;
+}
+.becomeAVendor button{
+  background: var(--background-color);
+  color: #fff;
+  margin-top: 1rem;
+}
+.form-container{
+  display: flex;
+  flex-direction: column;
+}
+form input{
+  padding: .6rem 5rem .6rem .4rem;
+  border-radius: 5px;
+  border: none;
+}
+/*----------------------footer styling---------------------*/
+
+
+.footer{
+  background-color: #fff;
+}
+.footer ul li a{
+  font-family: "Maven Pro", sans-serif;
+  font-weight: bold;
+}
+
+
