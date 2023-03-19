@@ -210,7 +210,7 @@
 
           <div class="featuredProducts">
             <h2>Featured Products</h2>
-            <div class="row featured-container mb-5">
+            <div class="row gap-3 gap-md-0 d-flex flex-column flex-md-row featured-container mb-5">
               <div class="col mx-2 featured_item">
                 <img src="assets/strawberries.jpg" alt="sample" class="" />
 
@@ -437,9 +437,7 @@
 
           <h2 class="text-center py-4">Testimonial from Satisfied Consumers</h2>
 
-          <div
-            class="row flex-column d-flex flex-md-row client-card-say justify-content-around gap-2 position-relative"
-          >
+          <div  class="row px-4 flex-column d-flex flex-md-row client-card-say justify-content-around gap-2 position-relative">
             <div class="c1"></div>
             <div class="c2"></div>
             <div class="col client">
@@ -530,39 +528,41 @@
 
       <!-- SECTION COUNTER-->
 
-      <div class="row justify-content-center section-page">
-        <div class="column section-1">
-          <div class="card section">
-            <p><i class="fa fa-user"></i></p>
-            <h3>5000+</h3>
-            <p>CUSTOMERS</p>
+      <section class="container py-5">
+        <div class="row d-flex flex-column flex-md-row justify-content-center section-page">
+          <div class="col section-1 m-0">
+            <div class="card section py-3">
+              <p><i class="fa fa-user"></i></p>
+              <h3>5000+</h3>
+              <p class="m-0">CUSTOMERS</p>
+            </div>
           </div>
-        </div>
 
-        <div class="column section-1">
-          <div class="card section">
-            <p><i class="fa-solid fa-handshake-angle"></i></p>
-            <h3>20+</h3>
-            <p>FARMER VENDORS</p>
+          <div class="col section-1 m-0">
+            <div class="card section py-3">
+              <p><i class="fa-solid fa-handshake-angle"></i></p>
+              <h3>20+</h3>
+              <p class="m-0">FARMER VENDORS</p>
+            </div>
           </div>
-        </div>
 
-        <div class="column section-1">
-          <div class="card section">
-            <p><i class="fa-solid fa-face-smile"></i></p>
-            <h3>98%</h3>
-            <p>SATISFACTION RATING</p>
+          <div class="col section-1 m-0">
+            <div class="card section py-3">
+              <p><i class="fa-solid fa-face-smile"></i></p>
+              <h3>98%</h3>
+              <p class="m-0">SATISFACTION RATING</p>
+            </div>
           </div>
-        </div>
 
-        <div class="column section-1">
-          <div class="card section">
-            <p><i class="fa-solid fa-chart-simple"></i></p>
-            <h3>5/5</h3>
-            <p>SALES PERFORMANCE SCORE</p>
+          <div class="col section-1 m-0">
+            <div class="card section py-3">
+              <p><i class="fa-solid fa-chart-simple"></i></p>
+              <h3>5/5</h3>
+              <p class="m-0">SALES PERFORMANCE SCORE</p>
+            </div>
           </div>
         </div>
-      </div>
+    </section>
       <!-------------------------footer section area-------------------->
 
       <section class="becomeAVendor">
@@ -576,14 +576,12 @@
         <div class="container d-flex justify-content-center align-items-center">
           <form action="" method="get">
             <div class="form-container">
-              <label for="name" class="user-label">Name</label>
               <input
                 type="text"
                 name="name"
                 placeholder="name"
-                class="user-input"
+                class="user-input my-3"
               />
-              <label for="email" class="user-label">Email</label>
               <input type="email" placeholder="email" class="user-input" />
               <button class="btn">Partner With Us</button>
             </div>
@@ -594,7 +592,7 @@
       <!-------------------------footer section area-------------------->
 
       <section class="footer py-5">
-        <div class="row container">
+        <div class="row d-flex flex-column flex-md-row container">
           <div class="col" id="footer">
             <div class="aboutUsFooter">
               <ul class="d-block list-unstyled gap-4">
@@ -623,7 +621,7 @@
               <div class="social_media_container d-flex justify-content-center align-items-center">
                 <div class="ul-container">
                   <h5>Social Media</h5>
-                  <ul class="list-unstyled">
+                  <ul class="list-unstyled d-flex gap-3 d-md-block d-md-block">
                     <li><a href="#" class="text-dark">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                         <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
