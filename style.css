@@ -375,7 +375,6 @@ body {
 /*----------------------section counter--------------------*/
 
 .section-page {
-  justify-content: center;
   margin: 2% 2%;
 }
 
@@ -408,6 +407,73 @@ body {
   font-size: 30px;
   color: #5bbb1f;
 }
+
+@media only screen and (max-width: 575px) {
+  .usellpro-content {
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .usp-btn {
+    margin-bottom: 4%;
+  }
+
+  .card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .card {
+    flex: 0 0 100%;
+    max-width: 95%;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  .section-1 {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 5%;
+  }
+}
+
+/* styles for large phones and portrait tablets */
+
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .section-1 {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 5%;
+  }
+}
+
+ {
+  /* styles for landscape tablets and small laptops */
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .section-1 {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  /* styles for medium laptops and desktops */
+  .section-1 {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 5%;
+  }
+}
+
 /*----------------------become a vendor--------------------*/
 
 .becomeAVendor {
