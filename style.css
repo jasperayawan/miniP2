@@ -453,9 +453,9 @@ body {
   }
 }
 
- {
+ 
   /* styles for landscape tablets and small laptops */
-}
+
 
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .section-1 {
