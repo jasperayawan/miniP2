@@ -447,7 +447,7 @@ body {
     width: 100%;
     display: block;
     margin-bottom: 10px;
-    margin-top: 5%;
+    margin-top: 3%;
   }
 }
 
@@ -460,17 +460,7 @@ body {
     width: 100%;
     display: block;
     margin-bottom: 10px;
-    margin-top: 5%;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-  /* styles for medium laptops and desktops */
-  .section-1 {
-    width: 100%;
-    display: block;
-    margin-bottom: 10px;
-    margin-top: 5%;
+    margin-top: 3%;
   }
 }
 
