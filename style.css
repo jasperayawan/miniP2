@@ -208,7 +208,7 @@ body {
 }
 .featured_item {
   width: 300px;
-  height: 450px;
+  height: 400px;
   overflow: hidden;
   padding: 0%;
   background-color: #454645;
@@ -297,6 +297,58 @@ body {
   border-radius: 5px;
 }
 
+/*---------------------------participating farm section----------------------*/
+
+.participating-farm {
+  background: rgba(201, 226, 101, 0.2);
+  display: grid;
+  grid-template-rows: repeat(auto, 300px);
+  grid-template-columns: 2fr 3fr;
+  grid-gap: 1.5rem;
+  padding: 3% 3%;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 992px) {
+  .participating-farm {
+    grid-template-columns: 1fr;
+  }
+}
+
+.item-1 {
+  margin-top: 5%;
+}
+
+.item-2 {
+  margin-left: 3%;
+}
+
+.item-3 {
+}
+
+.button-partfarm {
+  background-color: var(--background-color);
+  color: #fff;
+}
+
+/*--------------carousel--------------*/
+
+.carousel-item img {
+  height: 400px;
+  width: 400px;
+  border-radius: 2%;
+  object-fit: cover;
+}
+
+.carousel-caption h5 {
+  padding: 2% 0%;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
 /*--------------------testomial from consumers---------------------*/
 
 .client {
@@ -330,6 +382,8 @@ body {
   border-radius: 50%;
   z-index: -1;
 }
+
+
 
 /*----------------------become a vendor--------------------*/
 
