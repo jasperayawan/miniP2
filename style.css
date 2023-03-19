@@ -303,7 +303,7 @@ body {
   display: grid;
   background: rgba(201, 226, 101, 0.2);
   grid-template-rows: repeat(auto, 300px);
-  grid-template-columns: 3fr 2.5fr;
+  grid-template-columns: 3fr 2fr;
   grid-gap: 1.5rem;
   padding: 3% 3%;
   position: relative;
