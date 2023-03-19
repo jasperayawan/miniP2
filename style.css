@@ -499,3 +499,23 @@ form input {
   font-family: "Maven Pro", sans-serif;
   font-weight: bold;
 }
+#footer{
+  display: flex;
+  justify-content: end;
+}
+.aboutUsFooter{
+  width: 50%;
+}
+.aboutUsFooter ul li{
+  margin: .8rem 0;
+}
+.newsLetterForm button{
+  background-color: var(--background-color);
+  color: #fff;
+}
+.ul-container{
+  width: 50%;
+}
+.ul-container ul > li{
+  margin: .8rem 0;
+}
