@@ -118,10 +118,10 @@ body {
   content: "";
   position: absolute;
   background-image: url("assets/farmer.jpg");
-  background-position: center;
+  background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.95;
+  opacity: 1;
   inset: 0;
   z-index: -1;
 }
