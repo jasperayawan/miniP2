@@ -110,10 +110,20 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 92vh;
+  position: relative;
+  isolation: isolate;
+}
+
+.home::after {
+  content: "";
+  position: absolute;
   background-image: url("assets/farmer.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  opacity: 0.95;
+  inset: 0;
+  z-index: -1;
 }
 .home img {
   width: 100%;
