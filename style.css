@@ -483,7 +483,9 @@ form input {
 
 .footer {
   background-color: #fff;
+  border: solid green;
 }
+
 .footer ul li a {
   font-family: "Maven Pro", sans-serif;
   font-weight: bold;
