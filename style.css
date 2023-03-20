@@ -479,6 +479,11 @@ body {
   background: var(--background-color);
   color: #fff;
   margin-top: 1rem;
+  transition: 0.5s;
+}
+
+.becomeAVendor button:hover {
+  color: #fff;
 }
 .form-container {
   display: flex;
