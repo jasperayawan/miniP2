@@ -505,7 +505,6 @@ form input {
 
 .footer {
   background-color: #fff;
-  border: solid green;
 }
 
 .footer ul li a {
@@ -531,6 +530,16 @@ form input {
 }
 .ul-container ul > li {
   margin: 0.8rem 0;
+}
+
+/*----------------------final footer styling---------------------*/
+
+.final-footer {
+  padding: 1% 4%;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: center;
+  background: rgba(201, 226, 101, 0.2);
 }
 
 /*---------------------------for media query-------------------*/
