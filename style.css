@@ -501,39 +501,101 @@ form input {
 }
 /*----------------------footer styling---------------------*/
 
-.footer {
+footer {
   background-color: #fff;
+  color: black;
+  padding: 30px 0;
 }
 
 .footer-container {
-  padding: 1% 3%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.footer ul li a {
-  font-family: "Maven Pro", sans-serif;
-  font-weight: bold;
+.quick-links,
+.social-media,
+.newsletter,
+.supported-orgs {
+  flex: 1;
+  margin-right: 30px;
 }
-#footer {
+
+/* Give more space to newsletter section */
+.newsletter {
+  flex: 2;
+}
+
+.quick-links ul,
+.social-media ul,
+.supported-orgs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links a,
+.social-media a,
+.supported-orgs a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-media ul li a i {
+  font-size: 20px;
+}
+
+.newsletter form {
   display: flex;
-  justify-content: end;
-  width: 100%;
 }
-.aboutUsFooter {
-  width: 50%;
-  justify-content: start;
+
+.newsletter input[type="email"] {
+  flex: 1;
+  padding: 10px;
+
+  border-radius: 3px 0 0 3px;
 }
-.aboutUsFooter ul li {
-  margin: 0.8rem 0;
-}
-.newsLetterForm button {
+
+.newsletter button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
   background-color: var(--background-color);
   color: #fff;
 }
-.ul-container {
-  width: 50%;
+
+@media (max-width: 767px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .quick-links,
+  .social-media,
+  .newsletter,
+  .supported-orgs {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
 }
-.ul-container ul > li {
-  margin: 0.8rem 0;
+
+@media (max-width: 991px) {
+  .footer-container {
+    justify-content: center;
+  }
+
+  .quick-links,
+  .social-media,
+  .newsletter,
+  .supported-orgs {
+    margin-right: 20px;
+  }
+
+  .supported-orgs {
+    margin-right: 0;
+  }
 }
 
 /*----------------------final footer styling---------------------*/
