@@ -503,7 +503,10 @@ form input {
 
 .footer {
   background-color: #fff;
-  justify-content: center;
+}
+
+.footer-container {
+  padding: 1% 3%;
 }
 
 .footer ul li a {
@@ -513,9 +516,11 @@ form input {
 #footer {
   display: flex;
   justify-content: end;
+  width: 100%;
 }
 .aboutUsFooter {
   width: 50%;
+  justify-content: start;
 }
 .aboutUsFooter ul li {
   margin: 0.8rem 0;
