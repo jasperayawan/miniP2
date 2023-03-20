@@ -4,7 +4,162 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Harvest Hub</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!--FONTAWESOME ICONS-->
+    <script
+      src="https://kit.fontawesome.com/3ce7f5ba6a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="sticky-top w-100">
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container container-md-fluid w-100">
+          <!-----------------logo-------------->
+          <div class="fw-bold" id="logo">
+            <i class="fa-solid fa-tractor"></i>
+            <a href="index.html" class="text-decoration-none" id="logo"
+              ><span>H</span>arvest <span>H</span>ub</a
+            >
+          </div>
+          <!------------------menu icon--------------->
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-text-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+
+          <!-----------navbar list for Laptop size--------->
+          <div
+            class="collapse navbar-collapse gap-4"
+            id="navbarToggleExternalContent"
+          >
+            <ul class="navbar-nav gap-4 ms-auto">
+              <li class="nav-item">
+                <div class="dropdown d-flex">
+                  <a
+                    href="#"
+                    class="text-decoration-none d-flex justify-content-center align-items-center"
+                    >About Us
+                    <p class="mb-0">
+                      <!-- <i class="fa-solid fa-caret-down"></i> -->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-chevron-down"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </p>
+                  </a>
+                  <div class="menu">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Mission and Vision</a
+                    >
+                    <a href="#" class="text-decoration-none text-dark"
+                      >The Concept</a
+                    >
+                    <a href="#" class="text-decoration-none text-dark"
+                      >How it Works</a
+                    >
+                    <a href="#" class="text-decoration-none text-dark"
+                      >The Team</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="text-decoration-none">Marketplace</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="text-decoration-none">Farmers</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="text-decoration-none">Partner With Us</a>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown d-flex">
+                  <a
+                    href="#"
+                    class="text-decoration-none d-flex justify-content-center align-items-center"
+                    >Help Center
+                    <p class="mb-0">
+                      <!-- <i class="fa-solid fa-caret-down"></i> -->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-chevron-down"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </p>
+                  </a>
+                  <div class="menu">
+                    <a href="#" class="text-decoration-none text-dark">FAQ</a>
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Contact Us
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <!------------------sign up area------------->
+            <div class="signupAndLoginButtons">
+              <a href="#" class="text-decoration-none btn" id="signupButton"
+                >SIGN-UP</a
+              >
+              <a href="#" class="text-decoration-none btn" id="loginButton"
+                >LOGIN</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </body>
 </html>
