@@ -475,8 +475,7 @@ body {
 /*----------------------become a vendor--------------------*/
 
 .becomeAVendor {
-  background: rgba(33, 34, 34, 0.7)
-    url("assets/pexels-viktoria-slowikowska-5677799.jpg");
+  background: rgba(33, 34, 34, 0.7) url("assets/farmervendor.jpg");
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
