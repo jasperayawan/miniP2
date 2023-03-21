@@ -150,10 +150,16 @@
 
             <!------------------sign up area------------->
             <div class="signupAndLoginButtons">
-              <a href="Register.html" class="text-decoration-none btn" id="signupButton"
+              <a
+                href="Register.html"
+                class="text-decoration-none btn"
+                id="signupButton"
                 >SIGN-UP</a
               >
-              <a href="login.html" class="text-decoration-none btn" id="loginButton"
+              <a
+                href="login.html"
+                class="text-decoration-none btn"
+                id="loginButton"
                 >LOGIN</a
               >
             </div>
@@ -210,7 +216,9 @@
 
           <div class="featuredProducts">
             <h2>Featured Products</h2>
-            <div class="row px-4 gap-3 gap-md-0 d-flex flex-column flex-md-row featured-container mb-5">
+            <div
+              class="row px-4 gap-3 gap-md-0 d-flex flex-column flex-md-row featured-container mb-5"
+            >
               <div class="col mx-2 featured_item">
                 <img src="assets/strawberries.jpg" alt="sample" class="" />
 
@@ -273,8 +281,7 @@
         <div class="container my-4 whyBuyLocal-container">
           <h1>THINK GLOBAL, BUY LOCAL!</h1>
           <div class="px-3 row d-flex flex-column flex-md-row my-5">
-            <div
-              class="col d-flex justify-content-center align-items-justify">
+            <div class="col d-flex justify-content-center align-items-justify">
               <p>
                 <strong>FRESHNESS AND QUALITY:</strong> Local products are
                 typically fresher and of higher quality as they don't need to
@@ -740,5 +747,37 @@
     </main>
 
     <script src="script.js"></script>
+
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "120653074289644");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v16.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
   </body>
 </html>
