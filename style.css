@@ -586,7 +586,6 @@ footer {
     justify-content: center;
   }
 
-<<<<<<< HEAD
 /*---------------------------login area styling----------------------*/
 
 *{
@@ -653,14 +652,6 @@ footer {
   text-decoration: none;
   color: #333;
 }
-=======
-  .quick-links,
-  .social-media,
-  .newsletter,
-  .supported-orgs {
-    margin-right: 20px;
-  }
->>>>>>> 50ef00580f7d055ada082e296b12f663dbe6dba9
 
   .supported-orgs {
     margin-right: 0;
@@ -679,7 +670,6 @@ footer {
 
 /*---------------------------for media query-------------------*/
 
-<<<<<<< HEAD
 
 @media screen and (max-width: 600px){
 
@@ -688,9 +678,6 @@ footer {
   .navbarContainer{
     padding: 0 2rem;
   }
-=======
-@media screen and (max-width: 600px) {
->>>>>>> 50ef00580f7d055ada082e296b12f663dbe6dba9
   .about {
     overflow: hidden;
   }
@@ -703,7 +690,6 @@ footer {
   .whyByLocal {
     overflow: hidden;
   }
-<<<<<<< HEAD
   .aboutUsFooter{
     width: 100%;
     padding: 0 2rem;
@@ -716,6 +702,3 @@ footer {
     padding: 0 2rem;
   }
 }
-=======
-}
->>>>>>> 50ef00580f7d055ada082e296b12f663dbe6dba9
