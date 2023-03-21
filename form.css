@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*---------------------------login area styling----------------------*/
+
+
+.main-parent{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5)url('assets/fruitss.jpg');
+    background-position: center;
+    background-size: cover;  
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-parent .form-wrap{
+    width: 450px;
+    background: rgb(255 255 255/75%);
+    border-radius: 5px;
+    padding: 35px 40px;
+    backdrop-filter: blur(5px);
+  }
+  .main-parent .form-wrap h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .main-parent .form-wrap h1 span{
+    color: #48be3d;
+  }
+  .main-parent .form-wrap .single-input input{
+    width: 100%;
+    padding: 14px 10px;
+    border: none;
+    border-radius: 5px;
+    margin: .3rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .Submit-button{
+    text-align: center;
+  }
+  .Submit-button button{
+    padding: 13px 30px;
+    border: none;
+    background: #48be3d;
+    border-radius: 5px;
+    color: #fff;
+    margin: .5rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+  }
+  .account-have{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .account-have a{
+    text-decoration: none;
+    color: #333;
+  }
