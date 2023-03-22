@@ -103,6 +103,92 @@ body {
   color: #fff;
 }
 
+/* ------------Diagonal 1 Accents----------- */
+
+.wrapper {
+  max-width: 50rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.site-title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.25rem;
+}
+
+section {
+  padding-block: 5rem;
+}
+
+.diagonal-1 {
+  --skew-angle: 5deg;
+  --background: linear-gradient(45deg, #5fbca0, #8bd8a8, #c3fdb8);
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonal-1::after {
+  content: "";
+  background: var(--background);
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  transform: skewY(var(--skew-angle));
+}
+
+.diagonal-1 {
+  --skew-angle: 5deg;
+  --background: linear-gradient(45deg, #5fbca0, #8bd8a8, #c3fdb8);
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonal-1::after {
+  content: "";
+  background: var(--background);
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  transform: skewY(var(--skew-angle));
+}
+
+/* ------------Diagonal  Accents----------- */
+.diagonal {
+  --skew-angle: -5deg;
+  --background: linear-gradient(45deg, #5fbca0, #8bd8a8, #c3fdb8);
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonal::after {
+  content: "";
+  background: var(--background);
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  transform: skewY(var(--skew-angle));
+}
+
+.diagonal {
+  --skew-angle: -5deg;
+  --background: linear-gradient(45deg, #5fbca0, #8bd8a8, #c3fdb8);
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonal::after {
+  content: "";
+  background: var(--background);
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  transform: skewY(var(--skew-angle));
+}
+
 /* FAQs */
 .header {
   margin-top: 2%;
@@ -126,7 +212,7 @@ body {
 }
 
 .accordion {
-  background-color: #3d995f;
+  background: linear-gradient(45deg, #007d5a, #00b072, #4ad39a);
   font-size: 24px;
   color: #ffffff;
   cursor: pointer;
@@ -138,6 +224,7 @@ body {
   font-size: 15px;
   transition: 0.4s;
   opacity: 0.95;
+  margin-bottom: 1%;
 }
 
 .active,
@@ -245,22 +332,43 @@ input[type="submit"]:hover {
   clear: both;
 }
 
-/* -----CALL TO ACTION---- */
+/*----------------------become a vendor--------------------*/
 
-.calltoaction-page {
-  min-width: 100vw;
-  min-height: 100%;
-  margin-top: 5%;
-  margin-bottom: 3%;
+.becomeAVendor {
+  background: rgba(33, 34, 34, 0.7) url("assets/farmervendor.jpg");
+  background-position: center;
   background-size: cover;
-  padding: 0% 3%;
-  opacity: 0.95;
+  background-blend-mode: darken;
+  padding: 5rem 0;
+}
+.becomeAVendor button {
+  background: var(--background-color);
+  color: #fff;
+  margin-top: 1rem;
+  transition: 0.5s;
 }
 
+.becomeAVendor button:hover {
+  color: #fff;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+form input {
+  padding: 0.6rem 5rem 0.6rem 0.4rem;
+  border-radius: 5px;
+  border: none;
+}
+
+/* -----CALL TO ACTION---- */
+
 .calltoaction {
-  padding: 2%;
-  background: rgba(201, 226, 101, 0.2);
+  padding: 1%;
+  background: linear-gradient(45deg, #5fbca0, #8bd8a8, #c3fdb8);
   color: black;
+  margin-bottom: 3%;
+  text-align: center;
 }
 
 .h1 {

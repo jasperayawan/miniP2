@@ -479,6 +479,7 @@ body {
   background-size: cover;
   background-blend-mode: darken;
   padding: 5rem 0;
+  margin-top: 3%;
 }
 .becomeAVendor button {
   background: var(--background-color);
@@ -498,6 +499,40 @@ form input {
   padding: 0.6rem 5rem 0.6rem 0.4rem;
   border-radius: 5px;
   border: none;
+}
+
+/* -----CALL TO ACTION---- */
+
+.calltoaction {
+  padding: 1%;
+  background: linear-gradient(45deg, #5fbca0, #8bd8a8, #c3fdb8);
+  color: black;
+  margin-bottom: 3%;
+
+  text-align: center;
+}
+
+.h1 {
+  font-size: 45px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.lead {
+  font-size: 18px;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: bold;
+}
+
+.btn-shopnow {
+  background-color: var(--background-color);
+  color: #fff;
+  transition: 0.5s;
+}
+
+.btn-shopnow:hover {
+  background-color: var(--background-color);
+  color: #fff;
 }
 /*----------------------footer styling---------------------*/
 
@@ -603,12 +638,10 @@ footer {
 
 /*---------------------------for media query-------------------*/
 
-
-@media screen and (max-width: 600px){
-
+@media screen and (max-width: 600px) {
   /*-----------------Become a vendor---------------*/
 
-  .navbarContainer{
+  .navbarContainer {
     padding: 0 2rem;
   }
   .about {
@@ -617,17 +650,17 @@ footer {
 
   /*-----------------Become a vendor---------------*/
 
-  .becomeAVendor{
+  .becomeAVendor {
     padding: 2rem 2rem;
   }
   .whyByLocal {
     overflow: hidden;
   }
-  .aboutUsFooter{
+  .aboutUsFooter {
     width: 100%;
     padding: 0 2rem;
   }
-  .ul-container{
+  .ul-container {
     width: 100%;
     padding: 0 2rem;
   }
