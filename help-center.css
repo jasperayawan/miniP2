@@ -126,7 +126,7 @@ body {
 }
 
 .accordion {
-  background-color: #418f5e;
+  background-color: #3d995f;
   font-size: 24px;
   color: #ffffff;
   cursor: pointer;
@@ -147,13 +147,12 @@ body {
 
 .panel {
   padding: 0 18px;
-  background-color: #6d706d;
   font-size: 14px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   opacity: 0.85;
-  color: white;
+  color: black;
 }
 
 .accordion:after {
@@ -276,13 +275,13 @@ input[type="submit"]:hover {
   font-weight: bold;
 }
 
-.btn-info {
+.btn-shopnow {
   background-color: var(--background-color);
   color: #fff;
   transition: 0.5s;
 }
 
-.btn-info:hover {
+.btn-shopnow:hover {
   background-color: var(--background-color);
   color: #fff;
 }
