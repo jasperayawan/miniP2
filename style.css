@@ -184,7 +184,7 @@ body {
   height: 600px;
   top: -100px;
   left: -80px;
-  background-color: #79db40;
+  background: linear-gradient(45deg, #5fbca0, #8bd8a8, #c3fdb8);
   border-radius: 50%;
   z-index: -1;
 }
@@ -214,7 +214,7 @@ body {
   height: 30px;
   top: 30px;
   right: 30%;
-  background-color: #79db40;
+  background: linear-gradient(45deg, #9acd32, #adff2f, #9acd32);
   border-radius: 50%;
   z-index: -1;
 }
@@ -316,7 +316,7 @@ body {
 
 .participating-farm {
   display: grid;
-  background: rgba(201, 226, 101, 0.2);
+  background: linear-gradient(45deg, #5fbca0, #8bd8a8, #c3fdb8);
   grid-template-rows: repeat(auto, 300px);
   grid-template-columns: 3fr 2.5fr;
   grid-gap: 1.5rem;
@@ -384,7 +384,7 @@ body {
   height: 350px;
   top: -100px;
   left: -80px;
-  background-color: #79db40;
+  background: linear-gradient(45deg, #5fbca0, #8bd8a8, #c3fdb8);
   border-radius: 50%;
   z-index: -1;
 }
@@ -414,8 +414,8 @@ body {
 .fa,
 .fa-solid,
 .fa-brands {
-  font-size: 30px;
-  color: #5bbb1f;
+  font-size: 22px;
+  color: black;
 }
 
 @media only screen and (max-width: 575px) {
@@ -525,7 +525,7 @@ form input {
 }
 
 .btn-shopnow {
-  background-color: var(--background-color);
+  background: var(--background-color);
   color: #fff;
   transition: 0.5s;
 }
