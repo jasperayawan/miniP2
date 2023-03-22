@@ -2,56 +2,118 @@
     padding: 0;
     margin: 0;
 }
-/*---------------------------login area styling----------------------*/
+:root {
+    --background-color: #5bbb1f;
+    /* --background-color: rgb(56, 216, 96); */
+    --text-gray-color: rgb(68, 68, 68);
+    --text-dark-color: rgb(12, 12, 12);
+  }
 
-
-.main-parent{
+body{
+    background: rgb(0,0,0,0.7)url('assets/pexels-stanislav.jpg');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
     width: 100%;
     height: 100vh;
-    background: rgba(0,0,0,0.5)url('assets/fruitss.jpg');
-    background-position: center;
-    background-size: cover;  
-    background-blend-mode: darken;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .main-parent .form-wrap{
-    width: 450px;
+}
+
+/*---------------------------login area styling----------------------*/
+
+.main-parent{
     background: rgb(255 255 255/75%);
-    border-radius: 5px;
-    padding: 35px 40px;
+    border-radius: 15px;
     backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.1);
+  }
+  .left_content_form{
+    background: var(--background-color);
+    padding: 1rem 2rem;
+    color: #fff;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  .left_content_form img{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  .left_content_form .dot1{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    top: 2rem;
+    left: 2rem;
+  }
+  .left_content_form .dot2{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    bottom: .5rem;
+    left: .5rem;
+  }
+  .left_content_form .dot3{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    bottom: 5rem;
+    right: 5rem;
+  }
+  .left_content_form .dot4{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    top: 20%;
+    right: 8rem;
+  }
+  .form-wrap{
+    padding: 4rem;
   }
   .main-parent .form-wrap h1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 45px;
+    font-size: 30px;
     text-align: center;
     margin-bottom: 15px;
   }
-  .main-parent .form-wrap h1 span{
-    color: #48be3d;
+  .single-input{
+    border-bottom: 1px solid #101010;
   }
   .main-parent .form-wrap .single-input input{
     width: 100%;
-    padding: 14px 10px;
+    padding: 10px 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     margin: .3rem 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    background: none;
+
   }
   .Submit-button{
     text-align: center;
   }
   .Submit-button button{
-    padding: 13px 30px;
+    padding: 10px 30px;
     border: none;
     background: #48be3d;
-    border-radius: 5px;
+    border-radius: 50px;
     color: #fff;
     margin: .5rem 0;
+    margin-top: 1.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     cursor: pointer;
+    width: 100%;
   }
   .account-have{
     display: flex;
