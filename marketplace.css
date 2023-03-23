@@ -103,6 +103,15 @@ body {
   color: #fff;
 }
 
+/*----------------------marketplace styling---------------------*/
+
+.marketplace_banner {
+  background-image: url(assets/marketplace-background.jpeg);
+  background-position: center;
+  background-size: cover;
+  min-height: 50vh;
+}
+
 /*----------------------footer styling---------------------*/
 
 footer {
@@ -170,12 +179,10 @@ footer {
   background-color: var(--background-color);
   color: #fff;
 }
-
 @media (max-width: 767px) {
   .footer-container {
     flex-direction: column;
   }
-
   .quick-links,
   .social-media,
   .newsletter,
@@ -184,19 +191,19 @@ footer {
     margin-right: 0;
   }
 }
-
 @media (max-width: 991px) {
   .footer-container {
     justify-content: center;
   }
-
   .supported-orgs {
     margin-right: 0;
   }
 }
+}
 
-/*----------------------final footer styling---------------------*/
-
+/* Give more space to newsletter section */
+.newsletter {
+  flex
 .final-footer {
   padding: 1% 4%;
   display: grid;

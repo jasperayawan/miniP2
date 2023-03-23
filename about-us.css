@@ -107,7 +107,7 @@ body {
 /*-----------------------about us main page-----------------*/
 
 .about_us__banner {
-  background-image: url(assets/bg-6.jpg);
+  background-image: url(assets/mp-bg.jpg);
   background-position: center;
   background-size: cover;
   min-height: 50vh;
