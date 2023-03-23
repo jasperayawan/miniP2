@@ -209,8 +209,13 @@ footer {
 }
 
 /* Give more space to newsletter section */
+/* Give more space to newsletter section */
 .newsletter {
-  flex
+  flex: 2;
+}
+
+/*----------------------final footer styling---------------------*/
+
 .final-footer {
   padding: 1% 4%;
   display: grid;
