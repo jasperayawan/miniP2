@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Montserrat:wght@700&family=Open+Sans&family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Poppins:wght@200;300;400;500;600;700;800&family=Staatliches&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Poppins:wght@200;300;400;500;600;700;800&family=Staatliches&display=swap");
 
 * {
   padding: 0;
@@ -107,16 +106,16 @@ body {
 
 /*-----------------------about us main page-----------------*/
 
-.about_us__banner{
-  background-image:url(assets/bg-6.jpg);
+.about_us__banner {
+  background-image: url(assets/bg-6.jpg);
   background-position: center;
   background-size: cover;
   min-height: 50vh;
 }
-.MS_Container{
+.MS_Container {
   padding: 8rem 0;
 }
-.mission-img-container::before{
+.mission-img-container::before {
   content: "";
   position: absolute;
   top: -30px;
@@ -126,7 +125,7 @@ body {
   background: #5bbb1f;
   z-index: -1;
 }
-.vision-img-container::before{
+.vision-img-container::before {
   content: "";
   position: absolute;
   bottom: -30px;
@@ -139,23 +138,23 @@ body {
 
 /*--------------------content values styling--------------*/
 
-.left_content_values p{
+.left_content_values p {
   width: 90%;
 }
-.right_content_values{
+.right_content_values {
   width: 60%;
   height: 60%;
   border: 1px solid #5bbb1f;
   border-radius: 50%;
   position: relative;
 }
-.right_content_values h4{
-  font-family: 'Koulen', cursive;
+.right_content_values h4 {
+  font-family: "Koulen", cursive;
 }
-.right_content_values p{
+.right_content_values p {
   position: absolute;
 }
-.right_content_values .spanChildOne{
+.right_content_values .spanChildOne {
   position: absolute;
   top: -75px;
   color: #101010;
@@ -163,10 +162,10 @@ body {
   height: 150px;
   border-radius: 50%;
   border: 1px solid #5bbb1f;
-  font-family: 'Koulen', cursive;
+  font-family: "Koulen", cursive;
   background: #fff;
 }
-.right_content_values .spanChildTwo{
+.right_content_values .spanChildTwo {
   position: absolute;
   top: 30px;
   left: -75px;
@@ -175,10 +174,10 @@ body {
   height: 150px;
   border-radius: 50%;
   border: 1px solid #5bbb1f;
-  font-family: 'Koulen', cursive;
+  font-family: "Koulen", cursive;
   background: #fff;
 }
-.right_content_values .spanChildThree{
+.right_content_values .spanChildThree {
   position: absolute;
   top: 30px;
   right: -75px;
@@ -187,10 +186,10 @@ body {
   height: 150px;
   border-radius: 50%;
   border: 1px solid #5bbb1f;
-  font-family: 'Koulen', cursive;
+  font-family: "Koulen", cursive;
   background: #fff;
 }
-.right_content_values .spanChildFour{
+.right_content_values .spanChildFour {
   position: absolute;
   top: 200px;
   left: -10px;
@@ -199,10 +198,10 @@ body {
   height: 150px;
   border-radius: 50%;
   border: 1px solid #5bbb1f;
-  font-family: 'Koulen', cursive;
+  font-family: "Koulen", cursive;
   background: #fff;
 }
-.right_content_values .spanChildFive{
+.right_content_values .spanChildFive {
   position: absolute;
   top: 200px;
   right: -10px;
@@ -211,18 +210,18 @@ body {
   height: 150px;
   border-radius: 50%;
   border: 1px solid #5bbb1f;
-  font-family: 'Koulen', cursive;
+  font-family: "Koulen", cursive;
   background: #fff;
 }
 
 /*--------------------how we started--------------------*/
 
-.learn_more_btn{
+.learn_more_btn {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.learn_more_btn button{
+.learn_more_btn button {
   background: #5bbb1f;
   border: none;
   color: #fff;
@@ -330,8 +329,15 @@ footer {
   background: rgba(201, 226, 101, 0.2);
 }
 
-@media screen and (max-width: 600px){
-  .right_container_values{
+@media screen and (max-width: 600px) {
+  .right_container_values {
     min-height: 90vh;
   }
+}
+
+.fa,
+.fa-solid,
+.fa-brands {
+  font-size: 22px;
+  color: black;
 }
