@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Montserrat:wght@700&family=Open+Sans&family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Poppins:wght@200;300;400;500;600;700;800&family=Staatliches&display=swap');
+
 
 * {
   padding: 0;
@@ -103,6 +105,116 @@ body {
   color: #fff;
 }
 
+/*-----------------------about us main page-----------------*/
+
+.about_us__banner{
+  background-image:url(assets/bg-6.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 50vh;
+}
+.MS_Container{
+  padding: 8rem 0;
+}
+.mission-img-container::before{
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: 110px;
+  width: 70%;
+  height: 100%;
+  background: #5bbb1f;
+  z-index: -1;
+}
+.vision-img-container::before{
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: -20px;
+  width: 35%;
+  height: 100%;
+  background: #5bbb1f;
+  z-index: -1;
+}
+
+/*--------------------content values styling--------------*/
+
+.left_content_values p{
+  width: 90%;
+}
+.right_content_values{
+  width: 60%;
+  height: 60%;
+  border: 1px solid #5bbb1f;
+  border-radius: 50%;
+  position: relative;
+}
+.right_content_values h4{
+  font-family: 'Koulen', cursive;
+}
+.right_content_values p{
+  position: absolute;
+}
+.right_content_values .spanChildOne{
+  position: absolute;
+  top: -75px;
+  color: #101010;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #5bbb1f;
+  font-family: 'Koulen', cursive;
+  background: #fff;
+}
+.right_content_values .spanChildTwo{
+  position: absolute;
+  top: 30px;
+  left: -75px;
+  color: #101010;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #5bbb1f;
+  font-family: 'Koulen', cursive;
+  background: #fff;
+}
+.right_content_values .spanChildThree{
+  position: absolute;
+  top: 30px;
+  right: -75px;
+  color: #101010;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #5bbb1f;
+  font-family: 'Koulen', cursive;
+  background: #fff;
+}
+.right_content_values .spanChildFour{
+  position: absolute;
+  top: 200px;
+  left: -10px;
+  color: #101010;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #5bbb1f;
+  font-family: 'Koulen', cursive;
+  background: #fff;
+}
+.right_content_values .spanChildFive{
+  position: absolute;
+  top: 200px;
+  right: -10px;
+  color: #101010;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #5bbb1f;
+  font-family: 'Koulen', cursive;
+  background: #fff;
+}
+
 /*----------------------footer styling---------------------*/
 
 footer {
@@ -203,4 +315,10 @@ footer {
   grid-template-columns: repeat(3, 300px);
   justify-content: center;
   background: rgba(201, 226, 101, 0.2);
+}
+
+@media screen and (max-width: 600px){
+  .right_container_values{
+    min-height: 90vh;
+  }
 }
