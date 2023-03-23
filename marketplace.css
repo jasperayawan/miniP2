@@ -114,6 +114,13 @@ body {
 
 /*----------------------footer styling---------------------*/
 
+.fa,
+.fa-solid,
+.fa-brands {
+  font-size: 22px;
+  color: black;
+}
+
 footer {
   background-color: #fff;
   color: black;
