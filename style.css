@@ -384,7 +384,7 @@ body {
   height: 350px;
   top: -100px;
   left: -80px;
-  background: linear-gradient(45deg, #007d5a, #00b072, #4ad39a);
+  background: #5bbb1f;
   border-radius: 50%;
   z-index: -1;
 }
