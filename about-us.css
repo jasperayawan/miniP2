@@ -215,6 +215,19 @@ body {
   background: #fff;
 }
 
+/*--------------------how we started--------------------*/
+
+.learn_more_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.learn_more_btn button{
+  background: #5bbb1f;
+  border: none;
+  color: #fff;
+}
+
 /*----------------------footer styling---------------------*/
 
 footer {
