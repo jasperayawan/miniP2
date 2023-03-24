@@ -257,40 +257,6 @@ form input {
   border: none;
 }
 
-/* -----CALL TO ACTION---- */
-
-.calltoaction {
-  padding: 1%;
-  background: linear-gradient(45deg, #5fbca0, #8bd8a8, #c3fdb8);
-  color: black;
-  margin-bottom: 3%;
-
-  text-align: center;
-}
-
-.h1 {
-  font-size: 45px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-}
-
-.lead {
-  font-size: 18px;
-  font-family: "Maven Pro", sans-serif;
-  font-weight: bold;
-}
-
-.btn-shopnow {
-  background: var(--background-color);
-  color: #fff;
-  transition: 0.5s;
-}
-
-.btn-shopnow:hover {
-  background-color: var(--background-color);
-  color: #fff;
-}
-
 /*----------------------footer styling---------------------*/
 
 footer {
