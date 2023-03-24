@@ -103,7 +103,7 @@ body {
   color: #fff;
 }
 
-/*----------------------farmersstyling---------------------*/
+/*----------------------partner styling---------------------*/
 
 .partner_banner {
   background-image: url(assets/partner-bg.jpg);
@@ -111,6 +111,70 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 50vh;
+}
+
+/*----------------------become a vendor--------------------*/
+
+.becomeAVendor {
+  background: rgba(33, 34, 34, 0.7) url("assets/farmervendor.jpg");
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: darken;
+  padding: 5rem 0;
+  margin-top: 3%;
+}
+.becomeAVendor button {
+  background: var(--background-color);
+  color: #fff;
+  margin-top: 1rem;
+  transition: 0.5s;
+}
+
+.becomeAVendor button:hover {
+  color: #fff;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+form input {
+  padding: 0.6rem 5rem 0.6rem 0.4rem;
+  border-radius: 5px;
+  border: none;
+}
+
+/* -----CALL TO ACTION---- */
+
+.calltoaction {
+  padding: 1%;
+  background: linear-gradient(45deg, #5fbca0, #8bd8a8, #c3fdb8);
+  color: black;
+  margin-bottom: 3%;
+
+  text-align: center;
+}
+
+.h1 {
+  font-size: 45px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.lead {
+  font-size: 18px;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: bold;
+}
+
+.btn-shopnow {
+  background: var(--background-color);
+  color: #fff;
+  transition: 0.5s;
+}
+
+.btn-shopnow:hover {
+  background-color: var(--background-color);
+  color: #fff;
 }
 
 /*----------------------footer styling---------------------*/
