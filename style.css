@@ -502,6 +502,12 @@ body {
   display: flex;
   flex-direction: column;
 }
+.form-container .btn{
+  background: #5bbb1f;
+}
+.form-container .btn:hover{
+  background: #7ac749;
+}
 form input {
   padding: 0.6rem 5rem 0.6rem 0.4rem;
   border-radius: 5px;
