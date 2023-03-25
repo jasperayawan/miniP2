@@ -110,7 +110,7 @@ body {
 /*----------------------banner marketplace styling---------------------*/
 
 .marketplace_banner {
-  background-image: url(images/marketplace-bg-final.jpg);
+  background-image: url(assets/marketplace-bg-final.jpg);
   background-position: center;
   background-size: cover;
   min-height: 50vh;
