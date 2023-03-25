@@ -234,6 +234,29 @@ body {
   color: #fff;
 }
 
+/*----------------------The team-------------------------*/
+
+.title-team{
+  place-items: center;
+}
+.leaderLeft{
+  width: 200px;
+  height: 200px;
+}
+.co_workers{
+  width: 150px;
+  height: 150px;
+}
+.co_workers img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.name_of_team{
+  font-weight: bold;
+  color: #5bbb1f;
+}
+
 /*----------------------become a vendor--------------------*/
 
 .becomeAVendor {
@@ -369,6 +392,10 @@ footer {
 @media screen and (max-width: 600px) {
   .right_container_values {
     min-height: 90vh;
+  }
+  .leaderLeft{
+    width: 135px;
+    height: 135px;
   }
 }
 
