@@ -138,6 +138,13 @@ body {
 
 /*--------------------content values styling--------------*/
 
+.coreValues {
+  box-shadow: 0 0 0 100vmax rgba(201, 226, 101, 0.2);
+  clip-path: inset(0 -100vmax);
+  background: rgba(201, 226, 101, 0.2);
+  padding: 2%;
+}
+
 .left_content_values p {
   width: 90%;
 }
