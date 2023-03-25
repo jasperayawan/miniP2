@@ -33,25 +33,20 @@ productsContainer.addEventListener('click', (clickeventObject) => {
     const quantity = Number(product.querySelector('input[type="number"]').value);
     addItemToCart(name, price, quantity, code);
     updateCart();
-    saveCartItems();
     updateCartCount();
+    saveCartItems();
+   
   }
+
+  
 
 });
 
 
 
-//FUNCTION 1 Calculate the total quantity of all items in the cart
-function updateCartCount() {
-  let count = 0;
-  for (const item of cartItems) {
-    count += item.quantity;
-  }
-  // Update the cart count element with the new count
-  cartCount.textContent = count;
-}
 
-//Function 2 Add item to SHOPPING CART
+
+//Function 1 Add item to SHOPPING CART
 function addItemToCart(name, price, quantity, code) {
   // Check if item is already in cart
   for (let i = 0; i < cartItems.length; i++) {
@@ -63,13 +58,12 @@ function addItemToCart(name, price, quantity, code) {
   }
   // Add item to cart
   cartItems.push({ name, price, quantity, code });
-     // show a success message
-     alert("Product added to cart!");
+       // show a success message
+       alert("Product added to cart!");
 
- 
 }
 
-//FUNCTION 3 Update cart
+//FUNCTION 2 Update cart
 function updateCart() {
   cartItemsContainer.innerHTML = '';
   let totalQuantity = 0;
@@ -104,6 +98,16 @@ function updateCart() {
   totalPriceContainer.innerHTML = `Total Quantity: ${totalQuantity} | Grand Total: ₱${totalPrice.toFixed(2)}`;
 }
 
+//FUNCTION 3 Calculate the total quantity of all items in the cart
+function updateCartCount() {
+    let count = 0;
+    for (const item of cartItems) {
+      count += item.quantity;
+    }
+    // Update the cart count element with the new count
+    cartCount.textContent = count;
+  }
+
 // Add event listener to change sa shopping cart (3-days ko ito nalaman, kaloka!)
 
 cartItemsContainer.addEventListener('change', (changeeventObject) => {
@@ -112,8 +116,9 @@ cartItemsContainer.addEventListener('change', (changeeventObject) => {
     const newQuantity = Number(changeeventObject.target.value);
     cartItems[index].quantity = newQuantity;
     updateCart();
-    saveCartItems();
     updateCartCount();
+    saveCartItems();
+    
   }
 });
 
@@ -128,8 +133,9 @@ cartItemsContainer.addEventListener('click', (removeitemObject) => {
   if (removeitemObject.target.classList.contains('remove-item')) {
     const index = removeitemObject.target.dataset.index;
     cartItems.splice(index, 1);
-    updateCartCount();
+  
     updateCart();
+    updateCartCount();
     saveCartItems(); 
   }
 });
@@ -197,8 +203,9 @@ confirmButton.addEventListener('click', () => {
   alert('Your order has been confirmed!');
   // Clear the cart items array and update the cart
   cartItems = [];
-  updateCartCount();
+  
   updateCart();
+  updateCartCount();
   // Clear the local storage
   localStorage.removeItem('cartItems');
   // Hide the modal
@@ -216,9 +223,10 @@ wishlistBtns.forEach((btn) => {
     const product = btn.parentElement.parentElement.dataset;
     const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
     wishlist.push(product);
-    localStorage.setItem("wishlist", JSON.stringify(wishlist));
-    updateWishlistCount();
     displayWishlistItems();
+    updateWishlistCount();
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    
   });
 });
 
