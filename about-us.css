@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Montserrat:wght@700&family=Open+Sans&family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Poppins:wght@200;300;400;500;600;700;800&family=Staatliches&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Poppins:wght@200;300;400;500;600;700;800&family=Staatliches&display=swap");
 
 * {
   padding: 0;
@@ -107,16 +106,16 @@ body {
 
 /*-----------------------about us main page-----------------*/
 
-.about_us__banner{
-  background-image:url(assets/bg-6.jpg);
+.about_us__banner {
+  background-image: url(assets/mp-bg.jpg);
   background-position: center;
   background-size: cover;
   min-height: 50vh;
 }
-.MS_Container{
+.MS_Container {
   padding: 8rem 0;
 }
-.mission-img-container::before{
+.mission-img-container::before {
   content: "";
   position: absolute;
   top: -30px;
@@ -126,7 +125,7 @@ body {
   background: #5bbb1f;
   z-index: -1;
 }
-.vision-img-container::before{
+.vision-img-container::before {
   content: "";
   position: absolute;
   bottom: -30px;
@@ -139,23 +138,30 @@ body {
 
 /*--------------------content values styling--------------*/
 
-.left_content_values p{
+.coreValues {
+  box-shadow: 0 0 0 100vmax rgba(201, 226, 101, 0.2);
+  clip-path: inset(0 -100vmax);
+  background: rgba(201, 226, 101, 0.2);
+  padding: 2%;
+}
+
+.left_content_values p {
   width: 90%;
 }
-.right_content_values{
+.right_content_values {
   width: 60%;
   height: 60%;
   border: 1px solid #5bbb1f;
   border-radius: 50%;
   position: relative;
 }
-.right_content_values h4{
-  font-family: 'Koulen', cursive;
+.right_content_values h4 {
+  font-family: "Koulen", cursive;
 }
-.right_content_values p{
+.right_content_values p {
   position: absolute;
 }
-.right_content_values .spanChildOne{
+.right_content_values .spanChildOne {
   position: absolute;
   top: -75px;
   color: #101010;
@@ -163,10 +169,10 @@ body {
   height: 150px;
   border-radius: 50%;
   border: 1px solid #5bbb1f;
-  font-family: 'Koulen', cursive;
+  font-family: "Koulen", cursive;
   background: #fff;
 }
-.right_content_values .spanChildTwo{
+.right_content_values .spanChildTwo {
   position: absolute;
   top: 30px;
   left: -75px;
@@ -175,10 +181,10 @@ body {
   height: 150px;
   border-radius: 50%;
   border: 1px solid #5bbb1f;
-  font-family: 'Koulen', cursive;
+  font-family: "Koulen", cursive;
   background: #fff;
 }
-.right_content_values .spanChildThree{
+.right_content_values .spanChildThree {
   position: absolute;
   top: 30px;
   right: -75px;
@@ -187,10 +193,10 @@ body {
   height: 150px;
   border-radius: 50%;
   border: 1px solid #5bbb1f;
-  font-family: 'Koulen', cursive;
+  font-family: "Koulen", cursive;
   background: #fff;
 }
-.right_content_values .spanChildFour{
+.right_content_values .spanChildFour {
   position: absolute;
   top: 200px;
   left: -10px;
@@ -199,10 +205,10 @@ body {
   height: 150px;
   border-radius: 50%;
   border: 1px solid #5bbb1f;
-  font-family: 'Koulen', cursive;
+  font-family: "Koulen", cursive;
   background: #fff;
 }
-.right_content_values .spanChildFive{
+.right_content_values .spanChildFive {
   position: absolute;
   top: 200px;
   right: -10px;
@@ -211,21 +217,51 @@ body {
   height: 150px;
   border-radius: 50%;
   border: 1px solid #5bbb1f;
-  font-family: 'Koulen', cursive;
+  font-family: "Koulen", cursive;
   background: #fff;
 }
 
 /*--------------------how we started--------------------*/
 
-.learn_more_btn{
+.learn_more_btn {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.learn_more_btn button{
+.learn_more_btn button {
   background: #5bbb1f;
   border: none;
   color: #fff;
+}
+
+/*----------------------become a vendor--------------------*/
+
+.becomeAVendor {
+  background: rgba(33, 34, 34, 0.7) url("assets/farmervendor.jpg");
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: darken;
+  padding: 5rem 0;
+  margin-top: 3%;
+}
+.becomeAVendor button {
+  background: var(--background-color);
+  color: #fff;
+  margin-top: 1rem;
+  transition: 0.5s;
+}
+
+.becomeAVendor button:hover {
+  color: #fff;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+form input {
+  padding: 0.6rem 5rem 0.6rem 0.4rem;
+  border-radius: 5px;
+  border: none;
 }
 
 /*----------------------footer styling---------------------*/
@@ -330,8 +366,15 @@ footer {
   background: rgba(201, 226, 101, 0.2);
 }
 
-@media screen and (max-width: 600px){
-  .right_container_values{
+@media screen and (max-width: 600px) {
+  .right_container_values {
     min-height: 90vh;
   }
+}
+
+.fa,
+.fa-solid,
+.fa-brands {
+  font-size: 22px;
+  color: black;
 }

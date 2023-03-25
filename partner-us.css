@@ -103,7 +103,58 @@ body {
   color: #fff;
 }
 
+/*----------------------partner styling---------------------*/
+
+.partner_banner {
+  background-image: url(assets/partner-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+}
+
+/* -----CALL TO ACTION---- */
+
+.calltoaction {
+  padding: 1%;
+  background: linear-gradient(45deg, #5fbca0, #8bd8a8, #c3fdb8);
+  color: black;
+  margin-bottom: 3%;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.h1 {
+  font-size: 45px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.lead {
+  font-size: 18px;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: bold;
+}
+
+.btn-shopnow {
+  background: var(--background-color);
+  color: #fff;
+  transition: 0.5s;
+}
+
+.btn-shopnow:hover {
+  background-color: var(--background-color);
+  color: #fff;
+}
+
 /*----------------------footer styling---------------------*/
+
+.fa,
+.fa-solid,
+.fa-brands {
+  font-size: 22px;
+  color: black;
+}
 
 footer {
   background-color: #fff;
