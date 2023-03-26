@@ -52,3 +52,11 @@ login.addEventListener('click', function(e){
         }   
     }
 })
+
+function goToShop() {
+    window.location.href = "marketplace.html";
+  }
+
+  function goToFarmers() {
+    window.location.href = "farmers.html";
+  }
