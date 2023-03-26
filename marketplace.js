@@ -285,3 +285,45 @@ resetBtn.addEventListener("click", resetWishlist);
 
 
 
+
+
+
+const headerNav = document.querySelector('.header');
+const popUpMessage = document.createElement('div');
+popUpMessage.classList.add('pop-up-message');
+popUpMessage.innerHTML = `<div class="div-child"> 
+    <div class="alert alert-success mx-3" role="alert">
+    <button class="btn--close-cookie btn-close"></button>
+    <p style="font-size: 14px; text-align: justify; color: black">
+      DISCLAIMER: We are committed to providing our customers with the
+      freshest and highest quality local produce possible. However, we
+      understand that sometimes customers may wish to purchase produce from
+      outside their location radius. Please note that if you choose to
+      purchase produce outside your location radius, you may incur
+      additional costs for delivery and handling. We will do our best to
+      ensure that your order arrives in a timely manner and in good
+      condition, but we cannot guarantee the same level of freshness or
+      quality as our local produce. Furthermore, please be aware that
+      purchasing produce from outside your location radius may have other
+      consequences, such as longer shipping times, higher environmental
+      impact due to increased transportation, and potential issues with
+      customs or import regulations. If you choose to proceed with your
+      order, you acknowledge and accept these potential consequences and
+      costs. We appreciate your understanding and support in our efforts to
+      promote sustainable and locally sourced produce.
+      <a href="" class="text-dark disclaimer">READ MORE HERE!</a>
+    </p>
+  </div>
+    </div>
+    `
+
+
+popUpMessage.style.display = "flex";
+popUpMessage.style.justifyContent = "center";
+popUpMessage.style.alignItems = "center";
+headerNav.append(popUpMessage);
+
+document.querySelector('.btn--close-cookie').addEventListener('click', function(){
+    // popUpMessage.parentElement.removeChild(popUpMessage)
+    popUpMessage.remove();
+})
