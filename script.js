@@ -21,7 +21,7 @@ submitButton.addEventListener('click', function(e){
             swal("Opps..!", "Password not matching!", "error")
         }else{
             window.location.assign("login.html");
-            swal("Good job", "registration", "success")
+            swal("Good job!", "Registration Successsful!", "success")
         }
     }
 })
@@ -46,7 +46,7 @@ login.addEventListener('click', function(e){
     } else {
         if(emailAdress == Email && passWord == Password){
             window.location.assign("index.html");
-            swal("Good job!", "Login successful!", "success")
+            swal("Good job!", "Login Successful!", "success")
         } else{
             swal("Opps..!", "Something is wrong", "error")
         }   
