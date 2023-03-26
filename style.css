@@ -502,10 +502,10 @@ body {
   display: flex;
   flex-direction: column;
 }
-.form-container .btn{
+.form-container .btn {
   background: #5bbb1f;
 }
-.form-container .btn:hover{
+.form-container .btn:hover {
   background: #7ac749;
 }
 form input {
