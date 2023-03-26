@@ -149,10 +149,10 @@ body {
 .map-container {
   text-align: centers;
   position: relative;
-  height: 0;
+  border: solid green;
   overflow: hidden;
   max-width: 80%;
-  padding-bottom: 10%; /* 56.25% for 16:9 aspect ratio for a responsive map */
+  padding-bottom: 20%; /* NOTE: Once, map is already available use 56.25% for 16:9 aspect ratio for a responsive map */
 }
 
 .map-container iframe {
@@ -217,6 +217,12 @@ img {
   min-height: 100%;
   margin-bottom: 3%;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7);
+}
+
+.card-img-top {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* -----CALL TO ACTION---- */
