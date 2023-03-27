@@ -113,34 +113,113 @@ body {
   min-height: 50vh;
 }
 
-/*----------------------become a vendor--------------------*/
+/*----------------------MAIN CONTENT-------------------*/
 
-.becomeAVendor {
-  background: rgba(33, 34, 34, 0.7) url("assets/farmervendor.jpg");
-  background-position: center;
-  background-size: cover;
-  background-blend-mode: darken;
-  padding: 5rem 0;
-  margin-top: 3%;
+/* Search section styles */
+.search-farmer:nth-of-type(1) {
+  background-color: #f5f5f5;
+  text-align: right;
+  padding: 1% 5%;
 }
-.becomeAVendor button {
+
+.search-farmer:nth-of-type(1) label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.search-farmer:nth-of-type(1) input[type="text"] {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.search-farmer:nth-of-type(1) button[type="submit"] {
+  background-color: #2e8b57;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--background-color);
+}
+
+/* Map styles */
+.map-container {
+  text-align: centers;
+  position: relative;
+  border: solid green;
+  overflow: hidden;
+  padding-bottom: 20%; /* NOTE: Once, map is already available use 56.25% for 16:9 aspect ratio for a responsive map */
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* IMAGE */
+.image-container {
+  overflow-x: hidden;
+  box-shadow: 0 0 0 100vmax rgba(201, 226, 101, 0.2);
+  clip-path: inset(0 -100vmax);
+  background: rgba(201, 226, 101, 0.2);
+}
+.image-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(
+    (100% - (1.5rem * (var(--per-view) - 1))) / var(--per-view)
+  );
+  grid-gap: 1.5rem;
+  position: relative;
+  left: 0;
+  transition: 2s;
+}
+.image-wrapper > * {
+  aspect-ratio: 4 / 3;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+.btn-viewproducts {
   background: var(--background-color);
   color: #fff;
-  margin-top: 1rem;
   transition: 0.5s;
+  justify-content: center;
 }
 
-.becomeAVendor button:hover {
+.btn-viewproducts:hover {
+  background-color: var(--background-color);
   color: #fff;
 }
-.form-container {
-  display: flex;
-  flex-direction: column;
+/* IMAGE */
+
+.farmer-activities {
+  text-align: centers;
+  position: relative;
 }
-form input {
-  padding: 0.6rem 5rem 0.6rem 0.4rem;
-  border-radius: 5px;
-  border: none;
+
+.card {
+  min-height: 100%;
+  margin-bottom: 3%;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7);
+}
+
+.card-img-top {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* -----CALL TO ACTION---- */

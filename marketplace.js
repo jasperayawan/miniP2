@@ -303,15 +303,11 @@ popUpMessage.innerHTML = `<div class="div-child">
       additional costs for delivery and handling. We will do our best to
       ensure that your order arrives in a timely manner and in good
       condition, but we cannot guarantee the same level of freshness or
-      quality as our local produce. Furthermore, please be aware that
-      purchasing produce from outside your location radius may have other
-      consequences, such as longer shipping times, higher environmental
-      impact due to increased transportation, and potential issues with
-      customs or import regulations. If you choose to proceed with your
+      quality as our local produce. If you choose to proceed with your
       order, you acknowledge and accept these potential consequences and
       costs. We appreciate your understanding and support in our efforts to
       promote sustainable and locally sourced produce.
-      <a href="" class="text-dark disclaimer">READ MORE HERE!</a>
+   
     </p>
   </div>
     </div>
