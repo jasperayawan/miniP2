@@ -139,6 +139,7 @@ body {
   cursor: pointer;
   border: none;
   outline: none;
+  font-size: 24px;
 }
 .arrow:hover {
   background-color: rgba(0, 0, 0, 0.7);
