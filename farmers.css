@@ -151,7 +151,6 @@ body {
   position: relative;
   border: solid green;
   overflow: hidden;
-  max-width: 80%;
   padding-bottom: 20%; /* NOTE: Once, map is already available use 56.25% for 16:9 aspect ratio for a responsive map */
 }
 
@@ -167,7 +166,6 @@ body {
 /* IMAGE */
 .image-container {
   overflow-x: hidden;
-  max-width: 80%;
   box-shadow: 0 0 0 100vmax rgba(201, 226, 101, 0.2);
   clip-path: inset(0 -100vmax);
   background: rgba(201, 226, 101, 0.2);
@@ -210,7 +208,6 @@ img {
 .farmer-activities {
   text-align: centers;
   position: relative;
-  max-width: 80%;
 }
 
 .card {
@@ -220,7 +217,7 @@ img {
 }
 
 .card-img-top {
-  height: 300px;
+  height: 350px;
   width: 100%;
   object-fit: cover;
 }

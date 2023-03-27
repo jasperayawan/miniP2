@@ -23,5 +23,5 @@ function scrolling() {
   }
   const widthEl = document.querySelector('.image-wrapper > :first-child').offsetWidth + 24
   imageWrapper.style.left = `-${totalScroll * widthEl}px`
-  imageWrapper.style.transition = '1s'
+  imageWrapper.style.transition = '2s'
 }
