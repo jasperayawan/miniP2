@@ -56,3 +56,28 @@ login.addEventListener('click', function(e){
 function goToPage(url) {
     window.location.href = url;
   }
+
+
+//profile dropdown
+
+// const profileHeader = document.getElementById('profile')
+
+// profileHeader.addEventListener('click', function() {
+//     let displayHandling = document.getElementById('signLogin')
+    
+//     if(displayHandling.style.display === 'none'){
+//         displayHandling.style.display = 'block'
+//     } else{
+//         displayHandling.style.display = 'none'
+//     }
+// })
+
+function toggleBtn(){
+    let displayHandling = document.getElementById('profile_List')
+    
+    if(displayHandling.style.display === 'flex'){
+        displayHandling.style.display = 'none'
+    } else{
+        displayHandling.style.display = 'flex'
+    }
+}

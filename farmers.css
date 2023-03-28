@@ -94,13 +94,33 @@ body {
   rotate: -45deg;
 }
 
-.signupAndLoginButtons #signupButton {
+.profileIcon{
+  border: none;
+  background: none;
+}
+.profile_List{
+  display: none;
+  position: absolute;
+  background: #fff;
+  top: 2.5rem;
+  right: 0;
+  padding: 1rem; 
+  width: 200px;
+  justify-content: center;
+  
+}
+
+
+.signLogin_container #signupButton {
   border: 1px solid var(--background-color);
   color: var(--background-color);
+  font-size: 13px;
+  margin-right: 5px;
 }
-.signupAndLoginButtons #loginButton {
+.signLogin_container #loginButton {
   background-color: var(--background-color);
   color: #fff;
+  font-size: 13px;
 }
 
 /*----------------------farmersstyling---------------------*/
@@ -213,7 +233,7 @@ img {
 .card {
   min-height: 100%;
   margin-bottom: 3%;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 .card-img-top {

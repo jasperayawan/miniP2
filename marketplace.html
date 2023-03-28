@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="marketplace.css" />
   </head>
   <body>
-    <header class="sticky-top w-100 shadow-lg header">
+    <header class="sticky-top w-100 shadow-lg">
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container container-md-fluid w-100">
           <!-----------------logo-------------->
@@ -103,14 +103,31 @@
             </div>
 
             <!------------------sign up area------------->
-            <div class="signupAndLoginButtons">
-              <a href="#" class="text-decoration-none btn" id="signupButton"
-                >SIGN-UP</a
-              >
-              <a href="#" class="text-decoration-none btn" id="loginButton"
-                >LOGIN</a
-              >
-            </div>
+            <div class="profileLogo_Container position-relative">
+              <div class="profile">
+                <button onclick="toggleBtn()" class="profileIcon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="profile_List" id="profile_List">
+                <div class="signLogin_container d-flex">
+                <a
+                  href="Register.html"
+                  class="text-decoration-none btn"
+                  id="signupButton"
+                  >SIGN-UP</a
+                >
+                <a
+                  href="login.html"
+                  class="text-decoration-none btn"
+                  id="loginButton"
+                  >LOGIN</a
+                >
+              </div>
+              </div>
           </div>
         </div>
       </nav>
@@ -169,6 +186,28 @@
         </div>
       </div>
     </div>
+
+      <div class="alert alert-success mx-3" role="alert" style="margin-top: 2%">
+        <p style="font-size: 14px; text-align: justify; color: black">
+          DISCLAIMER: We are committed to providing our customers with the
+          freshest and highest quality local produce possible. However, we
+          understand that sometimes customers may wish to purchase produce from
+          outside their location radius. Please note that if you choose to
+          purchase produce outside your location radius, you may incur
+          additional costs for delivery and handling. We will do our best to
+          ensure that your order arrives in a timely manner and in good
+          condition, but we cannot guarantee the same level of freshness or
+          quality as our local produce. Furthermore, please be aware that
+          purchasing produce from outside your location radius may have other
+          consequences, such as longer shipping times, higher environmental
+          impact due to increased transportation, and potential issues with
+          customs or import regulations. If you choose to proceed with your
+          order, you acknowledge and accept these potential consequences and
+          costs. We appreciate your understanding and support in our efforts to
+          promote sustainable and locally sourced produce.
+          <a href="" class="text-dark disclaimer">READ MORE HERE!</a>
+        </p>
+      </div>
     </section>
 
     <!--PRODUCT PAGE AREA-->
@@ -181,8 +220,8 @@
         Shop Local, Eat Fresh with our Harvest Hub!
       </h4>
     </div>
-    <section class="marketplace-area my-5">
-      <div class="container search-area">
+    <section class="row d-flex flex-column flex-md-row marketplace-area my-5">
+      <div class="col-2 container search-area">
         <div class="container my-4">
           <h5>Shop by Location</h5>
           <hr />
@@ -210,7 +249,7 @@
       </div>
       <!--PRODUCT LISTING-->
 
-      <div class="container">
+      <div class="col container">
         <div class="products">
           <!--PRODUCT 1-->
 
@@ -336,7 +375,7 @@
 
       <!--PRODUCT LISTING-->
 
-      <div class="cart">
+      <div class="col cart">
         <div class="container">
           <h2>My Shopping Cart</h2>
           <br />
@@ -391,40 +430,44 @@
       <a href="" target="_blank" class="btn btn-shopnow">Shop Now</a>
     </div>
 
-    <footer class="py-5">
+    <footer class="py-5 bg-light">
       <div class="footer-container px-3">
         <div class="quick-links">
-          <h5>Quick Links</h5>
+          <h5 class="fw-bold">Quick Links</h5>
           <ul class="d-block list-unstyled gap-4">
-            <li class="nav-item">
+            <li class="nav-item mb-2">
               <a href="about-us.html" class="text-decoration-none text-dark"
-                >About us</a
+                >About Us</a
               >
             </li>
-            <li class="nav-item">
-              <a href="marketplace.html" class="text-decoration-none text-dark"
+            <li class="nav-item mb-2">
+              <a
+                href="marketplace.html"
+                class="text-decoration-none text-dark"
                 >Marketplace</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item mb-2">
               <a href="farmers.html" class="text-decoration-none text-dark"
                 >Farmers</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item mb-2">
               <a href="partner-us.html" class="text-decoration-none text-dark"
                 >Partner With Us</a
               >
             </li>
             <li class="nav-item">
-              <a href="help-center.html" class="text-decoration-none text-dark"
+              <a
+                href="help-center.html"
+                class="text-decoration-none text-dark"
                 >Help Center</a
               >
             </li>
           </ul>
         </div>
         <div class="social-media">
-          <h5>Connect With Us</h5>
+          <h5 class="fw-bold">Connect With Us</h5>
 
           <ul class="list-unstyled d-flex gap-4 d-md-block d-md-block">
             <li class="mb-2">
@@ -459,7 +502,7 @@
                 </svg>
               </a>
             </li>
-            <li class="mb-2">
+            <li>
               <a href="#" class="text-dark">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -478,13 +521,13 @@
           </ul>
         </div>
         <div class="supported-orgs">
-          <h5>Supported By:</h5>
+          <h5 class="fw-bold">Supported By:</h5>
           <ul>
-            <li><a href="#" class="text-dark">LGU - Isabela Province</a></li>
-            <li>
+            <li class="mb-2"><a href="#" class="text-dark">LGU - Isabela Province</a></li>
+            <li class="mb-2">
               <a href="#" class="text-dark">Force For Good</a>
             </li>
-            <li>
+            <li class="mb-2">
               <a href="#" class="text-dark">IRRI</a>
             </li>
             <li>
@@ -494,12 +537,17 @@
         </div>
 
         <div class="newsletter">
-          <h5>Subscribe to our Newsletter</h5>
+          <h5 class="fw-bold">Subscribe to our Newsletter</h5>
           <p style="font-size: 14px">
             Stay up-to-date with our new featured products, upcoming events,
             seasonal specials, and promotions.
           </p>
           <form action="" class="input-group newsLetterForm">
+            <span class="d-flex justify-content-center align-items-center bg-white px-3 email-logo-container">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+              </svg>
+            </span>
             <input
               class="form-control"
               type="email"
@@ -511,7 +559,7 @@
       </div>
     </footer>
 
-    <section class="final-footer">
+    <section class="final-footer py-md-5">
       <div class="item item1"></div>
       <div class="item item2 text-center">
         <i class="fa-solid fa-tractor"></i>
@@ -535,7 +583,6 @@
           >Privacy Policy</a
         >.
       </div>
-      <div class="item item3"></div>
     </section>
 
     <script src="marketplace.js"></script>

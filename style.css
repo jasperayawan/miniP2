@@ -93,14 +93,34 @@ body {
   height: 12px;
   rotate: -45deg;
 }
+.profileIcon{
+  border: none;
+  background: none;
+}
+.profile_List{
+  display: none;
+  position: absolute;
+  background: #fff;
+  top: 2.5rem;
+  right: 0;
+  padding: 1rem; 
+  width: 200px;
+  justify-content: center;
+  
+}
 
-.signupAndLoginButtons #signupButton {
+
+
+.signLogin_container #signupButton {
   border: 1px solid var(--background-color);
   color: var(--background-color);
+  font-size: 13px;
+  margin-right: 5px;
 }
-.signupAndLoginButtons #loginButton {
+.signLogin_container #loginButton {
   background-color: var(--background-color);
   color: #fff;
+  font-size: 13px;
 }
 
 /* ---------------------Home styling------------------ */
@@ -404,7 +424,6 @@ body {
 
 /* Style the counter cards */
 .section {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   text-align: center;
   background-color: #ffffff;
@@ -415,7 +434,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0,0,0,0.1);
 }
 
 .fa,
@@ -567,6 +586,9 @@ footer {
 .supported-orgs {
   flex: 1;
   margin-right: 30px;
+}
+.email-logo-container{
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Give more space to newsletter section */

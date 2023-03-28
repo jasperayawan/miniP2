@@ -104,20 +104,32 @@
             </ul>
 
             <!------------------sign up area------------->
-            <div class="signupAndLoginButtons">
-              <a
-                href="Register.html"
-                class="text-decoration-none btn"
-                id="signupButton"
-                >SIGN-UP</a
-              >
-              <a
-                href="login.html"
-                class="text-decoration-none btn"
-                id="loginButton"
-                >LOGIN</a
-              >
-            </div>
+            <div class="profileLogo_Container position-relative">
+              <div class="profile">
+                <button onclick="toggleBtn()" class="profileIcon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="profile_List" id="profile_List">
+                <div class="signLogin_container d-flex">
+                <a
+                  href="Register.html"
+                  class="text-decoration-none btn"
+                  id="signupButton"
+                  >SIGN-UP</a
+                >
+                <a
+                  href="login.html"
+                  class="text-decoration-none btn"
+                  id="loginButton"
+                  >LOGIN</a
+                >
+              </div>
+              </div>
+          </div>
           </div>
         </div>
       </nav>
@@ -363,69 +375,46 @@
 
     <!-------------------------footer section area-------------------->
 
-    <footer class="py-5">
-      <section class="becomeAVendor my-5">
-        <h2 class="text-center text-white" style="font-size: 45px">
-          Sustainable Farming Starts with You!
-        </h2>
-        <h4 class="text-center text-white">
-          Become a Vendor and Make a Difference in Your Community.
-        </h4>
-
-        <div class="container d-flex justify-content-center align-items-center">
-          <form action="" method="get">
-            <!------------------- <input
-                type="text"
-                name="name"
-                placeholder="name"
-                class="user-input my-3"
-              />
-              <input type="email" placeholder="email" class="user-input" />-------------------------->
-
-            <div class="form-container">
-              <button class="btn">Partner With Us</button>
-            </div>
-          </form>
-        </div>
-      </section>
-
-      <!-- end div call to action-->
-
+    <footer class="py-5 bg-light">
       <div class="footer-container px-3">
         <div class="quick-links">
-          <h5>Quick Links</h5>
+          <h5 class="fw-bold">Quick Links</h5>
           <ul class="d-block list-unstyled gap-4">
-            <li class="nav-item">
+            <li class="nav-item mb-2">
               <a href="about-us.html" class="text-decoration-none text-dark"
                 >About Us</a
               >
             </li>
-            <li class="nav-item">
-              <a href="marketplace.html" class="text-decoration-none text-dark"
+            <li class="nav-item mb-2">
+              <a
+                href="marketplace.html"
+                class="text-decoration-none text-dark"
                 >Marketplace</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item mb-2">
               <a href="farmers.html" class="text-decoration-none text-dark"
                 >Farmers</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item mb-2">
               <a href="partner-us.html" class="text-decoration-none text-dark"
                 >Partner With Us</a
               >
             </li>
             <li class="nav-item">
-              <a href="help-center.html" class="text-decoration-none text-dark"
+              <a
+                href="help-center.html"
+                class="text-decoration-none text-dark"
                 >Help Center</a
               >
             </li>
           </ul>
         </div>
-        <div class="social-media text-dark">
-          <h5>Connect With Us</h5>
+        <div class="social-media">
+          <h5 class="fw-bold">Connect With Us</h5>
 
-          <ul class="list-unstyled d-flex d-md-block d-md-block">
+          <ul class="list-unstyled d-flex gap-4 d-md-block d-md-block">
             <li class="mb-2">
               <a href="#" class="text-dark">
                 <svg
@@ -477,13 +466,13 @@
           </ul>
         </div>
         <div class="supported-orgs">
-          <h5>Supported By:</h5>
+          <h5 class="fw-bold">Supported By:</h5>
           <ul>
-            <li><a href="#" class="text-dark">LGU - Isabela Province</a></li>
-            <li>
+            <li class="mb-2"><a href="#" class="text-dark">LGU - Isabela Province</a></li>
+            <li class="mb-2">
               <a href="#" class="text-dark">Force For Good</a>
             </li>
-            <li>
+            <li class="mb-2">
               <a href="#" class="text-dark">IRRI</a>
             </li>
             <li>
@@ -493,12 +482,17 @@
         </div>
 
         <div class="newsletter">
-          <h5>Subscribe to our Newsletter</h5>
+          <h5 class="fw-bold">Subscribe to our Newsletter</h5>
           <p style="font-size: 14px">
             Stay up-to-date with our new featured products, upcoming events,
             seasonal specials, and promotions.
           </p>
           <form action="" class="input-group newsLetterForm">
+            <span class="d-flex justify-content-center align-items-center bg-white px-3 email-logo-container">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+              </svg>
+            </span>
             <input
               class="form-control"
               type="email"
@@ -510,7 +504,7 @@
       </div>
     </footer>
 
-    <section class="final-footer">
+    <section class="final-footer py-md-5">
       <div class="item item1"></div>
       <div class="item item2 text-center">
         <i class="fa-solid fa-tractor"></i>
@@ -534,7 +528,6 @@
           >Privacy Policy</a
         >.
       </div>
-      <div class="item item3"></div>
     </section>
 
     <script src="help-center.js"></script>

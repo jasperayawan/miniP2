@@ -3,7 +3,7 @@ const imageItems = document.querySelectorAll('.image-wrapper > *')
 const imageLength = imageItems.length
 const perView = 3
 let totalScroll = 0
-const delay = 2000
+const delay = 3000
 
 imageWrapper.style.setProperty('--per-view', perView)
 for(let i = 0; i < perView; i++) {
@@ -24,4 +24,14 @@ function scrolling() {
   const widthEl = document.querySelector('.image-wrapper > :first-child').offsetWidth + 24
   imageWrapper.style.left = `-${totalScroll * widthEl}px`
   imageWrapper.style.transition = '2s'
+}
+
+function toggleBtn(){
+  let displayHandling = document.getElementById('profile_List')
+  
+  if(displayHandling.style.display === 'flex'){
+      displayHandling.style.display = 'none'
+  } else{
+      displayHandling.style.display = 'flex'
+  }
 }
