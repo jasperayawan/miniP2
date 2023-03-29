@@ -10,8 +10,6 @@ form.addEventListener('submit', e => {
 
 
 
-
-
 const cardWrapper = document.querySelector('.card-wrapper')
 const widthToScroll = cardWrapper.children[0].offsetWidth
 const arrowPrev = document.querySelector('.arrow.prev')
