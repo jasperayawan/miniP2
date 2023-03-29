@@ -238,6 +238,11 @@
       </div>
     </section>
 
+
+    
+    
+
+    
     <!------------Benefits----------->
 
     <div class="my-5" style="text-align: center">
@@ -340,6 +345,47 @@
         </div>
       </div>
     </section>
+
+            <!------------------FORM------------->
+
+            <section class="my-5">
+
+              <div class="container registration-form">
+                <h2>Registration Form</h2>
+                <p>Show your intent to be a Farmer Vendor. Fill out the form below.</p>
+                <form name="registration-form">
+                  <input name="Email" type="email" placeholder="Email" class="r-form" required >
+                  <input name="Contact-Number" type="tel" placeholder="Phone Number" class="r-form" required >
+                  <input name="FirstName" type="text" placeholder="First Name" class="r-form" required>
+                  <input name="LastName" type="text" placeholder="Last Name" class="r-form" required>
+                  <input name="FarmName" type="text" placeholder="Farm Name" class="r-form" required>
+                  <input name="FarmLocation" type="text" placeholder="Farm Location" class="r-form" required>
+                  <input name="Products" type="text" placeholder="Farm Products" class="r-form" required>
+                  <label for="date">Preferred Interview Date</label>
+                  <input id="date" name="Call-Date" type="date" placeholder="Preferred Interview Schedule" class="r-form" required>
+                  <label for="time">Preferred Interview Time</label>
+                  <input id="time" name="Call-Time" type="time" placeholder="Preferred Interview Time" class="r-form" required>
+        
+                  <label style="color: black; margin-top: 1%" for="subject"
+                  >Tell us why you want to become a farmer vendor.</label
+                >
+                <textarea id="subject" name="Message" placeholder="Write something.." style="height: 170px"></textarea>
+                <p id="error" style="color: red; display: none;">Please enter at least 250 characters</p>
+              
+                  <button type="submit" class="btn-submit" name="submit">Submit</button>
+                </form>
+            
+                <div class="loading js-loading is-hidden">
+                  <div class="loading-spinner">
+                    <svg><circle cx="25" cy="25" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg>
+                  </div>
+                </div>
+            
+              
+              </div>
+          
+        
+            </section>
 
   
 
@@ -544,5 +590,8 @@
         fjs.parentNode.insertBefore(js, fjs);
       })(document, "script", "facebook-jssdk");
     </script>
+
+
+
   </body>
 </html>
