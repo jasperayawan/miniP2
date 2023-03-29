@@ -1,14 +1,3 @@
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxnTzTbrDg_R-1iqP92kPfPrlHTR6hJ0CES8KVNs8sv71t9ls2L1PG_bhAZbETLjEBp/exec'
-const form = document.forms['submit-to-google-sheet']
-
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => console.log('Success!', response))
-    .catch(error => console.error('Error!', error.message))
-})
-
-
 
 const cardWrapper = document.querySelector('.card-wrapper')
 const widthToScroll = cardWrapper.children[0].offsetWidth
