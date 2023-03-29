@@ -342,7 +342,9 @@
             </p>
 
             <div class="learn_more_btn">
-              <button class="btn">Visit Our Farmers Community</button>
+              <button class="btn" onclick="goToPage('farmers.html')">
+                Visit Our Farmers Community
+              </button>
             </div>
           </div>
         </div>
@@ -437,19 +439,11 @@
       </h4>
 
       <div class="container d-flex justify-content-center align-items-center">
-        <form action="" method="get">
-          <!------------------- <input
-              type="text"
-              name="name"
-              placeholder="name"
-              class="user-input my-3"
-            />
-            <input type="email" placeholder="email" class="user-input" />-------------------------->
-
-          <div class="form-container">
-            <button class="btn">Partner With Us</button>
-          </div>
-        </form>
+        <div class="form-container">
+          <button class="btn" onclick="goToPage('partner-us.html')">
+            Partner With Us
+          </button>
+        </div>
       </div>
     </section>
 
@@ -620,6 +614,11 @@
     </section>
 
     <script src="script.js"></script>
+    <script>
+      function goToPage(url) {
+        window.location.href = url;
+      }
+    </script>
 
     <!-- Messenger Chat Plugin Code -->
     <div id="fb-root"></div>
