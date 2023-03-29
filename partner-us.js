@@ -44,8 +44,6 @@ function mouseUpAndLeave() {
 }
 
 
-
-
 function goToPage(url) {
     window.location.href = url;
   }
@@ -75,5 +73,28 @@ function toggleBtn(){
     }
 }
 
+//Function to save the REG FORM sa Local Storage (Temporarily)
 
+const form = document.querySelector('form[name="submit-to-google-sheet"]');
+const inputs = form.querySelectorAll('input, textarea');
+
+// Load data from local storage
+for (const input of inputs) {
+  const value = localStorage.getItem(input.name);
+  if (value) {
+    input.value = value;
+  }
+}
+
+// Save data to local storage on input change
+for (const input of inputs) {
+  input.addEventListener('input', () => {
+    localStorage.setItem(input.name, input.value);
+  });
+}
+
+// Clear data from local storage on form submit
+form.addEventListener('submit', () => {
+  localStorage.clear();
+});
 
