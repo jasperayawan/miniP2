@@ -392,13 +392,19 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
   text-align: center;
-  width: 50%;
+
   min-height: 300px;
   margin: 0 auto;
   box-shadow: 0 10px 50px 0 #ccc;
   margin-bottom: 2rem;
+
+  max-width: 800px;
+
+ 
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 textarea {
@@ -421,6 +427,8 @@ textarea {
 
 .r-form {
   margin-bottom: 1rem;
+
+  
 }
 
 .r-form:focus {

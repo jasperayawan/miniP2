@@ -348,7 +348,7 @@
 
             <!------------------FORM------------->
 
-            <section class="my-5">
+            <section id="reg-form" class="my-5">
 
               <div class="container registration-form">
                 <h2>Registration Form</h2>
@@ -358,18 +358,19 @@
                   <input name="Contact-Number" type="tel" placeholder="Phone Number" class="r-form" required >
                   <input name="FirstName" type="text" placeholder="First Name" class="r-form" required>
                   <input name="LastName" type="text" placeholder="Last Name" class="r-form" required>
-                  <input name="FarmName" type="text" placeholder="Farm Name" class="r-form" required>
-                  <input name="FarmLocation" type="text" placeholder="Farm Location" class="r-form" required>
-                  <input name="Products" type="text" placeholder="Farm Products" class="r-form" required>
+                 
                   <label for="date">Preferred Interview Date</label>
                   <input id="date" name="Call-Date" type="date" placeholder="Preferred Interview Schedule" class="r-form" required>
                   <label for="time">Preferred Interview Time</label>
                   <input id="time" name="Call-Time" type="time" placeholder="Preferred Interview Time" class="r-form" required>
-        
+                  <label style="color: black; margin-top: 1%" for="subject"
+                  >Farm Description</label
+                >
+                <textarea id="subject" name="Farm-Details" placeholder="Please include Farm Name, Farm Location, and Major Products." style="height: 170px" required></textarea>
                   <label style="color: black; margin-top: 1%" for="subject"
                   >Tell us why you want to become a farmer vendor.</label
                 >
-                <textarea id="subject" name="Message" placeholder="Write something.." style="height: 170px"></textarea>
+                <textarea id="subject" name="Message" placeholder="Write something.." style="height: 170px" required></textarea>
                 <p id="error" style="color: red; display: none;">Please enter at least 250 characters</p>
               
                   <button type="submit" class="btn-submit" name="submit">Submit</button>
@@ -380,8 +381,7 @@
                     <svg><circle cx="25" cy="25" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg>
                   </div>
                 </div>
-            
-              
+  
               </div>
           
         
@@ -397,7 +397,7 @@
         "Join the Farm-to-Table Movement - Become a Farmer Vendor and Share Your
         Harvest with the World!"
       </p>
-      <a href="" target="_blank" class="btn btn-shopnow">Partner With Us</a>
+      <a href="#reg-form" target="_blank" class="btn btn-shopnow">Partner With Us</a>
     </div>
 
     <!-------------------------footer section area-------------------->
