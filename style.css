@@ -96,11 +96,11 @@ body {
   height: 12px;
   rotate: -45deg;
 }
-.profileIcon{
+.profileIcon {
   border: none;
   background: none;
 }
-.profile_List{
+.profile_List {
   display: none;
   position: absolute;
   background: #fff;
@@ -445,7 +445,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .fa,
@@ -598,7 +598,7 @@ footer {
   flex: 1;
   margin-right: 30px;
 }
-.email-logo-container{
+.email-logo-container {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 

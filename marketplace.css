@@ -104,23 +104,21 @@ body {
   margin-left: 1rem;
 }
 
-.profileIcon{
+.profileIcon {
   border: none;
   background: none;
   color: #000;
 }
-.profile_List{
+.profile_List {
   display: none;
   position: absolute;
   background: #fff;
   top: 2.5rem;
   right: 0;
-  padding: 1rem; 
+  padding: 1rem;
   width: 200px;
   justify-content: center;
-  
 }
-
 
 .signLogin_container #signupButton {
   border: 1px solid var(--background-color);
@@ -151,10 +149,10 @@ body {
   align-items: center; */
   padding: 20px 20px;
 }
-.top-area_content .how_it_works_box{
+.top-area_content .how_it_works_box {
   background: #fff;
-  box-shadow: 0 0 10px 2px rgba(0,0,0,0.1);
-  padding: 1rem .5rem;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0.5rem;
 }
 
 .search_code{
@@ -202,7 +200,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
-  
 }
 
 .cart {
