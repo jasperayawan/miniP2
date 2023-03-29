@@ -76,12 +76,10 @@ function toggleBtn(){
 const form = document.querySelector('form[name="submit-to-google-sheet"]');
 const inputs = form.querySelectorAll('input, textarea');
 
-// Load data from local storage
-for (const input of inputs) {
-  const value = localStorage.getItem(input.name);
-  if (value) {
-    input.value = value;
-  }
+const refNumber = localStorage.getItem('refNumber');
+if (refNumber) {
+  const message = `Your previous reference number is ${refNumber}.`;
+  alert(message);
 }
 
 // Save data to local storage on form submission
@@ -138,6 +136,5 @@ for (const input of inputs) {
 
 // Check for inactivity and clear local storage if needed
 setInterval(checkInteractionTimeout, 60 * 1000); // Check every minute
-
 
 
