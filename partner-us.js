@@ -73,8 +73,6 @@ function toggleBtn(){
     }
 }
 
-//Function to save the REG FORM sa Local Storage (Temporarily)
-
 const form = document.querySelector('form[name="submit-to-google-sheet"]');
 const inputs = form.querySelectorAll('input, textarea');
 
@@ -86,19 +84,41 @@ for (const input of inputs) {
   }
 }
 
-// Save data to local storage on input change
-for (const input of inputs) {
-  input.addEventListener('input', () => {
+// Save data to local storage on form submission
+form.addEventListener('submit', () => {
+  const submissions = JSON.parse(localStorage.getItem('submissions') || '[]');
+  const submission = {};
+  for (const input of inputs) {
+    submission[input.name] = input.value;
     localStorage.setItem(input.name, input.value);
-  });
-}
+    input.value = ''; // clear the form inputs
+   
+  }
+  submission.timestamp = Date.now();
+  submissions.push(submission);
+  localStorage.setItem('submissions', JSON.stringify(submissions));
 
-// Clear data from local storage after 24 hours of inactivity
-const CLEAR_TIMEOUT = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+  // Add success message to the DOM
+   // Show success message as an alert
+   const message = 'Your registration has been submitted. We will contact you within 24-48 hours.';
+   alert(message);
+
+   // Reset the form
+  form.reset();
+
+});
+
+
+
+// Clear old submissions from local storage after 48 hours
+const CLEAR_TIMEOUT = 48 * 60 * 60 * 1000; // 48 hours in milliseconds
 let lastInteractionTime = Date.now();
 
 function clearLocalStorage() {
-  localStorage.clear();
+  localStorage.removeItem('submissions');
+  for (const input of inputs) {
+    localStorage.removeItem(input.name);
+  }
 }
 
 function resetInteractionTime() {
@@ -114,11 +134,13 @@ function checkInteractionTimeout() {
 
 // Reset interaction time on any user input or window focus
 window.addEventListener('focus', resetInteractionTime);
+form.addEventListener('submit', resetInteractionTime);
 for (const input of inputs) {
   input.addEventListener('input', resetInteractionTime);
 }
 
 // Check for inactivity and clear local storage if needed
 setInterval(checkInteractionTimeout, 60 * 1000); // Check every minute
+
 
 
