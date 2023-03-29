@@ -78,7 +78,7 @@ const inputs = form.querySelectorAll('input, textarea');
 
 const refNumber = localStorage.getItem('refNumber');
 if (refNumber) {
-  const message = `Your previous reference number is ${refNumber}.`;
+  const message = `Your previous registration reference number is ${refNumber}.`;
   alert(message);
 }
 
@@ -94,12 +94,16 @@ form.addEventListener('submit', (event) => {
     input.value = ''; // clear input field
   }
   submission.timestamp = Date.now();
+
+  // Generate and add reference number to submission object
+  const refNumber = Math.floor(Math.random() * 1000000); // generate random 6-digit number
+  submission.referenceNumber = refNumber;
+
   submissions.push(submission);
   localStorage.setItem('submissions', JSON.stringify(submissions));
 
   // Generate and display application reference number
-  const refNumber = Math.floor(Math.random() * 1000000); // generate random 6-digit number
-  const message = `Your registration has been submitted. Your reference number is ${refNumber}. We will contact you within 24-48 hours.`;
+  const message = `Your registration has been submitted. Your registration reference number is ${refNumber}. We will contact you within 24-48 hours.`;
   alert(message);
 
   form.reset(); // clear the form
