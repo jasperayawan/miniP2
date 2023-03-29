@@ -85,30 +85,27 @@ for (const input of inputs) {
 }
 
 // Save data to local storage on form submission
-form.addEventListener('submit', () => {
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // prevent default form submission
+
   const submissions = JSON.parse(localStorage.getItem('submissions') || '[]');
   const submission = {};
   for (const input of inputs) {
     submission[input.name] = input.value;
     localStorage.setItem(input.name, input.value);
-    input.value = ''; // clear the form inputs
-   
+    input.value = ''; // clear input field
   }
   submission.timestamp = Date.now();
   submissions.push(submission);
   localStorage.setItem('submissions', JSON.stringify(submissions));
 
-  // Add success message to the DOM
-   // Show success message as an alert
-   const message = 'Your registration has been submitted. We will contact you within 24-48 hours.';
-   alert(message);
+  // Generate and display application reference number
+  const refNumber = Math.floor(Math.random() * 1000000); // generate random 6-digit number
+  const message = `Your registration has been submitted. Your reference number is ${refNumber}. We will contact you within 24-48 hours.`;
+  alert(message);
 
-   // Reset the form
-  form.reset();
-
+  form.reset(); // clear the form
 });
-
-
 
 // Clear old submissions from local storage after 48 hours
 const CLEAR_TIMEOUT = 48 * 60 * 60 * 1000; // 48 hours in milliseconds
