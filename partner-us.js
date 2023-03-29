@@ -93,8 +93,32 @@ for (const input of inputs) {
   });
 }
 
-// Clear data from local storage on form submit
-form.addEventListener('submit', () => {
+// Clear data from local storage after 24 hours of inactivity
+const CLEAR_TIMEOUT = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+let lastInteractionTime = Date.now();
+
+function clearLocalStorage() {
   localStorage.clear();
-});
+}
+
+function resetInteractionTime() {
+  lastInteractionTime = Date.now();
+}
+
+function checkInteractionTimeout() {
+  const elapsedTime = Date.now() - lastInteractionTime;
+  if (elapsedTime >= CLEAR_TIMEOUT) {
+    clearLocalStorage();
+  }
+}
+
+// Reset interaction time on any user input or window focus
+window.addEventListener('focus', resetInteractionTime);
+for (const input of inputs) {
+  input.addEventListener('input', resetInteractionTime);
+}
+
+// Check for inactivity and clear local storage if needed
+setInterval(checkInteractionTimeout, 60 * 1000); // Check every minute
+
 
