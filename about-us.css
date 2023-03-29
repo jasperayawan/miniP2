@@ -41,6 +41,9 @@ body {
   color: var(--text-dark-color);
   border-bottom: 1px solid var(--background-color);
 }
+.navbar-nav li a.active{
+  border-bottom: 1px solid var(--background-color);
+}
 .dropdown {
   position: relative;
   cursor: pointer;

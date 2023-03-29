@@ -40,6 +40,9 @@ body {
   color: var(--text-dark-color);
   border-bottom: 1px solid var(--background-color);
 }
+.navbar-nav li a.active{
+  border-bottom: 1px solid var(--background-color);
+}
 .dropdown {
   position: relative;
   cursor: pointer;
@@ -101,14 +104,22 @@ body {
   display: none;
   position: absolute;
   background: #fff;
-  top: 2.5rem;
+  top: 0;
   right: 0;
   padding: 1rem; 
-  width: 200px;
+  width: 0;
+  height: 100vh;
   justify-content: center;
-  
-}
 
+}
+.btn-close{
+  font-size: 14px;
+}
+.signLogin_container{
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
 
 
 .signLogin_container #signupButton {

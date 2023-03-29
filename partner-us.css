@@ -40,60 +40,9 @@ body {
   color: var(--text-dark-color);
   border-bottom: 1px solid var(--background-color);
 }
-.dropdown {
-  position: relative;
-  cursor: pointer;
+.navbar-nav li a.active{
+  border-bottom: 1px solid var(--background-color);
 }
-.dropdown > a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2px;
-  color: var(--text-color);
-}
-.dropdown a > p {
-  margin-left: 0.2rem;
-}
-.dropdown:hover .menu {
-  opacity: 1;
-  visibility: visible;
-  z-index: 10;
-}
-.menu > a {
-  font-size: 14px;
-  padding: 8px 20px;
-}
-.menu > a:hover {
-  background-color: rgb(222, 224, 224);
-}
-.menu {
-  position: absolute;
-  top: 40px;
-  right: -20px;
-  display: grid;
-  width: 180px;
-  padding: 8px 0;
-  background: #ffffff;
-  border-radius: 10px;
-  border: 1px solid #e1e1e1;
-  box-shadow: 0 40px 40px rgb(0 0 0 / 6%);
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.25s;
-}
-.menu::before {
-  content: "";
-  background: inherit;
-  border-top: 1px solid #e1e1e1;
-  border-right: 1px solid #e1e1e1;
-  position: absolute;
-  top: -7px;
-  right: 22px;
-  width: 12px;
-  height: 12px;
-  rotate: -45deg;
-}
-
 .profileIcon{
   border: none;
   background: none;

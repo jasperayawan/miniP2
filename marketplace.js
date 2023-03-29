@@ -336,4 +336,24 @@ function toggleBtn(){
   }
 }
 
+const cartIcon = document.getElementById('cart-icon')
 
+cartIcon.addEventListener('click', function(){
+  let cartcontainer = document.querySelector('.cart_container')
+
+  if(cartcontainer.style.display === 'block'){
+    cartcontainer.style.display = 'none';
+  } else {
+    cartcontainer.style.display = 'block'
+  }
+  closeContainercart()
+})
+
+function closeContainercart(){
+  const closeBtn = document.getElementById('btn_close')
+
+  closeBtn.addEventListener('click', () => {
+    let closeContainer = document.querySelector('.cart_container')
+    closeContainer.style.display = 'none'
+  })
+}
