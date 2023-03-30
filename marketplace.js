@@ -1,4 +1,5 @@
 
+
 // document.querySelector() method - para magselect ng HTML elements gamit yung class name nila
 
 const productsContainer = document.querySelector('.products');
@@ -24,8 +25,21 @@ if (localStorage.getItem('cartItems')) {
 
 
 // Add event listener for add to cart button, you can change the click and clickevent depende kung ano gusto mo
+
+const Email = localStorage.getItem("Email");
+const Password = localStorage.getItem('Password');
+// const addtocart = document.querySelectorAll('.add-to-cart')
+
+// addtocart.forEach((e) => {
+//   e.addEventListener('click', function(){
+    
+//   })
+// })
+
 productsContainer.addEventListener('click', (clickeventObject) => {
-  if (clickeventObject.target.classList.contains('add-to-cart')) {
+  if(Email == "" || Password == ""){
+    alert('login first')
+  }else if (clickeventObject.target.classList.contains('add-to-cart')) {
     const product = clickeventObject.target.closest('.product');
     const name = product.dataset.name;
     const price = Number(product.dataset.price);
@@ -54,6 +68,7 @@ function addItemToCart(name, price, quantity, code) {
   cartItems.push({ name, price, quantity, code });
        // show a success message
        alert("Product added to cart!");
+       
 
 }
 
@@ -82,14 +97,14 @@ function updateCart() {
       <td><input type="number" class="cart-item-quantity" min="0" value="${cartItems[i].quantity}" data-index="${i}"></td>
       <td class="product-price">₱${cartItems[i].price}</td>
       <td class="product-price">₱${cartItems[i].price * cartItems[i].quantity}</td>
-      <td><button class="remove-item" data-index="${i}">x</button></td>
+      <td><button class="remove-item" data-index="${i}">remove</button></td>
     `;
     table.appendChild(cartItem);
     totalQuantity += cartItems[i].quantity;
     totalPrice += cartItems[i].price * cartItems[i].quantity;
   }
   cartItemsContainer.appendChild(table);
-  totalPriceContainer.innerHTML = `Total Quantity: ${totalQuantity} | Grand Total: ₱${totalPrice.toFixed(2)}`;
+  totalPriceContainer.innerHTML = `<span class='total'>Total Quantity</span>: ${totalQuantity} <br> <span class='total'>Grand Total</span>: ₱${totalPrice.toFixed(2)}`;
 }
 
 //FUNCTION 3 Calculate the total quantity of all items in the cart
@@ -365,3 +380,24 @@ function closeContainercart(){
     closeContainer.style.display = 'none'
   })
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  

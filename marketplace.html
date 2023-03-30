@@ -384,12 +384,12 @@
   
 
     <!--PRODUCT LISTING-->
-    <div class="cart_container">
+    <div class="cart_container bg-light">
       <div class="slider_container">
       <div class="col cart">
         <div class="container">
           <button class="btn btn-close" id="btn_close"></button>
-          <h2>My Shopping Cart</h2> 
+          <h2 class="text-center">My Shopping Cart</h2> 
           <br />
           <hr />
           <div class="cart-items"></div>
@@ -450,7 +450,7 @@
     <footer class="py-5 bg-light">
       <div class="footer-container px-3">
         <div class="quick-links">
-          <h5 class="" style="font-weight: 500">Quick Links</h5>
+          <h5 class="fw-bold">Quick Links</h5>
           <ul class="d-block list-unstyled gap-4">
             <li class="nav-item mb-2">
               <a href="about-us.html" class="text-decoration-none text-dark"
@@ -484,7 +484,7 @@
           </ul>
         </div>
         <div class="social-media">
-          <h5 class="" style="font-weight: 500">Connect With Us</h5>
+          <h5 class="fw-bold">Connect With Us</h5>
 
           <ul class="list-unstyled d-flex gap-4 d-md-block d-md-block">
             <li class="mb-2">
@@ -538,7 +538,7 @@
           </ul>
         </div>
         <div class="supported-orgs">
-          <h5 class="" style="font-weight: 500">Supported By:</h5>
+          <h5 class="fw-bold">Supported By:</h5>
           <ul>
             <li class="mb-2"><a href="#" class="text-dark">LGU - Isabela Province</a></li>
             <li class="mb-2">
@@ -554,7 +554,7 @@
         </div>
 
         <div class="newsletter">
-          <h5 class="" style="font-weight: 500">Subscribe to our Newsletter</h5>
+          <h5 class="fw-bold">Subscribe to our Newsletter</h5>
           <p style="font-size: 14px">
             Stay up-to-date with our new featured products, upcoming events,
             seasonal specials, and promotions.
@@ -604,6 +604,36 @@
 
     <script src="marketplace.js"></script>
 
-   
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "120653074289644");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v16.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
   </body>
 </html>
