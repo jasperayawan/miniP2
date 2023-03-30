@@ -238,7 +238,6 @@ body {
 
 .quantity label {
   font-size: 0.9 rem;
-
   margin: 10px;
 }
 
@@ -246,18 +245,30 @@ body {
   width: 50px;
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #79db40;
   font-size: 0.9 rem;
 }
 
 .add-to-cart,
-.add-to-wishlist {
-  font-size: 13px;
+.checkout-button {
+  font-size: 14px;
   border: none;
   background: var(--background-color);
   padding: 0.5rem 0.8rem;
   border-radius: 5px;
   color: #fff;
+}
+
+.add-to-wishlist,
+.reset-cart,
+#reset-wishlist {
+  font-size: 14px;
+  border: none;
+  background: #fff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  color: green;
+  border: 1px solid #79db40;
 }
 
 /* Style for the shopping cart area */
@@ -294,20 +305,21 @@ tr {
 
 button {
   padding: 1% 3%;
-  color: white;
-  background: var(--background-color);
-  border: 1px solid #f8f8f8;
+  font-size: 13px;
+  color: green;
+  border: 1px solid #79db40;
+  border-radius: 5px;
 }
 
 td,
 th {
   padding: 10px;
   text-align: center;
+  font-family: "Open Sans", sans-serif;
 }
 
 th {
-  font-size: 13px;
-  font-weight: 450px;
+  font-size: 12px;
 }
 
 td {
@@ -333,18 +345,20 @@ td input {
 }
 
 .remove-item {
-  background-color: inherit;
+  padding: 2% 2%;
+  background: inherit;
   border: transparent;
-  color: #79db40;
-  font-size: 20px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  color: green;
+  font-size: 12px;
+  border: 1px solid #79db40;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
 }
 
 .cart li {
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 13px;
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ccc;
@@ -360,23 +374,23 @@ td input {
 .cart li .product-name {
   font-weight: bold;
   margin-right: 10px;
+  font-family: "Open Sans", sans-serif;
 }
 
 .cart li .quantity {
   font-weight: bold;
   margin-right: 10px;
+  font-family: "Open Sans", sans-serif;
 }
 
 .cart li .price {
   font-weight: bold;
 }
 
-.reset-cart,
-.checkout-button {
-  padding: 0.3rem 0.6rem;
-  color: white;
-  background-color: #5bbb1f;
-  border: 1px solid #79db40;
+.total-price {
+  font-weight: 550px;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
 }
 
 .modal {
@@ -395,13 +409,6 @@ td input {
   border: 1px solid #79db40;
   margin-right: 2% 10%;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7);
-}
-
-#reset-wishlist {
-  padding: 0.3rem 0.6rem;
-  color: white;
-  background-color: #5bbb1f;
-  border: 1px solid #79db40;
 }
 
 /* -----CALL TO ACTION---- */
