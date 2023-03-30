@@ -1,4 +1,5 @@
 
+
 // document.querySelector() method - para magselect ng HTML elements gamit yung class name nila
 
 const productsContainer = document.querySelector('.products');
@@ -24,8 +25,21 @@ if (localStorage.getItem('cartItems')) {
 
 
 // Add event listener for add to cart button, you can change the click and clickevent depende kung ano gusto mo
+
+const Email = localStorage.getItem("Email");
+const Password = localStorage.getItem('Password');
+// const addtocart = document.querySelectorAll('.add-to-cart')
+
+// addtocart.forEach((e) => {
+//   e.addEventListener('click', function(){
+    
+//   })
+// })
+
 productsContainer.addEventListener('click', (clickeventObject) => {
-  if (clickeventObject.target.classList.contains('add-to-cart')) {
+  if(Email == "" || Password == ""){
+    alert('login first')
+  }else if (clickeventObject.target.classList.contains('add-to-cart')) {
     const product = clickeventObject.target.closest('.product');
     const name = product.dataset.name;
     const price = Number(product.dataset.price);
@@ -37,9 +51,6 @@ productsContainer.addEventListener('click', (clickeventObject) => {
     saveCartItems();
    
   }
-
-  
-
 });
 
 
@@ -60,6 +71,7 @@ function addItemToCart(name, price, quantity, code) {
   cartItems.push({ name, price, quantity, code });
        // show a success message
        alert("Product added to cart!");
+       
 
 }
 
@@ -357,3 +369,24 @@ function closeContainercart(){
     closeContainer.style.display = 'none'
   })
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
