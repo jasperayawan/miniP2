@@ -30,22 +30,22 @@ body {
   top: 40%;
   left: 40%;
   background: #fff;
-  box-shadow: 0 0 20px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   padding: 1rem;
 }
-.messageAppear h5{
+.messageAppear h5 {
   color: #79db40;
   text-align: center;
 }
-.messageAppear button{
+.messageAppear button {
   background: #79db40;
   border-radius: 5px;
-  padding: .3rem .6rem;
+  padding: 0.3rem 0.6rem;
   color: #fff;
-  border: none; 
+  border: none;
 }
-.messageAppear .loginfirst_container{
+.messageAppear .loginfirst_container {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
@@ -163,7 +163,7 @@ body {
   background-image: url(assets/marketplace-bg-final.jpg);
   background-position: center;
   background-size: cover;
-  min-height: 50vh;
+  min-height: 40vh;
 }
 
 /* Style for the top area */

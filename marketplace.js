@@ -63,9 +63,7 @@ function goToMarketplace() {
  
 
 function btnLogout(){
-    
-  window.location.assign('login.html')
-  
+  window.location.assign('login.html') 
 }
 
 

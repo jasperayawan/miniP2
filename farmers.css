@@ -40,26 +40,24 @@ body {
   color: var(--text-dark-color);
   border-bottom: 1px solid var(--background-color);
 }
-.navbar-nav li a.active{
+.navbar-nav li a.active {
   border-bottom: 1px solid var(--background-color);
 }
 
-.profileIcon{
+.profileIcon {
   border: none;
   background: none;
 }
-.profile_List{
+.profile_List {
   display: none;
   position: absolute;
   background: #fff;
   top: 2.5rem;
   right: 0;
-  padding: 1rem; 
+  padding: 1rem;
   width: 200px;
   justify-content: center;
-  
 }
-
 
 .signLogin_container #signupButton {
   border: 1px solid var(--background-color);
@@ -80,7 +78,7 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 50vh;
+  min-height: 40vh;
 }
 
 /*----------------------MAIN CONTENT-------------------*/
