@@ -25,6 +25,31 @@ body {
 .header{
   z-index: 2;
 }
+.messageAppear {
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  background: #fff;
+  box-shadow: 0 0 20px 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  padding: 1rem;
+}
+.messageAppear h5{
+  color: #79db40;
+  text-align: center;
+}
+.messageAppear button{
+  background: #79db40;
+  border-radius: 5px;
+  padding: .3rem .6rem;
+  color: #fff;
+  border: none; 
+}
+.messageAppear .loginfirst_container{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
 #logo {
   color: var(--text-dark-color);
   font-size: 22px;
@@ -180,14 +205,18 @@ body {
 
 #cart-count,
 #wishlist-count {
-  display: inline-block;
+  display: flex;
   width: 1.5em;
   height: 1.5em;
   text-align: center;
-  color: green;
+  color: #fff;
+  background-color: #000;
+  border-radius: 50%;
   position: absolute;
   top: -10px;
-  right: -12px;
+  right: -15px;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Style for the marketplace area */

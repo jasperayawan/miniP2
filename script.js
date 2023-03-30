@@ -14,6 +14,12 @@ submitButton.addEventListener('click', function(e){
     localStorage.setItem('Password', pass)
     localStorage.setItem('CPassword', cpass)
 
+    sessionStorage.setItem('FirstName', fname)
+    sessionStorage.setItem('LastName', lname)
+    sessionStorage.setItem('Email', email)
+    sessionStorage.setItem('Password', pass)
+    sessionStorage.setItem('CPassword', cpass)
+
     if(fname == "" && lname == "" && email == "" && pass == "" && cpass == ""){
         swal("Opps..!", "Input field must be fill", "error")
     } else {
@@ -40,11 +46,13 @@ login.addEventListener('click', function(e){
 
     const Email = localStorage.getItem("Email");
     const Password = localStorage.getItem('Password');
+    const email = sessionStorage.getItem("Email")
+    const password = sessionStorage.getItem("Password")
 
     if(emailAdress == "" && passWord == ""){
         swal("I am sorry!", "Input field has no value", "error")
     } else {
-        if(emailAdress == Email && passWord == Password){
+        if(emailAdress == Email && passWord == Password && emailAdress == email && passWord == password){
             window.location.assign("index.html");
             swal("Good job!", "Login Successful!", "success")
         } else{
@@ -53,24 +61,8 @@ login.addEventListener('click', function(e){
     }
 })
 
-function goToPage(url) {
-    window.location.href = url;
-  }
 
 
-//profile dropdown
-
-// const profileHeader = document.getElementById('profile')
-
-// profileHeader.addEventListener('click', function() {
-//     let displayHandling = document.getElementById('signLogin')
-    
-//     if(displayHandling.style.display === 'none'){
-//         displayHandling.style.display = 'block'
-//     } else{
-//         displayHandling.style.display = 'none'
-//     }
-// })
 
 function toggleBtn(){
     let displayHandling = document.getElementById('profile_List')
@@ -92,6 +84,8 @@ function closeButton(){
     btnclose.style.display = 'none'
     })
 }
+
+
 
 
 

@@ -25,34 +25,48 @@ if (localStorage.getItem('cartItems')) {
 
 
 // Add event listener for add to cart button, you can change the click and clickevent depende kung ano gusto mo
+const headerNav = document.querySelector('body');
 
-const Email = localStorage.getItem("Email");
-const Password = localStorage.getItem('Password');
-// const addtocart = document.querySelectorAll('.add-to-cart')
+const Email = sessionStorage.getItem("Email");
+const Password = sessionStorage.getItem('Password');
 
-// addtocart.forEach((e) => {
-//   e.addEventListener('click', function(){
-    
-//   })
-// })
 
 productsContainer.addEventListener('click', (clickeventObject) => {
-  if(Email == "" || Password == ""){
-    alert('login first')
+  if(Email != "" && Password != ""){
+    // alert('login first', )
+    // window.location.assign('login.html')
+    // goToMarketplace()
+    let pop_up_message = document.createElement('div')
+    pop_up_message.classList.add('messageAppear');
+    headerNav.appendChild(pop_up_message);
+
+    pop_up_message.innerHTML += `<h5>Oops!, you're not login!</h5>
+      <div class="loginfirst_container"> <button onclick ="goToMarketplace()">Login now!</button> </div>
+    `
   }else if (clickeventObject.target.classList.contains('add-to-cart')) {
-    const product = clickeventObject.target.closest('.product');
-    const name = product.dataset.name;
-    const price = Number(product.dataset.price);
-    const code = product.dataset.code;
-    const quantity = Number(product.querySelector('input[type="number"]').value);
-    addItemToCart(name, price, quantity, code);
-    updateCart();
-    updateCartCount();
-    saveCartItems();
-   
-  }
+      const product = clickeventObject.target.closest('.product');
+      const name = product.dataset.name;
+      const price = Number(product.dataset.price);
+      const code = product.dataset.code;
+      const quantity = Number(product.querySelector('input[type="number"]').value);
+      addItemToCart(name, price, quantity, code);
+      updateCart();
+      updateCartCount();
+      saveCartItems();
+    }
+  
 });
 
+function goToMarketplace() {
+  window.location.assign('login.html');
+}
+ 
+
+function btnLogout(){
+    
+  window.location.assign('login.html')
+  
+}
 
 
 
@@ -297,10 +311,6 @@ resetBtn.addEventListener("click", resetWishlist);
 
 
 
-
-
-
-const headerNav = document.querySelector('.header');
 const popUpMessage = document.createElement('div');
 popUpMessage.classList.add('pop-up-message');
 popUpMessage.innerHTML = `<div class="div-child"> 
