@@ -88,7 +88,7 @@ function updateCart() {
       <td><input type="number" class="cart-item-quantity" min="0" value="${cartItems[i].quantity}" data-index="${i}"></td>
       <td class="product-price">₱${cartItems[i].price}</td>
       <td class="product-price">₱${cartItems[i].price * cartItems[i].quantity}</td>
-      <td><button class="remove-item" data-index="${i}">x</button></td>
+      <td><button class="remove-item" data-index="${i}">remove</button></td>
     `;
     table.appendChild(cartItem);
     totalQuantity += cartItems[i].quantity;
