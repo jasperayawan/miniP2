@@ -95,7 +95,7 @@ function updateCart() {
     totalPrice += cartItems[i].price * cartItems[i].quantity;
   }
   cartItemsContainer.appendChild(table);
-  totalPriceContainer.innerHTML = `Total Quantity: ${totalQuantity} | Grand Total: ₱${totalPrice.toFixed(2)}`;
+  totalPriceContainer.innerHTML = `<span class='total'>Total Quantity</span>: ${totalQuantity} <br> <span class='total'>Grand Total</span>: ₱${totalPrice.toFixed(2)}`;
 }
 
 //FUNCTION 3 Calculate the total quantity of all items in the cart
