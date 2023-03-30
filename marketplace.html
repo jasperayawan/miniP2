@@ -105,7 +105,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
               <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
             </svg>
-            <span id="wishlist-count" class="badge">0</span>
+            <span id="wishlist-count" class="badge"></span>
           </div>
         </div>
         <!------------------sign up area------------->
@@ -203,6 +203,8 @@
         Shop Local, Eat Fresh with our Harvest Hub!
       </h4>
     </div>
+
+
     <section class="row d-flex flex-column flex-md-row marketplace-area my-5 px-3">
       <div class="col-2 container search-area">
         <div class="container my-4">
@@ -251,10 +253,10 @@
                 <label for="product1-quantity">Quantity:</label>
                 <input type="number" id="product1-quantity" min="1" value="1" />
               </div>
-              <div class="CW_btn_container">
+              
                 <button class="add-to-cart">Add to Cart</button>
                 <button class="add-to-wishlist">Add to Wishlist</button>
-              </div>
+              
             </div>
           </div>
 
@@ -276,10 +278,10 @@
                 <label for="product2-quantity">Quantity:</label>
                 <input type="number" id="product2-quantity" min="1" value="1" />
               </div>
-              <div class="CW_btn_container">
+              
                 <button class="add-to-cart">Add to Cart</button>
                 <button class="add-to-wishlist">Add to Wishlist</button>
-              </div>
+              
             </div>
           </div>
 
@@ -301,10 +303,10 @@
                 <label for="product3-quantity">Quantity:</label>
                 <input type="number" id="product3-quantity" min="1" value="1" />
               </div>
-              <div class="CW_btn_container">
+            
                 <button class="add-to-cart">Add to Cart</button>
                 <button class="add-to-wishlist">Add to Wishlist</button>
-              </div>
+              
             </div>
           </div>
 
@@ -324,10 +326,10 @@
                 <label for="product3-quantity">Quantity:</label>
                 <input type="number" id="product3-quantity" min="1" value="1" />
               </div>
-              <div class="CW_btn_container">
+              
                 <button class="add-to-cart">Add to Cart</button>
                 <button class="add-to-wishlist">Add to Wishlist</button>
-              </div>
+            
             </div>
           </div>
 
@@ -347,10 +349,10 @@
                 <label for="product3-quantity">Quantity:</label>
                 <input type="number" id="product3-quantity" min="1" value="1" />
               </div>
-              <div class="CW_btn_container">
+            
                 <button class="add-to-cart">Add to Cart</button>
                 <button class="add-to-wishlist">Add to Wishlist</button>
-              </div>
+              
             </div>
           </div>
 
@@ -370,16 +372,16 @@
                 <label for="product3-quantity">Quantity:</label>
                 <input type="number" id="product3-quantity" min="1" value="1" />
               </div>
-              <div class="CW_btn_container">
+             
                 <button class="add-to-cart">Add to Cart</button>
                 <button class="add-to-wishlist">Add to Wishlist</button>
-              </div>
+              
             </div>
           </div>
         </div>
       </div>
-
     </section>
+  
 
     <!--PRODUCT LISTING-->
     <div class="cart_container">
@@ -401,11 +403,14 @@
         <button class="reset-cart text-center">Reset Cart</button>
         <button class="checkout-button text-center">Checkout</button>
 
-        <div class="container my-5 wishlist-area">
+        <div class="container my-5 wishlist-container">
           <h2 class="my-3">My Wishlist</h2>
           <button id="reset-wishlist">Reset Wishlist</button>
           <br />
-          <ul id="wishlist-items"></ul>
+          <ul id="wishlist-items">
+           
+          </ul>
+          
         </div>
       </div>
 
@@ -431,6 +436,7 @@
       </div>
     </div>
     </div>
+
 
     <hr />
     <div class="container my-5 calltoaction">
