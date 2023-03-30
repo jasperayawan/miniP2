@@ -101,8 +101,8 @@ function updateCart() {
       <th>Code</th>
       <th>Quantity</th>
       <th>Price/Qty</th>
-      <th>Total Price</th>
-      <th>Remove</th>
+      <th>Total</th>
+      <th></th>
     </tr>
   `;
 
@@ -114,7 +114,7 @@ function updateCart() {
       <td><input type="number" class="cart-item-quantity" min="0" value="${cartItems[i].quantity}" data-index="${i}"></td>
       <td class="product-price">₱${cartItems[i].price}</td>
       <td class="product-price">₱${cartItems[i].price * cartItems[i].quantity}</td>
-      <td><button class="remove-item" data-index="${i}">remove</button></td>
+      <td><button class="remove-item" data-index="${i}">Remove</button></td>
     `;
     table.appendChild(cartItem);
     totalQuantity += cartItems[i].quantity;
@@ -157,26 +157,36 @@ function saveCartItems() {
 // Add event listener for remove item button
 cartItemsContainer.addEventListener('click', (removeitemObject) => {
   if (removeitemObject.target.classList.contains('remove-item')) {
-    const index = removeitemObject.target.dataset.index;
-    cartItems.splice(index, 1);
-  
-    updateCart();
-    updateCartCount();
-    saveCartItems(); 
+    if (confirm("Are you sure you want to remove this item from your cart?")) {
+      const index = removeitemObject.target.dataset.index;
+      cartItems.splice(index, 1);
+      updateCart();
+      updateCartCount();
+      saveCartItems();
+    }
   }
 });
 
 
-resetButton.addEventListener('click', () => {
-  // Clear the cart items array and update the cart
-  cartItems = [];
-  updateCart();
-  updateCartCount();
+// Select the button that triggers cart clearing
+const clearCartButton = document.querySelector('.reset-cart');
 
-  // Clear the local storage
-  localStorage.removeItem('cartItems');
+// Add an event listener to the button
+clearCartButton.addEventListener('click', function() {
+
+  // Ask for confirmation before clearing the cart
+  const confirmClear = confirm('Are you sure you want to remove ALL ITEMS on your cart?');
+
+  if (confirmClear) {
+    // Clear the cart items array and update the cart
+    cartItems = [];
+    updateCart();
+    updateCartCount();
+
+    // Clear the local storage
+    localStorage.removeItem('cartItems');
+  }
 });
-
 
 
 // Checkout button
@@ -237,8 +247,9 @@ confirmButton.addEventListener('click', () => {
   // Hide the modal
   modal.style.display = 'none';
 
-  
 });
+
+
 
 
 // Wishlist (Add sa counter and update if may naremove)
@@ -249,10 +260,9 @@ wishlistBtns.forEach((btn) => {
     const product = btn.parentElement.parentElement.dataset;
     const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
     wishlist.push(product);
-    displayWishlistItems();
-    updateWishlistCount();
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
-    
+    updateWishlistCount();
+    displayWishlistItems();
   });
 });
 
@@ -291,19 +301,22 @@ window.addEventListener("load", () => {
 });
 
 
-// Function for the Reset Wishlist
-
 function resetWishlist() {
-  // Clear the localStorage
-  localStorage.removeItem("wishlist");
+  // Display a confirmation dialog box
+  const confirmed = confirm("Are you sure you want to reset your wishlist?");
 
-  // Reset the count in the header
-  const wishlistCount = document.getElementById("wishlist-count");
-  wishlistCount.textContent = "0";
+  if (confirmed) {
+    // Clear the localStorage
+    localStorage.removeItem("wishlist");
 
-  // Remove all items from the displayed list
-  const wishlistItems = document.getElementById("wishlist-items");
-  wishlistItems.innerHTML = "";
+    // Reset the count in the header
+    const wishlistCount = document.getElementById("wishlist-count");
+    wishlistCount.textContent = "0";
+
+    // Remove all items from the displayed list
+    const wishlistItems = document.getElementById("wishlist-items");
+    wishlistItems.innerHTML = "";
+  }
 }
 
 const resetBtn = document.getElementById("reset-wishlist");
