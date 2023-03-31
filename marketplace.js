@@ -449,30 +449,6 @@ function closeContainercart(){
 
 
 
-const paymentForm = document.querySelector('#payment-form');
-
-paymentForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  // Validate the payment details
-  const cardNumber = document.querySelector('#card-number').value;
-  const expiryDate = document.querySelector('#expiry-date').value;
-  const cvv = document.querySelector('#cvv').value;
-
-  // Add your payment validation logic here
-  // ...
-
-  // If payment is valid, confirm the order
-  alert('Your payment has been processed. Thank you for your order!');
-  // Clear the cart items array and update the cart
-  cartItems = [];
-  updateCart();
-  updateCartCount();
-  // Clear the local storage
-  localStorage.removeItem('cartItems');
-  // Hide the payment form
-  paymentForm.style.display = 'none';
-});
 
 
 
