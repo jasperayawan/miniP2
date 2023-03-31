@@ -117,9 +117,9 @@ body {
 .map-container {
   text-align: centers;
   position: relative;
-  border: solid green;
+  border: 1px solid green;
   overflow: hidden;
-  padding-bottom: 20%; /* NOTE: Once, map is already available use 56.25% for 16:9 aspect ratio for a responsive map */
+  padding-bottom: 56.25%; /* NOTE: Once, map is already available use 56.25% for 16:9 aspect ratio for a responsive map */
 }
 
 .map-container iframe {

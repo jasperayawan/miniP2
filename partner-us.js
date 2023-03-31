@@ -76,11 +76,11 @@ function toggleBtn(){
 const form = document.querySelector('form[name="submit-to-google-sheet"]');
 const inputs = form.querySelectorAll('input, textarea');
 
-const refNumber = localStorage.getItem('refNumber');
-if (refNumber) {
-  const message = `Your previous registration reference number is ${refNumber}.`;
-  alert(message);
-}
+//const refNumber = localStorage.getItem('refNumber');
+//if (refNumber) {
+ // const message = `Your previous registration reference number is ${refNumber}.`;
+ // alert(message);
+// }
 
 // Save data to local storage on form submission
 form.addEventListener('submit', (event) => {
