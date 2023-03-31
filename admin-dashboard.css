@@ -209,7 +209,9 @@ body {
     justify-content: space-between;
     align-items: flex-start;
 }
-
+.cardHeader h2{
+    font-size: 25px;
+}
 .cardHeader .btn{
     padding: .2rem .6rem;
     background: var(--background-color);
