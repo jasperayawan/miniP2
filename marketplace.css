@@ -310,25 +310,18 @@ body {
 }
 
 .product-info {
-  padding: 0.8rem;
+  padding: 0.9rem;
+  text-align: right;
+  line-height: 0.9;
 }
 
 .product h3 {
-  font-size: 1rem;
-}
-
-.product p.price {
-  font-size: 15px;
-  
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .quantity {
-  margin: 10px;
-}
-
-.quantity label {
-  font-size: 0.9 rem;
-  margin: 10px;
+  margin-bottom: 10px;
 }
 
 .quantity input[type="number"] {
@@ -336,12 +329,12 @@ body {
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #79db40;
-  font-size: 0.9 rem;
+  font-size: 1 rem;
 }
 
 .add-to-cart,
 .checkout-button {
-  font-size: 14px;
+  font-size: 0.9rem;
   border: none;
   background: var(--background-color);
   padding: 0.5rem 0.8rem;
@@ -352,7 +345,7 @@ body {
 .add-to-wishlist,
 .reset-cart,
 #reset-wishlist {
-  font-size: 14px;
+  font-size: 0.9rem;
   border: none;
   background: #fff;
   padding: 0.5rem 0.8rem;
@@ -391,14 +384,6 @@ tr {
   padding: 10px;
   border-collapse: separate;
   border-spacing: 0px 10px;
-}
-
-button {
-  padding: 1% 3%;
-  font-size: 13px;
-  color: green;
-  border: 1px solid #79db40;
-  border-radius: 5px;
 }
 
 td,
@@ -442,7 +427,6 @@ td input {
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 3%;
-  font-family: "Open Sans", sans-serif;
 }
 
 .cart li {
@@ -532,8 +516,8 @@ td input {
 
 /* Style for button container */
 #wishlist-items .btn-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+
   align-items: center;
 }
 
@@ -676,39 +660,4 @@ footer {
   grid-template-columns: repeat(3, 300px);
   justify-content: center;
   background: rgba(201, 226, 101, 0.2);
-}
-
-/*----------------------MOdal for the Wishlist container--------------------*/
-.modal-wishlist {
-  display: none;
-
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-}
-
-.wishlist-content {
-  background-color: #fefefe;
-  margin: 5% auto;
-  padding: 20px;
-
-  width: 80%;
-  max-width: 600px;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
 }
