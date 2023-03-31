@@ -41,7 +41,7 @@ body {
   color: var(--text-dark-color);
   border-bottom: 1px solid var(--background-color);
 }
-.navbar-nav li a.active{
+.navbar-nav li a.active {
   border-bottom: 1px solid var(--background-color);
 }
 .dropdown {
@@ -97,20 +97,19 @@ body {
   height: 12px;
   rotate: -45deg;
 }
-.profileIcon{
+.profileIcon {
   border: none;
   background: none;
 }
-.profile_List{
+.profile_List {
   display: none;
   position: absolute;
   background: #fff;
   top: 2.5rem;
   right: 0;
-  padding: 1rem; 
+  padding: 1rem;
   width: 200px;
   justify-content: center;
-  
 }
 
 .signLogin_container #signupButton {
@@ -131,7 +130,7 @@ body {
   background-image: url(assets/mp-bg.jpg);
   background-position: center;
   background-size: cover;
-  min-height: 50vh;
+  min-height: 40vh;
 }
 .MS_Container {
   padding: 8rem 0;
@@ -257,23 +256,23 @@ body {
 
 /*----------------------The team-------------------------*/
 
-.title-team{
+.title-team {
   place-items: center;
 }
-.leaderLeft{
+.leaderLeft {
   width: 200px;
   height: 200px;
 }
-.co_workers{
+.co_workers {
   width: 150px;
   height: 150px;
 }
-.co_workers img{
+.co_workers img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
-.name_of_team{
+.name_of_team {
   font-weight: bold;
   color: #5bbb1f;
 }
@@ -414,7 +413,7 @@ footer {
   .right_container_values {
     min-height: 90vh;
   }
-  .leaderLeft{
+  .leaderLeft {
     width: 135px;
     height: 135px;
   }

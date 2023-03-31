@@ -30,22 +30,22 @@ body {
   top: 40%;
   left: 40%;
   background: #fff;
-  box-shadow: 0 0 20px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   padding: 1rem;
 }
-.messageAppear h5{
+.messageAppear h5 {
   color: #79db40;
   text-align: center;
 }
-.messageAppear button{
+.messageAppear button {
   background: #79db40;
   border-radius: 5px;
-  padding: .3rem .6rem;
+  padding: 0.3rem 0.6rem;
   color: #fff;
-  border: none; 
+  border: none;
 }
-.messageAppear .loginfirst_container{
+.messageAppear .loginfirst_container {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
@@ -163,7 +163,7 @@ body {
   background-image: url(assets/marketplace-bg-final.jpg);
   background-position: center;
   background-size: cover;
-  min-height: 50vh;
+  min-height: 40vh;
 }
 
 /* Style for the top area */
@@ -180,13 +180,73 @@ body {
   padding: 1rem 0.5rem;
 }
 
-.search_code {
+.search-area {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-area h5 {
+  font-size: 1.2rem;
+  font-weight: 500px;
+  margin-bottom: 10px;
+}
+
+.search-area hr {
+  margin-top: 0;
+  margin-bottom: 20px;
   border: none;
+  border-top: 1px solid green;
+}
+
+.search-area h6 {
+  font-size: 1rem;
+
+  margin-bottom: 10px;
+}
+
+.search-area form {
+  margin-bottom: 20px;
+}
+
+.search-area input[type="number"] {
+  border-radius: 5px 0 0 5px;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.search-area button[type="submit"] {
+  border-radius: 0 5px 5px 0;
+  border: none;
+  padding: 10px;
   background: var(--background-color);
   color: #fff;
-  padding: 0.3rem 0.8rem;
-  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
 }
+
+.search-area button[type="submit"]:hover {
+  background: var(--background-color);
+}
+
+.search-area ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search-area li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.search-area li:hover {
+  color: green;
+}
+
 #cart-icon,
 #wishlist-icon {
   display: flex;
@@ -375,13 +435,13 @@ td input {
 }
 
 .remove-item {
-  padding: 2% 2%;
-  background: inherit;
-  border: transparent;
-  color: green;
-  font-size: 12px;
-  border: 1px solid #79db40;
+  background-color: #c51c2d;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
   border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 3%;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -391,7 +451,7 @@ td input {
   font-size: 13px;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 0.5px solid green;
 }
 
 .cart li img {
@@ -439,6 +499,42 @@ td input {
   border: 1px solid #79db40;
   margin-right: 2% 10%;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7);
+}
+
+/* Style for wishlist items */
+#wishlist-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Style for remove button */
+#wishlist-items .remove-btn {
+  background-color: #c51c2d;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 3%;
+}
+
+/* Style for add to cart button */
+#wishlist-items .cart-btn {
+  background: var(--background-color);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style for button container */
+#wishlist-items .btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* -----CALL TO ACTION---- */
@@ -568,7 +664,6 @@ footer {
 }
 
 /* Give more space to newsletter section */
-/* Give more space to newsletter section */
 .newsletter {
   flex: 2;
 }
@@ -581,4 +676,39 @@ footer {
   grid-template-columns: repeat(3, 300px);
   justify-content: center;
   background: rgba(201, 226, 101, 0.2);
+}
+
+/*----------------------MOdal for the Wishlist container--------------------*/
+.modal-wishlist {
+  display: none;
+
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.wishlist-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+
+  width: 80%;
+  max-width: 600px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
