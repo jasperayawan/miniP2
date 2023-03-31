@@ -296,6 +296,7 @@ body {
 .product {
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
   position: relative;
+  border-radius: 8px;
 }
 .product .imageContainer {
   width: 100%;
@@ -305,6 +306,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 .product-info {
@@ -313,12 +315,11 @@ body {
 
 .product h3 {
   font-size: 1rem;
-  margin: 10px;
 }
 
 .product p.price {
-  font-size: 0.8rem;
-  margin: 10px;
+  font-size: 15px;
+  
 }
 
 .quantity {
