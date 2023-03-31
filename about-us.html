@@ -613,8 +613,17 @@
       </div>
     </section>
 
-    <script src="script.js"></script>
     <script>
+      function toggleBtn() {
+        let displayHandling = document.getElementById("profile_List");
+
+        if (displayHandling.style.display === "flex") {
+          displayHandling.style.display = "none";
+        } else {
+          displayHandling.style.display = "flex";
+        }
+      }
+
       function goToPage(url) {
         window.location.href = url;
       }
