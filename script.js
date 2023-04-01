@@ -1,3 +1,30 @@
+
+// Set the interval for the carousel to slide automatically
+var interval = 5000; // in milliseconds
+
+// Get the carousel element
+var carousel = document.querySelector('#myCarousel');
+
+// Get the carousel items
+var items = carousel.querySelectorAll('.carousel-item');
+
+// Set the current slide to the first item
+var currentSlide = 0;
+
+// Start the carousel
+var slideInterval = setInterval(nextSlide, interval);
+
+// Function to move to the next slide
+function nextSlide() {
+  // Hide the current slide
+  items[currentSlide].classList.remove('active');
+  // Move to the next slide
+  currentSlide = (currentSlide + 1) % items.length;
+  // Show the next slide
+  items[currentSlide].classList.add('active');
+}
+
+
 const submitButton = document.querySelector('.button')
 
 submitButton.addEventListener('click', function(e){
