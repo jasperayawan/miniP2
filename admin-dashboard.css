@@ -27,7 +27,18 @@ body {
     background: var(--background-color);
     border-left: 10px solid var(--background-color);
     transition: 0.5s;
-    overflow: hidden;
+    overflow: auto;
+    min-height: 100vh;
+  }
+  .navigation_container::-webkit-scrollbar{
+    width: 8px;
+  }
+  .navigation_container::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: #e9b10a;
+  }
+  .navigation_container::-webkit-scrollbar-thumb:hover{
+    background: #b38e22;
   }
 .navigation_container.active {
     width: 80px;
@@ -70,6 +81,27 @@ body {
     height: 60px;
     line-height: 60px;
     white-space: nowrap;
+}
+.sub-menu{
+    overflow: hidden;
+    transition: 0.5s;
+    max-height: 0;
+}
+.sub-menu li{
+    line-height: 3rem;
+    margin: 4px auto;
+    padding: 5px 10px;
+}
+.sub-menu li a{
+    position: initial;
+    height: 100%;
+    display: initial;
+}
+.nav-item.actives .sub-menu{
+    max-height: 300px;
+}
+.nav-item.actives .greater{
+    transform: rotate(90deg);
 }
 .main{
     width: calc(100% - 300px);

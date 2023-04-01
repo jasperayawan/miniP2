@@ -17,3 +17,17 @@ toggle.onclick = function(){
     navigation.classList.toggle("active")
     main.classList.toggle("active")
 }
+
+const subMenu = document.querySelector('.sub-menu')
+const navItem = document.querySelectorAll('.nav-item')
+
+for(let i of navItem){
+    i.onclick = activeLi;
+}
+
+function activeLi(){
+    const list = Array.from(navItem);
+
+    list.forEach(e => e.classList.remove('actives'));
+    this.classList.add('actives')
+}
