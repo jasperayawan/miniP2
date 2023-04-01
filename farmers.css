@@ -83,41 +83,12 @@ body {
 
 /*----------------------MAIN CONTENT-------------------*/
 
-/* Search section styles */
-.search-farmer:nth-of-type(1) {
-  background-color: #f5f5f5;
-  text-align: right;
-  padding: 1% 5%;
-}
-
-.search-farmer:nth-of-type(1) label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.search-farmer:nth-of-type(1) input[type="text"] {
-  width: 30%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.search-farmer:nth-of-type(1) button[type="submit"] {
-  background-color: #2e8b57;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: var(--background-color);
-}
-
 /* Map styles */
 .map-container {
+  padding: 2% 2%;
   text-align: centers;
   position: relative;
-  border: 1px solid green;
+
   overflow: hidden;
   padding-bottom: 56.25%; /* NOTE: Once, map is already available use 56.25% for 16:9 aspect ratio for a responsive map */
 }
