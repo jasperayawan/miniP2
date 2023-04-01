@@ -378,6 +378,10 @@ body {
   color: #fff;
 }
 
+.carousel-item {
+  transition: transform 1s ease-in-out;
+}
+
 .carousel-item img {
   height: 420px;
   width: 400px;
