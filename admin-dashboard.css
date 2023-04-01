@@ -71,6 +71,27 @@ body {
     line-height: 60px;
     white-space: nowrap;
 }
+.sub-menu{
+    overflow: hidden;
+    transition: 0.5s;
+    max-height: 0;
+}
+.sub-menu li{
+    line-height: 3rem;
+    margin: 4px auto;
+    padding: 5px 10px;
+}
+.sub-menu li a{
+    position: initial;
+    height: 100%;
+    display: initial;
+}
+.nav-item.actives .sub-menu{
+    max-height: 300px;
+}
+.nav-item.actives .greater{
+    transform: rotate(90deg);
+}
 .main{
     width: calc(100% - 300px);
     left: 300px;
