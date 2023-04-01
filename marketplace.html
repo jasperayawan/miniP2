@@ -148,13 +148,14 @@
         <h1
           class="text-white"
           style="
-            background-color: rgba(56, 46, 46, 0.4);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-
-            padding: 1% 3%;
-            text-align: center;
-          "
+          background-color: rgba(85, 79, 79, 0.315);
+          -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+          text-align: center;
+          padding: 1% 3%;
+          opacity: 0.9;
+          border-radius: 10px;
+        "
         >
           Marketplace
           <br />
@@ -207,21 +208,23 @@
       </h4>
     </div>
 
+    <section class="my-3">
+      <form class="search-farmer">
+        <h5>Find a Local Farmer Nearby</h5>
+        <input
+          type="text"
+          id="location"
+          name="location"
+          placeholder="Enter Your Zipcode"
+        />
+        <button type="submit">Search</button>
+      
+      </form>
+    </section> 
 
     <section class="row d-flex flex-column flex-md-row marketplace-area my-5 px-3">
       <div class="col-2 container search-area">
-        <div class="container my-4">
-          <h5>Shop by Location</h5>
-          <hr />
-          <h6>Find a Local Farmer Near You</h6>
-          <form action="/search" method="get" class="">
-            <div class="input-group w-100">
-            <input
-              type="number" name="query" placeholder="Enter your Zip Code" class="form-control"/>
-            <button type="submit" class="search_code">Search</button>
-          </div>
-          </form>
-        </div>
+  
         <div class="container my-5">
           <h5>Shop by Category</h5>
           <hr />
@@ -246,6 +249,7 @@
             data-name="Durian"
             data-code="F216Z"
             data-price="350"
+            data-category="Fruits"
           >
             <div class="imageContainer">
                 <img src="assets/durian-fruit.jpg" alt="Product 1" />

@@ -180,55 +180,34 @@ body {
   padding: 1rem 0.5rem;
 }
 
-.search-area {
-  background-color: #f8f9fa;
-  padding: 20px;
+/* Search section styles */
+.search-farmer:nth-of-type(1) {
+  background-color: #f5f5f5;
+  text-align: right;
+  padding: 1% 5%;
+}
+
+.search-farmer:nth-of-type(1) label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.search-farmer:nth-of-type(1) input[type="text"] {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.search-area h5 {
-  font-size: 1.2rem;
-  font-weight: 500px;
   margin-bottom: 10px;
 }
 
-.search-area hr {
-  margin-top: 0;
-  margin-bottom: 20px;
-  border: none;
-  border-top: 1px solid green;
-}
-
-.search-area h6 {
-  font-size: 1rem;
-
-  margin-bottom: 10px;
-}
-
-.search-area form {
-  margin-bottom: 20px;
-}
-
-.search-area input[type="number"] {
-  border-radius: 5px 0 0 5px;
-  border: none;
-  padding: 10px;
-  font-size: 1rem;
-}
-
-.search-area button[type="submit"] {
-  border-radius: 0 5px 5px 0;
-  border: none;
-  padding: 10px;
-  background: var(--background-color);
+.search-farmer:nth-of-type(1) button[type="submit"] {
+  background-color: #2e8b57;
   color: #fff;
-  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-}
-
-.search-area button[type="submit"]:hover {
-  background: var(--background-color);
+  background-color: var(--background-color);
 }
 
 .search-area ul {

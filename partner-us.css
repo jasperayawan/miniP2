@@ -86,9 +86,11 @@ body {
 }
 
 /* start: Slider */
+
+/* start: Slider */
 .wrapper {
   position: relative;
-  max-width: 56%;
+  max-width: 940px;
   width: 100%;
 }
 .arrow {
@@ -101,15 +103,14 @@ body {
   align-items: center;
   justify-content: center;
   color: #fff;
-  background: var(--background-color);
+  background-color: rgba(0, 0, 0, .5);
   font-size: 20px;
   cursor: pointer;
   border: none;
   outline: none;
-  font-size: 24px;
 }
 .arrow:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, .7);
 }
 .arrow.prev {
   left: 0;
@@ -120,12 +121,12 @@ body {
 .card-wrapper {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 320px;
+  grid-auto-columns: calc((100% / 2) - 12px);
   overflow-x: auto;
   padding: 24px;
   gap: 24px;
   cursor: grab;
-  scroll-snap-type: x;
+  scroll-snap-type: x mandatory;
   scroll-padding-inline: 24px;
   scroll-behavior: smooth;
   scrollbar-width: none;
@@ -139,17 +140,22 @@ body {
   scroll-snap-type: none;
   scroll-behavior: auto;
 }
+.card-wrapper.no-smooth {
+  scroll-behavior: auto;
+}
 .card-item {
   scroll-snap-align: start;
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 8px 8px 24px rgba(0, 0, 0, .1);
 }
 .card-item img {
-  background: var(--background-color);
+   background-color: #5bbb1f;
+   padding: 1%;
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 300px;
+  object-fit: contain;
+
 }
 .card-info {
   padding: 16px;
@@ -163,12 +169,25 @@ body {
   color: #222;
 }
 .card-title:hover {
-  color: #5bbb1f;
+  color: #006aff;
 }
 .card-description {
   color: #888;
 }
 /* end: Slider */
+
+
+
+@media screen and (max-width: 575px) {
+  .arrow {
+      display: none;
+  }
+  .card-wrapper {
+      margin-left: -16px;
+      width: 100vw;
+      grid-auto-columns: 100%;
+  }
+}
 
 @media screen and (max-width: 575px) {
   .arrow {
