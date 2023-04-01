@@ -1,52 +1,83 @@
+const cardWrapper = document.querySelector('.card-wrapper');
+const widthToScroll = cardWrapper.children[0].offsetWidth;
+const arrowPrev = document.querySelector('.arrow.prev');
+const arrowNext = document.querySelector('.arrow.next');
+const cardBounding = cardWrapper.getBoundingClientRect();
+const cardImageAndLink = cardWrapper.querySelectorAll('img, a');
+let currScroll = 0;
+let initPos = 0;
+let clicked = false;
+let intervalId;
 
-const cardWrapper = document.querySelector('.card-wrapper')
-const widthToScroll = cardWrapper.children[0].offsetWidth
-const arrowPrev = document.querySelector('.arrow.prev')
-const arrowNext = document.querySelector('.arrow.next')
-const cardBounding = cardWrapper.getBoundingClientRect()
-const cardImageAndLink = cardWrapper.querySelectorAll('img, a')
-let currScroll = 0
-let initPos = 0
-let clicked = false
-
-cardImageAndLink.forEach(item=> {
-  item.setAttribute('draggable', false)
-})
+cardImageAndLink.forEach(item => {
+  item.setAttribute('draggable', false);
+});
 
 arrowPrev.onclick = function() {
-  cardWrapper.scrollLeft -= widthToScroll
-}
+  cardWrapper.scrollLeft -= widthToScroll;
+};
 
 arrowNext.onclick = function() {
-  cardWrapper.scrollLeft += widthToScroll
+  cardWrapper.scrollLeft += widthToScroll;
+};
+
+function startCarousel() {
+  intervalId = setInterval(() => {
+    arrowNext.onclick();
+  }, 3000); // change the interval time (in milliseconds) as desired
 }
 
-cardWrapper.onmousedown = function(e) {
-  cardWrapper.classList.add('grab')
-  initPos = e.clientX - cardBounding.left
-  currScroll = cardWrapper.scrollLeft
-  clicked = true
+function stopCarousel() {
+  clearInterval(intervalId);
 }
 
-cardWrapper.onmousemove = function(e) {
-  if(clicked) {
-    const xPos = e.clientX - cardBounding.left
-    cardWrapper.scrollLeft = currScroll + -(xPos - initPos)
+cardWrapper.addEventListener('mousedown', () => {
+  stopCarousel();
+  cardWrapper.classList.add('grab');
+  initPos = event.clientX - cardBounding.left;
+  currScroll = cardWrapper.scrollLeft;
+  clicked = true;
+});
+
+cardWrapper.addEventListener('touchstart', () => {
+  stopCarousel();
+  cardWrapper.classList.add('grab');
+  initPos = event.touches[0].clientX - cardBounding.left;
+  currScroll = cardWrapper.scrollLeft;
+  clicked = true;
+});
+
+cardWrapper.addEventListener('mousemove', event => {
+  if (clicked) {
+    const xPos = event.clientX - cardBounding.left;
+    cardWrapper.scrollLeft = currScroll + -(xPos - initPos);
   }
-}
+});
 
-cardWrapper.onmouseup = mouseUpAndLeave
-cardWrapper.onmouseleave = mouseUpAndLeave
+cardWrapper.addEventListener('touchmove', event => {
+  if (clicked) {
+    const xPos = event.touches[0].clientX - cardBounding.left;
+    cardWrapper.scrollLeft = currScroll + -(xPos - initPos);
+  }
+});
 
-function mouseUpAndLeave() {
-  cardWrapper.classList.remove('grab')
-  clicked = false
-}
+cardWrapper.addEventListener('mouseup', () => {
+  stopCarousel();
+  cardWrapper.classList.remove('grab');
+  clicked = false;
+});
 
+cardWrapper.addEventListener('mouseleave', () => {
+  stopCarousel();
+  cardWrapper.classList.remove('grab');
+  clicked = false;
+});
+
+startCarousel();
 
 function goToPage(url) {
-    window.location.href = url;
-  }
+  window.location.href = url;
+}
 
 
 //profile dropdown
