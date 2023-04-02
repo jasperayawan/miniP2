@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Montserrat:wght@700&family=Open+Sans&family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Poppins:wght@200;300;400;500;600;700;800&family=Staatliches&display=swap');
+
 
 * {
   padding: 0;
@@ -89,6 +91,15 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 80vh;
+}
+.partner_banner h1{
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: .3rem;
+}
+.partner_banner span{
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
 }
 
 .title-partner-with-us {
