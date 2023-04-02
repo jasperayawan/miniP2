@@ -540,7 +540,7 @@ body {
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
-  padding: 5rem 0;
+  padding: 3rem 0;
   margin-top: 3%;
 }
 .becomeAVendor button {
@@ -572,7 +572,7 @@ form input {
 /* -----CALL TO ACTION---- */
 
 .calltoaction {
-  padding: 4rem;
+  padding: 3rem;
   background: #dcffc4;
   color: black;
   margin-bottom: 3%;
