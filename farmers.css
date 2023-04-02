@@ -84,7 +84,8 @@ body {
 /*----------------------farmersstyling---------------------*/
 
 .farmers_banner {
-  background-image: url(assets/farmers-bg-fin.jpg);
+  background: rgba(0, 0, 0, 0.4) url(assets/farmers-bg-fin.jpg);
+  background-blend-mode: darken;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

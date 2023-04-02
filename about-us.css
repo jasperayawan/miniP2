@@ -137,7 +137,8 @@ body {
 /*-----------------------about us main page-----------------*/
 
 .about_us__banner {
-  background-image: url(assets/mp-bg.jpg);
+  background: rgba(33, 34, 34, 0.4) url(assets/mp-bg.jpg);
+  background-blend-mode: darken;
   background-position: center;
   background-size: cover;
   min-height: 80vh;

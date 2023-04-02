@@ -83,7 +83,8 @@ body {
 /*----------------------partner styling---------------------*/
 
 .partner_banner {
-  background-image: url(assets/partner-bg.jpg);
+  background: rgba(0, 0, 0,0.4) url(assets/partner-bg.jpg);
+  background-blend-mode: darken;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

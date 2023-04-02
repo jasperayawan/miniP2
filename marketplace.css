@@ -167,7 +167,8 @@ body {
 /*----------------------banner marketplace styling---------------------*/
 
 .marketplace_banner {
-  background-image: url(assets/marketplace-bg-final.jpg);
+  background: rgba(0, 0, 0, 0.4) url(assets/marketplace-bg-final.jpg);
+  background-blend-mode: darken;
   background-position: center;
   background-size: cover;
   min-height: 80vh;
