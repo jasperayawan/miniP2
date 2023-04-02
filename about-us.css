@@ -19,6 +19,16 @@ body {
 }
 /* --------------------header styling---------------- */
 
+.header {
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: top 0.2s ease-in-out;
+  z-index: 100;
+}
 #logo {
   color: var(--text-dark-color);
   font-size: 22px;
@@ -130,7 +140,7 @@ body {
   background-image: url(assets/mp-bg.jpg);
   background-position: center;
   background-size: cover;
-  min-height: 40vh;
+  min-height: 80vh;
 }
 .MS_Container {
   padding: 8rem 0;

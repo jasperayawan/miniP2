@@ -30,7 +30,7 @@
             <div class="dot4"></div>
       </div>
       <div class="col form-wrap px-5">
-        <form action="">
+        <form action="" method="">
           <h1>Sign up</h1>
           <div class="single-input">
             <input type="text" id="fname" placeholder="First name" required />
@@ -66,10 +66,10 @@
             <option selected>user_type</option>
             <option value="user">user</option>
             <option value="vendor">vendor</option>
-            <option value="admin">admin</option>
+            <option value="admin" class="admin">admin</option>
           </select>
           <div class="Submit-button">
-            <button class="button">Submit</button>
+            <button class="button" id="submit">Submit</button>
           </div>
           <div class="account-have">
             <a href="login.html">Already Have An Account? LOGIN HERE.</a>
@@ -78,7 +78,7 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="register.js"></script>
     <script src="sweetalert.js"></script>
   </body>
 </html>

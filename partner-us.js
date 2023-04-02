@@ -177,3 +177,18 @@ for (const input of inputs) {
 setInterval(checkInteractionTimeout, 60 * 1000); // Check every minute
 
 
+
+
+
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector("header").style.top = "0";
+  } else {
+     document.querySelector("header").style.top = "-7.2rem";
+  }
+  prevScrollpos = currentScrollPos;
+}
+

@@ -32,7 +32,7 @@ const Password = sessionStorage.getItem('Password');
 
 
 productsContainer.addEventListener('click', (clickeventObject) => {
-  if(Email != "" && Password != ""){
+  if(Email == "" && Password == ""){
     // alert('login first', )
     // window.location.assign('login.html')
     // goToMarketplace()
@@ -43,7 +43,9 @@ productsContainer.addEventListener('click', (clickeventObject) => {
     pop_up_message.innerHTML += `<h5>Oops!, you're not login!</h5>
       <div class="loginfirst_container"> <button onclick ="goToMarketplace()">Login now!</button> </div>
     `
-  }else if (clickeventObject.target.classList.contains('add-to-cart')) {
+    
+  } 
+  else if (clickeventObject.target.classList.contains('add-to-cart')) {
       const product = clickeventObject.target.closest('.product');
       const name = product.dataset.name;
       const price = Number(product.dataset.price);
@@ -451,7 +453,17 @@ function closeContainercart(){
 
 
 
+var prevScrollpos = window.pageYOffset;
 
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector("header").style.top = "0";
+  } else {
+     document.querySelector("header").style.top = "-7.2rem";
+  }
+  prevScrollpos = currentScrollPos;
+}
 
 
 

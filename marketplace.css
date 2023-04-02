@@ -23,6 +23,13 @@ body {
 /* --------------------header styling---------------- */
 
 .header {
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: top 0.2s ease-in-out;
   z-index: 2;
 }
 .messageAppear {
@@ -163,7 +170,7 @@ body {
   background-image: url(assets/marketplace-bg-final.jpg);
   background-position: center;
   background-size: cover;
-  min-height: 40vh;
+  min-height: 80vh;
 }
 
 /* Style for the top area */
