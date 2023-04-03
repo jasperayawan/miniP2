@@ -27,7 +27,7 @@
   </head>
   <body>
     <header class="sticky-top w-100 position-fixed text-white header">
-      <nav class="navbar navbar-expand-lg py-4">
+      <nav class="navbar navbar-expand-lg py-1 py-md-2 py-lg-4">
         <div class="container navbarContainer container-md-fluid w-100">
           <!-----------------logo-------------->
           <div class="fw-bold" id="logo">
@@ -150,10 +150,10 @@
     <main>
       <!-------------------Home section-------------------->
       <section class="home relative" id="home">
-        <div class="container content__home mb-5">
+        <div class="container-fluid container-md content__home mb-5">
           <div class="row">
-            <div class="col main-title">
-              <div class="title">
+            <div class="col main-title d-flex flex-column">
+              <div class="title d-flex flex-column">
                 <h1 class="title1 text-center">
                   Nourishing Communities, <br />
                   One Harvest at a Time
@@ -163,7 +163,7 @@
                   One-Stop Farm-to-Table Online Marketplace
                 </p>
               </div>
-              <div class="CTA d-flex justify-content-center gap-2">
+              <div class="CTA d-flex justify-content-center gap-2 flex-column flex-md-row">
                 <button class="btn" onclick="goToPage('marketplace.html')">
                   Shop Now
                 </button>
@@ -190,7 +190,7 @@
 
         <div class="container">
           <div
-            class="proportion d-flex justify-content-evenly align-items-center py-3 p-lg-5"
+            class="proportion d-flex justify-content-evenly align-items-center py-3 p-lg-5 flex-column flex-md-row"
           >
             <span>FRESH.</span>
 
@@ -201,7 +201,7 @@
           <div class="featuredProducts">
             <h2>Featured Products</h2>
             <div
-              class="row px-4 gap-3 gap-md-0 d-flex flex-column flex-md-row featured-container mb-5"
+              class="row px-2 gap-2 px-md-3 d-flex flex-column justify-content-center align-items-center flex-md-row featured-container mb-md-5"
             >
               <div class="col mx-2 featured_item">
                 <img src="assets/pexels-kunno-jayson-1750468.jpg" alt="sample" class="" />
@@ -510,9 +510,9 @@
 
       <section class="container py-5">
         <div
-          class="row d-flex flex-column flex-md-row justify-content-center section-page"
+          class="section-page"
         >
-          <div class="col section-1 m-0">
+          <div class="section-1 m-0">
             <div class="card section py-3">
               <p><i class="fa fa-user" style="color: #5bbb1f"></i></p>
               <h3>5000+</h3>
@@ -520,7 +520,7 @@
             </div>
           </div>
 
-          <div class="col section-1 m-0">
+          <div class="section-1 m-0">
             <div class="card section py-3">
               <p>
                 <i
@@ -533,7 +533,7 @@
             </div>
           </div>
 
-          <div class="col section-1 m-0">
+          <div class="section-1 m-0">
             <div class="card section py-3">
               <p>
                 <i class="fa-solid fa-face-smile" style="color: #5bbb1f"></i>
@@ -543,7 +543,7 @@
             </div>
           </div>
 
-          <div class="col section-1 m-0">
+          <div class="section-1 m-0">
             <div class="card section py-3">
               <p>
                 <i class="fa-solid fa-chart-simple" style="color: #5bbb1f"></i>
