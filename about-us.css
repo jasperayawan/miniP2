@@ -171,9 +171,9 @@ body {
   content: "";
   position: absolute;
   bottom: -30px;
-  left: 50px;
-  width: 35%;
-  height: 100%;
+  left: 80px;
+  width: 30%;
+  height: 90%;
   background: #5bbb1f;
   z-index: -1;
 }
@@ -185,6 +185,10 @@ body {
   clip-path: inset(0 -100vmax);
   background: rgba(201, 226, 101, 0.2);
   padding: 2%;
+}
+.containervalues{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .left_content_values p {
@@ -396,6 +400,11 @@ footer {
   background-color: var(--background-color);
   color: #fff;
 }
+@media (max-width: 991px){
+  .containervalues{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 @media (max-width: 767px) {
   .footer-container {
@@ -421,6 +430,68 @@ footer {
   }
 }
 
+@media (max-width: 600px){
+  .containervalues{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .right_content_values {
+    width: 60%;
+    height: 27%;
+  }
+  .right_content_values .spanChildOne {
+    /* top: -75px; */
+    width: 90px;
+    height: 90px;
+  }
+  .right_content_values .spanChildTwo {
+    /* top: 30px;
+    left: -75px; */
+    width: 90px;
+    height: 90px;
+  }
+  .right_content_values .spanChildThree {
+    /* top: 30px;
+    right: -75px; */
+    width: 90px;
+    height: 90px;
+  }
+  .right_content_values .spanChildFour {
+    top: 160px;
+    left: -8px;
+    width: 90px;
+    height: 90px;
+  }
+  .right_content_values .spanChildFive {
+    width: 90px;
+    height: 90px;
+    top: 160px;
+    right: -8px;
+  }
+  .vision-img-container img{
+    width: 330px;
+  }
+  .vision-img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .vision-img-container::before {
+    width: 75%;
+    height: 45%;
+  }.mission-img-container::before {
+    width: 68%;
+    height: 100%;
+  }
+  .mission-img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mission-img-container img{
+    width: 330px;
+  }
+  
+}
 /*----------------------final footer styling---------------------*/
 
 .final-footer {
