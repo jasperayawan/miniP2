@@ -12,6 +12,7 @@ const checkoutButton = document.querySelector('.checkout-button');
 
 // ito yung empty array
 let cartItems = [];
+let orderId = '';
 
 // ito icheck nya yung local storage ng browser. if merong nakasave, iload nito sa cartItems array gamin yung method na JSON.parse()
 if (localStorage.getItem('cartItems')) {
@@ -72,7 +73,7 @@ function btnLogout(){
 
 
 //Function 1 Add item to SHOPPING CART
-function addItemToCart(name, price, quantity, code) {
+function addItemToCart(name, price, quantity, code, orderId) {
   // Check if item is already in cart
   for (let i = 0; i < cartItems.length; i++) {
     if (cartItems[i].name === name && cartItems[i].code === code) {
@@ -82,7 +83,7 @@ function addItemToCart(name, price, quantity, code) {
     }
   }
   // Add item to cart
-  cartItems.push({ name, price, quantity, code });
+  cartItems.push({ name, price, quantity, code, orderId });
        // show a success message
        alert("Product added to cart!");
        
@@ -201,12 +202,17 @@ checkoutButton.addEventListener('click', () => {
 
 });
 
+
+
 // FUNCTION 5 to save the order to local storage
 function saveOrderToLocalStorage() {
   // Get the current date and time
   const now = new Date();
-  // Create a new order object with the current date and time, cart items and total price
+  // Generate a random order ID number
+  const orderId = generateOrderId();
+  // Create a new order object with the current date and time, cart items, total price, and order ID
   const order = {
+    id: orderId,
     date: now.toLocaleString(),
     items: cartItems,
     total: getTotalPrice()
@@ -219,6 +225,15 @@ function saveOrderToLocalStorage() {
   localStorage.setItem('orders', JSON.stringify(orders));
 }
 
+function generateOrderId() {
+  const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let result = '';
+  for (let i = 0; i < 8; i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return result;
+}
+
 // FUNCTION 6 to get the total price of the cart items
 function getTotalPrice() {
   let total = 0;
@@ -228,28 +243,131 @@ function getTotalPrice() {
   return total;
 }
 
-// Order confirmation modal
+
+
+
+
+// Order and Payment Confirmation
+
 const close = document.querySelector('.close');
 const confirmButton = document.querySelector('.confirm-order');
 const modal = document.querySelector('.modal');
+const paymentForm = document.querySelector('.payment-form');
+const payNowButton = document.querySelector('.pay-now');
+const cartItemsList = document.querySelector('.cart-items');
+
+
 close.addEventListener('click', () => {
   // Hide the modal when close button is clicked
   modal.style.display = 'none';
 });
-confirmButton.addEventListener('click', () => {
-  // Confirmation button click handler
-  alert('Your order has been confirmed!');
-  // Clear the cart items array and update the cart
-  cartItems = [];
-  
-  updateCart();
-  updateCartCount();
-  // Clear the local storage
-  localStorage.removeItem('cartItems');
-  // Hide the modal
-  modal.style.display = 'none';
 
+function confirmOrder() {
+  // Confirmation button click handler
+  if (confirm('Are you sure you want to confirm your order?')) {
+    // Generate a random order ID number
+    const orderId = generateOrderId();
+    // Create a new order object with the current date and time, cart items, total price, and order ID
+    const order = {
+      id: orderId,
+      date: new Date().toLocaleString(),
+      items: cartItems,
+      total: getTotalPrice()
+    };
+    // Save the order to local storage
+    saveOrderToLocalStorage(orderId, order);
+    // Display the order ID in the alert message
+    alert(`Your order has been confirmed with an Order ID: ${orderId}. Click OK to proceed to payment.`);
+    // Hide the Confirm button and show the payment form
+    confirmButton.style.display = 'none';
+    paymentForm.style.display = 'block';
+    // Add items to cart with the order ID number
+    for (let i = 0; i < cartItems.length; i++) {
+      const cartItem = cartItems[i];
+      addItemToCart(cartItem.name, cartItem.price, cartItem.quantity, cartItem.code, orderId);
+    }
+  }
+}
+
+function saveOrderToLocalStorage(orderId, order) {
+  // Get the existing orders from local storage
+  const orders = JSON.parse(localStorage.getItem('orders')) || [];
+  // Add the new order to the orders array
+  orders.push(order);
+  // Save the updated orders array to local storage
+  localStorage.setItem('orders', JSON.stringify(orders));
+}
+
+confirmButton.addEventListener('click', () => {
+  // Display the cart items before confirming the order
+  cartItemsList.innerHTML = '';
+  for (let i = 0; i < cartItems.length; i++) {
+    const cartItem = cartItems[i];
+    const cartItemElement = document.createElement('div');
+    cartItemElement.innerHTML = `${cartItem.name} - $${cartItem.price}`;
+    cartItemsList.appendChild(cartItemElement);
+  }
+  // Proceed with order confirmation
+  confirmOrder();
 });
+
+payNowButton.addEventListener('click', () => {
+  // Payment button click handler
+  // Validate payment details entered by the user
+  const cardNumber = paymentForm.querySelector('#card-number').value;
+  const expirationDate = paymentForm.querySelector('#expiration-date').value;
+  const cvv = paymentForm.querySelector('#cvv').value;
+
+  // Validate card number
+  if (cardNumber.length < 16) {
+    alert('Please enter a valid credit card number.');
+    return;
+  }
+
+  // Validate expiration date
+  const today = new Date();
+  const [month, year] = expirationDate.split('/');
+  const expiration = new Date(year, month - 1);
+  if (expiration < today || isNaN(expiration.getTime())) {
+    alert('Please enter a valid expiration date.');
+    return;
+
+  }
+
+  // Validate CVV
+  if (cvv.length > 3) {
+    alert('Please enter a valid CVV.');
+    return;
+  }
+
+  // Payment details are valid
+  if (confirm('Are you sure you want to proceed with the payment?')) {
+    alert('Payment successful!');
+    // Clear the cart items array and update the cart
+    cartItems = [];
+    updateCart();
+    updateCartCount();
+    // Clear the local storage
+    localStorage.removeItem('cartItems');
+    // Hide the modal
+    modal.style.display = 'none';
+  }
+});
+
+// Show the Confirm button initially
+confirmButton.style.display = 'block';
+paymentForm.style.display = 'none';
+
+// Prevent the modal from closing when clicking outside of it
+modal.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    event.stopPropagation();
+  }
+});
+
+
+
+
 
 
 
@@ -326,9 +444,6 @@ function updateWishlist() {
 
 // Call updateWishlist() on page load
 updateWishlist();
-
-
-
 
 function resetWishlist() {
   // Display a confirmation dialog box
@@ -450,9 +565,6 @@ function closeContainercart(){
 
 
 
-
-
-
 var prevScrollpos = window.pageYOffset;
 
 window.onscroll = function() {
@@ -465,11 +577,19 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
+const categorySelect = document.getElementById('category-select');
+const products = document.querySelectorAll('.product');
 
-
-
-
-
+categorySelect.addEventListener('change', () => {
+  const selectedCategory = categorySelect.value;
+  products.forEach(product => {
+    if (selectedCategory === 'all' || product.dataset.category === selectedCategory) {
+      product.style.display = 'block';
+    } else {
+      product.style.display = 'none';
+    }
+  });
+});
 
 
 

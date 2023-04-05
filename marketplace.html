@@ -176,7 +176,7 @@
           <h1>
             <i class="fa-solid fa-location-dot" style="font-size: 45px"></i>
           </h1>
-          <p>Type in your zip code. Look for farmers near you.</p>
+          <p>Type in your zip code. Look for products near you.</p>
         </div>
         <div class="col how_it_works_box">
           <h1>
@@ -210,7 +210,7 @@
 
     <section class="my-3">
       <form class="search-farmer">
-        <h5>Find a Local Farmer Nearby</h5>
+        <h5>Find a Local Product Nearby</h5>
         <input
           type="text"
           id="location"
@@ -228,13 +228,16 @@
         <div class="container my-5">
           <h5>Shop by Category</h5>
           <hr />
-          <ul class="list-unstyled">
-            <li>Fruits</li>
-            <li>Vegetables</li>
-            <li>Dairy Products</li>
-            <li>Meat</li>
-            <li>Other Local Products</li>
-          </ul>
+          <select id="category-select">
+            <option value="all">All</option>
+            <option value="fruits">Fruits</option>
+            <option value="vegetables">Vegetables</option>
+            <option value="meat">Meat Products</option>
+            <option value="poultry">Poultry Products</option>
+            <option value="dairy">Dairy Products</option>
+            <option value="local">Other Local Products</option>
+            <!-- add more options for other categories -->
+          </select>
         </div>
       </div>
       
@@ -249,7 +252,8 @@
             data-name="Durian"
             data-code="F216Z"
             data-price="350"
-            data-category="Fruits"
+            data-category="fruits"
+            data-location="3318"
           >
             <div class="imageContainer">
                 <img src="assets/durian-fruit.jpg" alt="Product 1" />
@@ -276,6 +280,7 @@
             data-name="Organic Egg"
             data-price="280"
             data-code="P0816"
+            data-category="poultry"
           >
             <div class="imageContainer">
                 <img src="assets/eggs.jpeg" alt="Product 2" />
@@ -301,6 +306,7 @@
             data-name="Highland Pork"
             data-price="450"
             data-code="B0325"
+            data-category="meat"
           >
             <div class="imageContainer">
                 <img src="assets/meat copy.jpg" alt="Product 3" />
@@ -324,6 +330,7 @@
             data-name="Carrots"
             data-price="100"
             data-code="B0325"
+            data-category="vegetables"
           >
             <div class="imageContainer">
                 <img src="assets/carrots.jpg" alt="Product 4" />
@@ -347,6 +354,7 @@
             data-name="Tomatoes"
             data-price="20"
             data-code="T0325"
+            data-category="vegetables"
           >
             <div class="imageContainer">
                 <img src="assets/tomatoes.webp.crdownload" alt="Product 5" />
@@ -370,6 +378,7 @@
             data-name="Chicken"
             data-price="150"
             data-code="C0325"
+            data-category="poultry"
           >
             <div class="imageContainer">
                 <img src="assets/chicken.webp" alt="Product 6" />
@@ -387,6 +396,254 @@
               
             </div>
           </div>
+
+
+          <div
+          class="product"
+          data-name="Ampalaya"
+          data-price="30"
+          data-code="A0325"
+          data-category="vegetables"
+        >
+          <div class="imageContainer">
+              <img src="assets/vegetable-ampalaya.jpg" alt="Product 7" />
+          </div>
+          <div class="product-info">
+            <h3>Ampalaya</h3>
+            <p class="price">Php 30/kilo</p>
+            <div class="quantity">
+              <label for="product3-quantity">Quantity:</label>
+              <input type="number" id="product3-quantity" min="1" value="1" />
+            </div>
+           
+              <button class="add-to-cart">Add to Cart</button>
+              <button class="add-to-wishlist"><i class="fa-regular fa-heart"></i></button>
+            
+          </div>
+        </div>
+
+        <div
+        class="product"
+        data-name="Regular Beef"
+        data-price="250"
+        data-code="RB0325"
+        data-category="meat"
+      >
+        <div class="imageContainer">
+            <img src="assets/meat-beef.jpg" alt="Product 8" />
+        </div>
+        <div class="product-info">
+          <h3>Regular Beef</h3>
+          <p class="price">Php 250/kilo</p>
+          <div class="quantity">
+            <label for="product3-quantity">Quantity:</label>
+            <input type="number" id="product3-quantity" min="1" value="1" />
+          </div>
+         
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-wishlist"><i class="fa-regular fa-heart"></i></button>
+          
+        </div>
+      </div>
+
+      <div
+      class="product"
+      data-name="Squash"
+      data-price="50"
+      data-code="SQ0325"
+      data-category="vegetables"
+    >
+      <div class="imageContainer">
+          <img src="assets/vegetable-kalabasa.jpg" alt="Product 9" />
+      </div>
+      <div class="product-info">
+        <h3>Squash</h3>
+        <p class="price">Php 50/kilo</p>
+        <div class="quantity">
+          <label for="product3-quantity">Quantity:</label>
+          <input type="number" id="product3-quantity" min="1" value="1" />
+        </div>
+       
+          <button class="add-to-cart">Add to Cart</button>
+          <button class="add-to-wishlist"><i class="fa-regular fa-heart"></i></button>
+        
+      </div>
+    </div>
+
+
+    
+    <div
+    class="product"
+    data-name="Fresh Milk"
+    data-price="120"
+    data-code="SQ0325"
+    data-category="dairy"
+  >
+    <div class="imageContainer">
+        <img src="assets/dairy-freshmilk.webp" alt="Product 10" />
+    </div>
+    <div class="product-info">
+      <h3>Fresh Milk (Cow)</h3>
+      <p class="price">Php 120/bottle</p>
+      <div class="quantity">
+        <label for="product3-quantity">Quantity:</label>
+        <input type="number" id="product3-quantity" min="1" value="1" />
+      </div>
+     
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="add-to-wishlist"><i class="fa-regular fa-heart"></i></button>
+      
+    </div>
+  </div>
+
+
+  <div
+  class="product"
+  data-name="Pineapple"
+  data-price="55"
+  data-code="PA0325"
+  data-category="fruits"
+>
+  <div class="imageContainer">
+      <img src="assets/fruit-pineapple.jpg" alt="Product 11" />
+  </div>
+  <div class="product-info">
+    <h3>Pineapple</h3>
+    <p class="price">Php 55/piece</p>
+    <div class="quantity">
+      <label for="product3-quantity">Quantity:</label>
+      <input type="number" id="product3-quantity" min="1" value="1" />
+    </div>
+   
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-wishlist"><i class="fa-regular fa-heart"></i></button>
+    
+  </div>
+</div>
+
+<div
+class="product"
+data-name="Banana"
+data-price="60"
+data-code="BA325"
+data-category="fruits"
+>
+<div class="imageContainer">
+    <img src="assets/fruit-banana.jpg" alt="Product 12" />
+</div>
+<div class="product-info">
+  <h3>Banana</h3>
+  <p class="price">Php 60/kilo</p>
+  <div class="quantity">
+    <label for="product3-quantity">Quantity:</label>
+    <input type="number" id="product3-quantity" min="1" value="1" />
+  </div>
+ 
+    <button class="add-to-cart">Add to Cart</button>
+    <button class="add-to-wishlist"><i class="fa-regular fa-heart"></i></button>
+  
+</div>
+</div>
+
+<div
+class="product"
+data-name="Beef Shanks"
+data-price="320"
+data-code="BS325"
+data-category="meat"
+>
+<div class="imageContainer">
+    <img src="assets/meat-crosscutbeef-shanks.jpeg" alt="Product 13" />
+</div>
+<div class="product-info">
+  <h3>Beef Shanks</h3>
+  <p class="price">Php 320/kilo</p>
+  <div class="quantity">
+    <label for="product3-quantity">Quantity:</label>
+    <input type="number" id="product3-quantity" min="1" value="1" />
+  </div>
+ 
+    <button class="add-to-cart">Add to Cart</button>
+    <button class="add-to-wishlist"><i class="fa-regular fa-heart"></i></button>
+  
+</div>
+</div>
+
+<div
+class="product"
+data-name="String Beans"
+data-price="20"
+data-code="SB325"
+data-category="vegetables"
+>
+<div class="imageContainer">
+    <img src="assets/vegetable- string beans.webp.crdownload" alt="Product 14" />
+</div>
+<div class="product-info">
+  <h3>String Beans</h3>
+  <p class="price">Php 20/bundle</p>
+  <div class="quantity">
+    <label for="product3-quantity">Quantity:</label>
+    <input type="number" id="product3-quantity" min="1" value="1" />
+  </div>
+ 
+    <button class="add-to-cart">Add to Cart</button>
+    <button class="add-to-wishlist"><i class="fa-regular fa-heart"></i></button>
+  
+</div>
+</div>
+
+<div
+class="product"
+data-name="Dried Mangoes"
+data-price="120"
+data-code="DM12345"
+data-category="local"
+>
+<div class="imageContainer">
+    <img src="assets/other-driedmangoes.webp" alt="Product 15" />
+</div>
+<div class="product-info">
+  <h3>Dried Mangoes</h3>
+  <p class="price">Php 120/pack</p>
+  <div class="quantity">
+    <label for="product3-quantity">Quantity:</label>
+    <input type="number" id="product3-quantity" min="1" value="1" />
+  </div>
+ 
+    <button class="add-to-cart">Add to Cart</button>
+    <button class="add-to-wishlist"><i class="fa-regular fa-heart"></i></button>
+  
+</div>
+</div>
+
+<div
+class="product"
+data-name="Glazed Pili NUts"
+data-price="120"
+data-code="PL12345"
+data-category="local"
+>
+<div class="imageContainer">
+    <img src="assets/other-glazedpili.jpg" alt="Product 16" />
+</div>
+<div class="product-info">
+  <h3>Glazed Pili Nuts</h3>
+  <p class="price">Php 120/pack</p>
+  <div class="quantity">
+    <label for="product3-quantity">Quantity:</label>
+    <input type="number" id="product3-quantity" min="1" value="1" />
+  </div>
+ 
+    <button class="add-to-cart">Add to Cart</button>
+    <button class="add-to-wishlist"><i class="fa-regular fa-heart"></i></button>
+  
+</div>
+</div>
+
+
+
+
         </div>
       </div>
     </section>
@@ -418,33 +675,40 @@
       </div>
       <div id="total"></div>
       </div>
+
+
+      
       <!-- Order confirmation modal -->
-      <div class="modal">
-       
-
-        
+      <div class="modal" >
         <div class="container modal-content">
-
-
-
           <!-- Modal content -->
-
           <div>
-            <span class="close" style="font-size: 24px; text-align: right"
-              >&times;</span
-            >
-
-            
-            <h2>Order Confirmation</h2>
-            <p>Are you sure you want to confirm your order?</p>
+            <span class="close" style="font-size: 24px; text-align: right">&times;</span>
+            <h2 >Order and Payment Confirmation</h2>
+     
           </div>
-
-          <div class="my-3">
+          <form class="payment-form">
+            <div class="form-group">
+              <label for="card-number">Card Number</label>
+              <input type="text" id="card-number" name="card-number" minlength="16" required>
+            </div>
+            <div class="form-group">
+              <label for="expiration-date">Expiration Date</label>
+              <input type="text" id="expiration-date" name="expiration-date"  required>
+            </div>
+            <div class="form-group">
+              <label for="cvv">CVV</label>
+              <input type="text" id="cvv" name="cvv" maxlength="3" required>
+            </div>
+            <div class="my-3" style="text-align: center;"  >
+              <button class="pay-now">Pay Now</button>
+            </div>
+          </form>
+          <div class="my-3" style="text-align: center;">
             <button class="confirm-order">Confirm Order</button>
           </div>
         </div>
       </div>
-
     </div>
 
   
