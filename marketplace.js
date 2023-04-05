@@ -228,31 +228,76 @@ function getTotalPrice() {
   return total;
 }
 
-// Order confirmation modal
+// Order confirmation modal / PAYMENT DETAIL
 const close = document.querySelector('.close');
 const confirmButton = document.querySelector('.confirm-order');
 const modal = document.querySelector('.modal');
+const paymentForm = document.querySelector('.payment-form');
+const payNowButton = document.querySelector('.pay-now');
+const cartItemsList = document.querySelector('.cart-items');
+
 close.addEventListener('click', () => {
   // Hide the modal when close button is clicked
   modal.style.display = 'none';
 });
-confirmButton.addEventListener('click', () => {
+
+function confirmOrder() {
   // Confirmation button click handler
   alert('Your order has been confirmed!');
-  // Clear the cart items array and update the cart
-  cartItems = [];
-  
-  updateCart();
-  updateCartCount();
-  // Clear the local storage
-  localStorage.removeItem('cartItems');
-  // Hide the modal
-  modal.style.display = 'none';
+  // Hide the Confirm button and show the payment form
+  confirmButton.style.display = 'none';
+  paymentForm.style.display = 'block';
+}
 
+confirmButton.addEventListener('click', () => {
+  // Display the cart items before confirming the order
+  cartItemsList.innerHTML = '';
+  for (let i = 0; i < cartItems.length; i++) {
+    const cartItem = cartItems[i];
+    const cartItemElement = document.createElement('div');
+    cartItemElement.innerHTML = `${cartItem.name} - $${cartItem.price}`;
+    cartItemsList.appendChild(cartItemElement);
+  }
+  // Proceed with order confirmation
+  confirmOrder();
 });
 
+payNowButton.addEventListener('click', () => {
+  // Payment button click handler
+  // Validate payment details entered by the user
+  const cardNumber = paymentForm.querySelector('#card-number').value;
+  const expirationDate = paymentForm.querySelector('#expiration-date').value;
+  const cvv = paymentForm.querySelector('#cvv').value;
 
+  if (cardNumber && expirationDate && cvv) {
+    // Payment details are valid
+    if (confirm('Are you sure you want to proceed with the payment?')) {
+      alert('Payment successful!');
+      // Clear the cart items array and update the cart
+      cartItems = [];
+      updateCart();
+      updateCartCount();
+      // Clear the local storage
+      localStorage.removeItem('cartItems');
+      // Hide the modal
+      modal.style.display = 'none';
+    }
+  } else {
+    // Payment details are invalid
+    alert('Please enter valid payment details.');
+  }
+});
 
+// Show the Confirm button initially
+confirmButton.style.display = 'block';
+paymentForm.style.display = 'none';
+
+// Prevent the modal from closing when clicking outside of it
+modal.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    event.stopPropagation();
+  }
+});
 
 // Wishlist (Add sa counter and update if may naremove)
 const wishlistBtns = document.querySelectorAll(".add-to-wishlist");
@@ -326,9 +371,6 @@ function updateWishlist() {
 
 // Call updateWishlist() on page load
 updateWishlist();
-
-
-
 
 function resetWishlist() {
   // Display a confirmation dialog box
@@ -450,9 +492,6 @@ function closeContainercart(){
 
 
 
-
-
-
 var prevScrollpos = window.pageYOffset;
 
 window.onscroll = function() {
@@ -464,11 +503,6 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
-
-
-
-
-
 
 
 

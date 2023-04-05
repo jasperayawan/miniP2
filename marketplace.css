@@ -1,5 +1,5 @@
 /* Reset default margin and padding */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Poppins:wght@200;300;400;500;600;700;800&family=Staatliches&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Poppins:wght@200;300;400;500;600;700;800&family=Staatliches&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Montserrat:wght@700&family=Open+Sans&family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap");
 
@@ -174,11 +174,11 @@ body {
   background-size: cover;
   min-height: 80vh;
 }
-.marketplace_banner h1{
-  font-family: 'Bebas Neue', cursive;
-  letter-spacing: .3rem;
+.marketplace_banner h1 {
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 0.3rem;
 }
-.marketplace_banner span{
+.marketplace_banner span {
   text-align: center;
   color: #fff;
   font-size: 20px;
@@ -464,22 +464,98 @@ td input {
   font-family: "Open Sans", sans-serif;
 }
 
+/* Modal */
 .modal {
-  margin-top: 10%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
+/* Modal content */
 .modal-content {
-  background: linear-gradient(45deg, #5fbca0, #8bd8a8, #c3fdb8);
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7);
-  text-align: center;
-  max-width: 50%;
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Payment form */
+.payment-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("down-arrow.png") no-repeat right center;
+  background-size: 20px;
+  padding-right: 30px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+.pay-now {
+  margin-right: 10px;
 }
 
 .confirm-order {
-  padding: 1% 3%;
-  border: 1px solid #79db40;
-  margin-right: 2% 10%;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7);
+  background-color: #4caf50;
+}
+
+.confirm-order:hover {
+  background-color: #4caf50;
 }
 
 /* Style for wishlist items */
