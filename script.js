@@ -58,3 +58,9 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
+
+//This is for the simple buttons going to the other pages
+
+function goToPage(url) {
+  window.location.href = url;
+}
