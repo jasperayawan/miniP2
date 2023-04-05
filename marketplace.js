@@ -228,7 +228,6 @@ function getTotalPrice() {
   return total;
 }
 
-// Order confirmation modal / PAYMENT DETAIL
 const close = document.querySelector('.close');
 const confirmButton = document.querySelector('.confirm-order');
 const modal = document.querySelector('.modal');
@@ -243,10 +242,12 @@ close.addEventListener('click', () => {
 
 function confirmOrder() {
   // Confirmation button click handler
-  alert('Your order has been confirmed!');
-  // Hide the Confirm button and show the payment form
-  confirmButton.style.display = 'none';
-  paymentForm.style.display = 'block';
+  if (confirm('Are you sure you want to confirm your order?')) {
+    alert('Your order has been confirmed! Click OK to proceed to payment.');
+    // Hide the Confirm button and show the payment form
+    confirmButton.style.display = 'none';
+    paymentForm.style.display = 'block';
+  }
 }
 
 confirmButton.addEventListener('click', () => {
