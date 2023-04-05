@@ -522,7 +522,19 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
+const categorySelect = document.getElementById('category-select');
+const products = document.querySelectorAll('.product');
 
+categorySelect.addEventListener('change', () => {
+  const selectedCategory = categorySelect.value;
+  products.forEach(product => {
+    if (selectedCategory === 'all' || product.dataset.category === selectedCategory) {
+      product.style.display = 'block';
+    } else {
+      product.style.display = 'none';
+    }
+  });
+});
 
 
 

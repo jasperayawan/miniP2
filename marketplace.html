@@ -228,13 +228,16 @@
         <div class="container my-5">
           <h5>Shop by Category</h5>
           <hr />
-          <ul class="list-unstyled">
-            <li>Fruits</li>
-            <li>Vegetables</li>
-            <li>Dairy Products</li>
-            <li>Meat</li>
-            <li>Other Local Products</li>
-          </ul>
+          <select id="category-select">
+            <option value="all">All</option>
+            <option value="fruits">Fruits</option>
+            <option value="vegetables">Vegetables</option>
+            <option value="meat">Meat Products</option>
+            <option value="poultry">Poultry Products</option>
+            <option value="dairy">Dairy Products</option>
+            <option value="local">Other Local Products</option>
+            <!-- add more options for other categories -->
+          </select>
         </div>
       </div>
       
@@ -249,7 +252,7 @@
             data-name="Durian"
             data-code="F216Z"
             data-price="350"
-            data-category="Fruits"
+            data-category="fruits"
           >
             <div class="imageContainer">
                 <img src="assets/durian-fruit.jpg" alt="Product 1" />
@@ -276,6 +279,7 @@
             data-name="Organic Egg"
             data-price="280"
             data-code="P0816"
+            data-category="poultry"
           >
             <div class="imageContainer">
                 <img src="assets/eggs.jpeg" alt="Product 2" />
@@ -301,6 +305,7 @@
             data-name="Highland Pork"
             data-price="450"
             data-code="B0325"
+            data-category="meat"
           >
             <div class="imageContainer">
                 <img src="assets/meat copy.jpg" alt="Product 3" />
@@ -324,6 +329,7 @@
             data-name="Carrots"
             data-price="100"
             data-code="B0325"
+            data-category="vegetables"
           >
             <div class="imageContainer">
                 <img src="assets/carrots.jpg" alt="Product 4" />
@@ -347,6 +353,7 @@
             data-name="Tomatoes"
             data-price="20"
             data-code="T0325"
+            data-category="vegetables"
           >
             <div class="imageContainer">
                 <img src="assets/tomatoes.webp.crdownload" alt="Product 5" />
@@ -370,6 +377,7 @@
             data-name="Chicken"
             data-price="150"
             data-code="C0325"
+            data-category="poultry"
           >
             <div class="imageContainer">
                 <img src="assets/chicken.webp" alt="Product 6" />
@@ -394,6 +402,7 @@
           data-name="Ampalaya"
           data-price="30"
           data-code="A0325"
+          data-category="vegetables"
         >
           <div class="imageContainer">
               <img src="assets/vegetable-ampalaya.jpg" alt="Product 7" />
@@ -417,6 +426,7 @@
         data-name="Regular Beef"
         data-price="250"
         data-code="RB0325"
+        data-category="meat"
       >
         <div class="imageContainer">
             <img src="assets/meat-beef.jpg" alt="Product 8" />
@@ -440,6 +450,7 @@
       data-name="Squash"
       data-price="50"
       data-code="SQ0325"
+      data-category="vegetables"
     >
       <div class="imageContainer">
           <img src="assets/vegetable-kalabasa.jpg" alt="Product 9" />
@@ -465,6 +476,7 @@
     data-name="Fresh Milk"
     data-price="120"
     data-code="SQ0325"
+    data-category="dairy"
   >
     <div class="imageContainer">
         <img src="assets/dairy-freshmilk.webp" alt="Product 10" />
@@ -489,6 +501,7 @@
   data-name="Pineapple"
   data-price="55"
   data-code="PA0325"
+  data-category="fruits"
 >
   <div class="imageContainer">
       <img src="assets/fruit-pineapple.jpg" alt="Product 11" />
@@ -512,6 +525,7 @@ class="product"
 data-name="Banana"
 data-price="60"
 data-code="BA325"
+data-category="fruits"
 >
 <div class="imageContainer">
     <img src="assets/fruit-banana.jpg" alt="Product 12" />
@@ -535,6 +549,7 @@ class="product"
 data-name="Beef Shanks"
 data-price="320"
 data-code="BS325"
+data-category="meat"
 >
 <div class="imageContainer">
     <img src="assets/meat-crosscutbeef-shanks.jpeg" alt="Product 13" />
@@ -558,6 +573,7 @@ class="product"
 data-name="String Beans"
 data-price="20"
 data-code="SB325"
+data-category="vegetables"
 >
 <div class="imageContainer">
     <img src="assets/vegetable- string beans.webp.crdownload" alt="Product 14" />
@@ -581,6 +597,7 @@ class="product"
 data-name="Dried Mangoes"
 data-price="120"
 data-code="DM12345"
+data-category="local"
 >
 <div class="imageContainer">
     <img src="assets/other-driedmangoes.webp" alt="Product 15" />
@@ -604,6 +621,7 @@ class="product"
 data-name="Glazed Pili NUts"
 data-price="120"
 data-code="PL12345"
+data-category="local"
 >
 <div class="imageContainer">
     <img src="assets/other-glazedpili.jpg" alt="Product 16" />
