@@ -270,22 +270,39 @@ payNowButton.addEventListener('click', () => {
   const expirationDate = paymentForm.querySelector('#expiration-date').value;
   const cvv = paymentForm.querySelector('#cvv').value;
 
-  if (cardNumber && expirationDate && cvv) {
-    // Payment details are valid
-    if (confirm('Are you sure you want to proceed with the payment?')) {
-      alert('Payment successful!');
-      // Clear the cart items array and update the cart
-      cartItems = [];
-      updateCart();
-      updateCartCount();
-      // Clear the local storage
-      localStorage.removeItem('cartItems');
-      // Hide the modal
-      modal.style.display = 'none';
-    }
-  } else {
-    // Payment details are invalid
-    alert('Please enter valid payment details.');
+  // Validate card number
+  if (cardNumber.length < 16) {
+    alert('Please enter a valid credit card number.');
+    return;
+  }
+
+  // Validate expiration date
+  const today = new Date();
+  const [month, year] = expirationDate.split('/');
+  const expiration = new Date(year, month - 1);
+  if (expiration < today || isNaN(expiration.getTime())) {
+    alert('Please enter a valid expiration date.');
+    return;
+
+  }
+
+  // Validate CVV
+  if (cvv.length > 3) {
+    alert('Please enter a valid CVV.');
+    return;
+  }
+
+  // Payment details are valid
+  if (confirm('Are you sure you want to proceed with the payment?')) {
+    alert('Payment successful!');
+    // Clear the cart items array and update the cart
+    cartItems = [];
+    updateCart();
+    updateCartCount();
+    // Clear the local storage
+    localStorage.removeItem('cartItems');
+    // Hide the modal
+    modal.style.display = 'none';
   }
 });
 
@@ -504,7 +521,6 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
-
 
 
 
