@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/3ce7f5ba6a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="customer-portal.css">
+</head>
+<body>
+    <div class="container-body">
+        <div class="navigation_container">
+            <div class="logo d-flex justify-content-center align-items-center py-4">
+                <div class="logo_container position-relative d-flex flex-row gap-2">
+                    <img src="assets/prof.png" alt="" width="50" height="50">
+                    <div class="name_container d-block">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p class="fw-bold">jasperayawan</p>
+                        </div>
+                        <div class="editprofile d-flex justify-content-start align-items-center">
+                            <ion-icon name="pencil-outline"></ion-icon>
+                            <span>Edit Profile</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lisy_container d-flex justify-content-center align-items-center">
+                <ul class="list-unstyled">
+                    <li class="d-flex justify-content-center align-items-center gap-2">
+                    <ion-icon name="person-outline"></ion-icon>
+                        <a href="#" class="text-decoration-none text-dark">My Account</a></li>
+                    <li class="d-flex justify-content-end">
+                        <a href="#" class="text-decoration-none text-secondary">Profile</a>
+                    </li>
+                    <li class="d-flex justify-content-center align-items-center gap-2">
+                    <ion-icon name="reader-outline"></ion-icon>
+                        <a href="#" class="text-decoration-none text-dark">My Purchase</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main p-5">
+            <div class="topbar">
+                <h2>My Profile</h2>
+                <p>Manage and protect your account</p>
+            </div>
+            <hr>
+            <div class="content_container row position-relative">
+                <form action="" class="col-8 d-flex justify-content-center align-items-center">
+                   <table>
+                    <tr>
+                        <td class="pb-4">Username</td>
+                        <td class="ps-4 pb-4">jasperayawan</td>
+                    </tr>
+                    <tr>
+                        <td class="pb-4">Name</td>
+                        <td class="ps-4 pb-4">
+                            <div>
+                                <input type="text">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pb-4">Email</td>
+                        <td class="ps-4 pb-4">
+                            <div>
+                                ej*******22@gmail.com
+                                <button class="border-0 text-primary">change</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pb-4">Phone number</td>
+                        <td class="ps-4 pb-4">
+                            <div>
+                                *********58 
+                                <button class="border-0 text-primary">change</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pb-4">Gender</td>
+                        <td class="ps-4 pb-4">
+                            <div class="stardust-radio-group d-flex gap-2" role="radiogroup">
+                                <div class="stardust-radio d-flex justify-content-center align-items-center gap-2">
+                                    <input type="radio" value="male">
+                                    <label for="">Male</label>
+                                </div>
+                                <div class="stardust-radio d-flex justify-content-center align-items-center gap-2">
+                                    <input type="radio" value="female">
+                                    <label for="">Female</label>
+                                </div>
+                                <div class="stardust-radio d-flex justify-content-center align-items-center gap-2">
+                                    <input type="radio" value="other">
+                                    <label for="">Other</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Birth of dat</td>
+                        <td class="ps-4">jasperayawan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="ps-4 pt-4">
+                            <button class="btn saveBtn">Save</button>
+                        </td>
+                    </tr>
+                   </table>
+                </form>
+
+                <div class="col-4 profile_right d-flex justify-content-center align-items-center position-relative">
+                    <div class="d-flex flex-column justify-content-center align-items-center gap-3">
+                        <img src="assets/prof.png" alt="" width="200" height="200">
+                        <input type="file">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

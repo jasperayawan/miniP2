@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white: #fff;
+    --black: #101010;
+    --green: #5bbb1f;
+    --grey: #eeecec;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.navigation_container{
+    position: fixed;
+    width: 300px;
+    background-color: var(--grey);
+    height: 100vh;
+    position: relative;
+    transition: 0.5s all;
+}
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    top: 0;
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+}
+.form-container{
+    min-height: 100vh;
+}
+.profile_right{
+    border-left: 1px solid #8a8888;
+}
+
+.saveBtn{
+    border: none;
+    background: var(--green);
+}
