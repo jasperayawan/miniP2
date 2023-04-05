@@ -32,7 +32,7 @@ const Password = sessionStorage.getItem('Password');
 
 
 productsContainer.addEventListener('click', (clickeventObject) => {
-  if(Email == "" && Password == ""){
+  if(Email == "jasper@gmail.com" && Password == "jasper123"){
     // alert('login first', )
     // window.location.assign('login.html')
     // goToMarketplace()

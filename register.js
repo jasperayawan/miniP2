@@ -1,36 +1,48 @@
-const submitButton = document.getElementById('submit')
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-submitButton.addEventListener('click', function(e){
-    e.preventDefault();
-    let fname = document.getElementById('fname').value
-    let lname = document.getElementById('lname').value
-    let email = document.getElementById('email').value
-    let pass = document.getElementById('pass').value
-    let cpass = document.getElementById('cpass').value
-  
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBdQWIMr01I9BJzThhdThBDlhx_8crSi3E",
+  authDomain: "harvesthubform-1e334.firebaseapp.com",
+  projectId: "harvesthubform-1e334",
+  storageBucket: "harvesthubform-1e334.appspot.com",
+  messagingSenderId: "34745514072",
+  appId: "1:34745514072:web:b4e829fbb208c9c51b722d"
+};
 
-    localStorage.setItem('FirstName', fname)
-    localStorage.setItem('LastName', lname)
-    localStorage.setItem('Email', email)
-    localStorage.setItem('Password', pass)
-    localStorage.setItem('CPassword', cpass)
 
-    sessionStorage.setItem('FirstName', fname)
-    sessionStorage.setItem('LastName', lname)
-    sessionStorage.setItem('Email', email)
-    sessionStorage.setItem('Password', pass)
-    sessionStorage.setItem('CPassword', cpass)
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth()
+
+  const firstName = document.getElementById('fname')
+  const lastName = document.getElementById('lname')
+  const email = document.getElementById('email')
+  const pass = document.getElementById('pass')
+  const cpass = document.getElementById('cpass')
+
+  const submit = document.getElementById('submit')
+
+  submit.addEventListener('click', function(e){
+    e.preventDefault(); 
     
-
-    if(fname == "" && lname == "" && email == "" && pass == "" && cpass == ""){
-        swal("Opps..!", "Input field must be fill", "error")
-    } else {
-        if(pass !== cpass){
-            swal("Opps..!", "Password not matching!", "error")
-        }else{
-            window.location.assign("login.html");
-            swal("Good job!", "Registration Successsful!", "success")
-        }
-    }
-})
-
+    const obj = {
+        FirstName: firstName.value,
+        LastName: lastName.value,
+        Email: email.value,
+        Password: pass.value,
+        Cpassword: cpass.value,
+    };
+    createUserWithEmailAndPassword(auth, obj.Email, obj.Password)
+        .then(() => {
+            alert('signup successfully')
+            window.location.assign('index.html')
+        })
+        .catch((error) => {
+            alert(error)
+        })
+        console.log(obj)
+  })

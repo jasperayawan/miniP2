@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harvest Hub</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--FONTAWESOME ICONS-->
+    <script
+      src="https://kit.fontawesome.com/3ce7f5ba6a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="sticky-top w-100 position-fixed text-white header">
+      <nav class="navbar navbar-expand-lg py-1 py-md-2 py-lg-4">
+        <div class="container navbarContainer container-md-fluid w-100">
+          <!-----------------logo-------------->
+          <div class="fw-bold" id="logo">
+            <i class="fa-solid fa-tractor"></i>
+            <a href="index.html" class="text-decoration-none" id="logo"
+              ><span>H</span>arvest <span>H</span>ub</a
+            >
+          </div>
+          <!------------------menu icon--------------->
+          <button
+            class="navbar-toggler border-0 ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-text-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M6 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-4-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+
+          <!-----------navbar list for Laptop size--------->
+          <div
+            class="collapse navbar-collapse gap-4"
+            id="navbarToggleExternalContent"
+          >
+            <ul class="navbar-nav gap-4 ms-auto">
+              <li class="nav-item">
+                <a href="about-us.html" class="text-decoration-none"
+                  id="about">About Us</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a href="marketplace.html" class="text-decoration-none"
+                  >Marketplace</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a href="farmers.html" class="text-decoration-none">Farmers</a>
+              </li>
+              <li class="nav-item">
+                <a href="partner-us.html" class="text-decoration-none"
+                  >Partner With Us</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a href="help-center.html" class="text-decoration-none"
+                  >Help Center</a
+                >
+              </li>
+              <li class="nav-item"></li>
+            </ul>
+            <!------------------sign up area------------->
+          </div>
+          <div class="profileLogo_Container">
+            <div class="profile">
+              <button onclick="toggleBtn()" class="profileIcon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="23"
+                  height="23"
+                  fill="currentColor"
+                  class="bi bi-person-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="profile_List" id="profile_List">
+              <div class="signLogin_container d-flex">
+                <button class="btn btn-close" id="btn-close"></button>
+                <div class="dashboard_container">
+                  <h2>Dashboard</h2>
+                </div>
+                
+                <a
+                  href="index.html"
+                  class="text-decoration-none btn"
+                  id="loginButton"
+                  >Logout</a
+                >
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-----------------main area--------------->
+
+    <main>
+      <!-------------------Home section-------------------->
+      <section class="home relative" id="home">
+        <div class="container-fluid container-md content__home mb-5">
+          <div class="row">
+            <div class="col main-title d-flex flex-column">
+              <div class="title d-flex flex-column">
+                <h1 class="title1 text-center">
+                  Nourishing Communities, <br />
+                  One Harvest at a Time
+                </h1>
+                <p class="text-center">
+                  Connect with Local Farmers and Build Community through our
+                  One-Stop Farm-to-Table Online Marketplace
+                </p>
+              </div>
+              <div class="CTA d-flex justify-content-center gap-2 flex-column flex-md-row">
+                <button class="btn" onclick="goToPage('marketplace.html')">
+                  Shop Now
+                </button>
+                <button
+                  class="btn buttonFind"
+                  onclick="goToPage('farmers.html')"
+                >
+                  Find Local Farmers
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-------------------featured products section-------------------->
+
+      <section class="about position-relative" id="about">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+
+        <div class="container">
+          <div
+            class="proportion d-flex justify-content-evenly align-items-center py-3 p-lg-5 flex-column flex-md-row"
+          >
+            <span class="fw-bold">FRESH.</span>
+
+            <span class="fw-bold">ORGANIC.</span>
+            <span class="fw-bold">SUSTAINABLE.</span>
+          </div>
+
+          <div class="featuredProducts">
+            <h2>Featured Products</h2>
+            <div
+              class="row px-2 gap-2 px-md-3 d-flex flex-column justify-content-center align-items-center flex-md-row featured-container mb-md-5"
+            >
+              <div class="col mx-2 featured_item">
+                <img src="assets/pexels-kunno-jayson-1750468.jpg" alt="sample" class="" />
+
+                <div class="layer text-center">
+                  <h3>Highland Strawberries</h3>
+                  <p>
+                    Sweet, juicy, and bursting with flavor, our strawberries are
+                    a delicious and healthy treat. Straight from the farm to
+                    your table, they're the perfect way to indulge in the taste
+                    of summer.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col mx-2 featured_item">
+                <img src="assets/meat.jpg" alt="sample" class="" />
+                <div class="layer text-center">
+                  <h3>Organic Beef</h3>
+                  <p>
+                    Our organic beef is high-quality, sustainable, and healthier
+                    than conventionally raised beef. It's sourced from small
+                    family farms using humane practices and fed a natural diet
+                    free from GMOs. With higher levels of omega-3s and a richer,
+                    more complex flavor, it's a delicious and responsible choice
+                    for customers who care about the environment and animal
+                    welfare.
+                  </p>
+                </div>
+              </div>
+              <div class="col mx-2 featured_item">
+                <img src="assets/vegetables.jpg" alt="sample" class="" />
+                <div class="layer text-center">
+                  <h3>Organic Fruits and Veggies</h3>
+                  <p>
+                    Our organic fruits and veggies are sustainably grown without
+                    synthetic pesticides, fertilizers, or GMOs, resulting in
+                    flavorful, nutrient-rich produce. We source our fruits and
+                    vegetables from local growers who use responsible and humane
+                    practices, supporting small family farms and local
+                    economies. By choosing organic, you can enjoy delicious,
+                    high-quality produce while making a positive impact on the
+                    environment and communities.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center">
+              <h3 class="text-white">We Bring Farmers Market to Your Doorstep.</h3>
+            </div>
+
+            <div
+              class="button d-flex justify-content-center align-items-center"
+            >
+              <button
+                class="btn buttonViewAll"
+                onclick="goToPage('marketplace.html')"
+              >
+                Visit Marketplace
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!---------------------------Why buy local? -------------------->
+
+      <section class="my-4 whyByLocal">
+        <div class="container my-4 whyBuyLocal-container">
+          <h1>THINK GLOBAL, BUY LOCAL!</h1>
+          <div class="px-3 row d-flex flex-column flex-md-row my-5">
+            <div class="col d-flex justify-content-center align-items-justify">
+              <p>
+                <strong>FRESHNESS AND QUALITY:</strong> Local products are
+                typically fresher and of higher quality as they don't need to
+                travel long distances to reach the consumer.
+                <br />
+                <br />
+                <strong>SUPPORTING LOCAL ECONOMY:</strong> By buying from local
+                farmers and producers, you are supporting the local economy and
+                helping to create jobs in your community.
+                <br />
+                <br />
+                <strong>ENVIRONMENTAL BENEFITS:</strong> Locally grown products
+                have a smaller carbon footprint as they require less
+                transportation and it lessens packaging waste reducing
+                greenhouse gas emissions.
+
+                <br />
+                <br />
+                <strong>COMMUNITY ENGAGEMENT:</strong> Shopping at a
+                farm-to-table marketplace provides an opportunity to connect
+                with your community and learn more about where your food comes
+                from.
+              </p>
+            </div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col WBL1">
+                  <img src="assets/KEEPITLOCAL.png" alt="sample" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---------------------------Participating Farms Section-------------------->
+
+          <div class="container my-5 py-3 participating-farm">
+            <div class="item item-1">
+              <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="assets/rice-farm.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Isabela Province Rice Farm</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="assets/lettuce farm.webp"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Gat's Organic Lettuce Farm</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="assets/strawberry farm.webp"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Benguet Strawberry Farm</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="assets/meat farm.jpeg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Cagayan Meat and Dairy Farm</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="assets/poultry farm.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Flores Poultry Farm</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br />
+            </div>
+            <div class="item item-2">
+              <h2 class="">Participating Farms and Vendors</h2>
+              <p class="">
+                Our community supports local farmers and vendors who provide a
+                diverse range of unique products and produce. Each vendor has
+                their own growing practices and stories to share. We encourage
+                you to connect directly with them if you have any questions,
+                comments, or compliments to pass along. You can easily find
+                their contact information on their profiles.<br /><br />We're
+                always looking for new vendors to add to our marketplace, and we
+                rely on suggestions from the community. If you know of a vendor
+                that you would like to see featured on our platform, please
+                don't hesitate to reach out to us at jj@harvest-hub.com. <br />
+                <br />
+
+                <strong style="text-align: center">
+                  Join our community of local farmers and vendors and showcase
+                  your unique products and practices!</strong
+                >
+              </p>
+
+              <button
+                class="btn button-partfarm"
+                onclick="goToPage('farmers.html')"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          <!---------------------------Testimonials-------------------->
+
+          <h2 class="text-center py-4">Testimonial from Satisfied Consumers</h2>
+
+          <div
+            class="row px-4 flex-column d-flex flex-md-row client-card-say justify-content-around gap-2 position-relative"
+          >
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="col client">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-quote"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"
+                />
+              </svg>
+              <p class="text-dark">
+                I absolutely love shopping at my local farm-to-table
+                marketplace. The produce is always so fresh and flavorful, and I
+                feel good knowing that I'm supporting local farmers and the
+                economy. Plus, it's a great way to connect with my community and
+                learn more about where my food comes from. I highly recommend
+                this shop. They also have a friendly farmers and staff. Keep it
+                up.
+              </p>
+              <div class="client-profile">
+                <img src="assets/prof.png" alt="profile" />
+                <span class="fw-medium">@ChrisjohnAndoyo</span>
+              </div>
+            </div>
+
+            <div class="col client">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-quote"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"
+                />
+              </svg>
+              <p class="text-dark">
+                Since I started shopping at the farm-to-table marketplace, I've
+                noticed a huge improvement in the quality of the food I'm
+                eating. Everything is so fresh and delicious, and I love that I
+                can talk to the farmers and learn more about their growing
+                practices. Plus, it feels good to know that I'm supporting local
+                businesses and helping to reduce my environmental impact.
+              </p>
+              <div class="client-profile">
+                <img src="assets/prof.png" alt="profile" />
+                <span class="fw-medium">@MarkAbano</span>
+              </div>
+            </div>
+
+            <div class="col client">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-quote"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"
+                />
+              </svg>
+              <p class="text-dark">
+                I can't say enough good things about the farm-to-table
+                marketplace. The selection of products is amazing, and I love
+                that I can find unique items that I can't get anywhere else.
+                Plus, it's so convenient to have everything in one place, and I
+                always leave feeling inspired to cook and create delicious meals
+                with my fresh, local ingredients. You can never go wrong with
+                Harvest Hub. Kudos!
+              </p>
+              <div class="client-profile">
+                <img src="assets/prof.png" alt="profile" />
+                <span class="fw-medium">@EjPinoliad</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION CTA-->
+
+      <section class="container calltoaction">
+        <p class="h1">Small Choices. Big Impact.</p>
+        <p class="lead">
+          Choose to buy local agri-products and support a thriving community.
+        </p>
+        <a href="marketplace.html" target="_blank" class="btn btn-shopnow"
+          >Shop Now</a
+        >
+      </section>
+
+      <!-- SECTION COUNTER-->
+
+      <section class="container py-5">
+        <div
+          class="section-page"
+        >
+          <div class="section-1 m-0">
+            <div class="card section py-3">
+              <p><i class="fa fa-user" style="color: #5bbb1f"></i></p>
+              <h3>5000+</h3>
+              <p class="m-0">CUSTOMERS</p>
+            </div>
+          </div>
+
+          <div class="section-1 m-0">
+            <div class="card section py-3">
+              <p>
+                <i
+                  class="fa-solid fa-handshake-angle"
+                  style="color: #5bbb1f"
+                ></i>
+              </p>
+              <h3>20+</h3>
+              <p class="m-0">FARMER VENDORS</p>
+            </div>
+          </div>
+
+          <div class="section-1 m-0">
+            <div class="card section py-3">
+              <p>
+                <i class="fa-solid fa-face-smile" style="color: #5bbb1f"></i>
+              </p>
+              <h3>98%</h3>
+              <p class="m-0">SATISFACTION RATING</p>
+            </div>
+          </div>
+
+          <div class="section-1 m-0">
+            <div class="card section py-3">
+              <p>
+                <i class="fa-solid fa-chart-simple" style="color: #5bbb1f"></i>
+              </p>
+              <h3>5/5</h3>
+              <p class="m-0">SALES SCORE</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-------------------------footer section area-------------------->
+
+      <section class="becomeAVendor">
+        <h2 class="text-center text-white" style="font-size: 45px">
+          Become a Farmer Vendor
+        </h2>
+        <h4 class="text-center text-white">
+          Grow With Us and Make a Difference.
+        </h4>
+        <h5 class="text-center text-white">
+          Join the movement towards healthier and more sustainable food system.
+        </h5>
+        <div class="container d-flex justify-content-center align-items-center">
+          <form action="" method="get">
+            <!------------------- <input
+                type="text"
+                name="name"
+                placeholder="name"
+                class="user-input my-3"
+              />
+              <input type="email" placeholder="email" class="user-input" />-------------------------->
+
+            <div class="form-container">
+              <button class="btn">
+                <a
+                  href="partner-us.html"
+                  class="text-decoration-none text-white"
+                  >Partner With Us</a
+                >
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-------------------------footer section area-------------------->
+
+      <footer class="py-5 bg-light">
+        <div class="footer-container px-3">
+          <div class="quick-links">
+            <h5 class="" style="font-weight: 500">Quick Links</h5>
+            <ul class="d-block list-unstyled gap-4">
+              <li class="nav-item mb-2">
+                <a href="about-us.html" class="text-decoration-none text-dark"
+                  >About Us</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a
+                  href="marketplace.html"
+                  class="text-decoration-none text-dark"
+                  >Marketplace</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="farmers.html" class="text-decoration-none text-dark"
+                  >Farmers</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="partner-us.html" class="text-decoration-none text-dark"
+                  >Partner With Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="help-center.html"
+                  class="text-decoration-none text-dark"
+                  >Help Center</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="social-media">
+            <h5 class="" style="font-weight: 500">Connect With Us</h5>
+
+            <ul class="list-unstyled d-flex gap-4 d-md-block d-md-block">
+              <li class="mb-2">
+                <a href="#" class="text-dark">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-facebook"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-dark">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-instagram"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-dark">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-twitter"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="supported-orgs">
+            <h5 class="" style="font-weight: 500">Supported By:</h5>
+            <ul>
+              <li class="mb-2">
+                <a href="#" class="text-dark">LGU - Isabela Province</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-dark">Force For Good</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-dark">IRRI</a>
+              </li>
+              <li>
+                <a href="#" class="text-dark">UP - Los Banos</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="newsletter">
+            <h5 class="" style="font-weight: 500">
+              Subscribe to our Newsletter
+            </h5>
+            <p style="font-size: 14px">
+              Stay up-to-date with our new featured products, upcoming events,
+              seasonal specials, and promotions.
+            </p>
+            <form action="" class="input-group newsLetterForm">
+              <span
+                class="d-flex justify-content-center align-items-center bg-white px-3 email-logo-container"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-envelope"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
+                  />
+                </svg>
+              </span>
+              <input
+                class="form-control"
+                type="email"
+                placeholder="Your Email Here"
+              />
+              <button class="btn">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </footer>
+
+      <section class="final-footer py-md-5">
+        <div class="item item1"></div>
+        <div class="item item2 text-center">
+          <i class="fa-solid fa-tractor"></i>
+          <a href="index.html" class="text-decoration-none" id="logo"
+            ><span>H</span>arvest <span>H</span>ub</a
+          >
+          <br />
+          <i class="fa-regular fa-copyright"></i> All Rights Reserved, 2023.
+          <br />
+          <a
+            href=""
+            class="text-dark-emphasis"
+            style="text-decoration: none; font-weight: 500"
+            >Terms & Conditions</a
+          >
+          and
+          <a
+            href=""
+            class="text-dark-emphasis"
+            style="text-decoration: none; font-weight: 500"
+            >Privacy Policy</a
+          >.
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+   
+  </body>
+</html>
