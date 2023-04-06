@@ -44,3 +44,14 @@ body{
     border: none;
     background: var(--green);
 }
+#display_image{
+    width: 200px;
+    height: 200px;
+    background: #8a8888;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
