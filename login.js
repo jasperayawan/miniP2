@@ -3,6 +3,14 @@
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
     import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+    import {
+        getDatabase,
+        ref,
+        set,
+        child,
+        update,
+        remove,
+      } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
   
@@ -20,6 +28,7 @@
     const app = initializeApp(firebaseConfig); 
     
     const Auth = getAuth();
+    const db = getDatabase();
   
   
     const email = document.getElementById('email')
@@ -43,6 +52,33 @@
           })
     })
   
+    function addUserDataToDatabase(user, userData) {
+        const databaseRef = ref(db, `users/${user.uid}`); // Replace 'users' with the path to your users data in the database
+        update(databaseRef, userData)
+          .then(() => {
+            console.log('User data added to database successfully!');
+          })
+          .catch((error) => {
+            console.error('Error adding user data to database:', error);
+          });
+      }
+
+      signInWithEmailAndPassword(Auth, obj.email, obj.password)
+  .then((userCredential) => {
+    const user = userCredential.user;
+    const userData = {
+      name: 'John Doe',
+      email: 'johndoe@example.com',
+      password: 'password123'
+    };
+    addUserDataToDatabase(user, userData);
+    alert('login successfully!');
+    window.location.assign('home.html');
+  })
+  .catch((error) => {
+    alert(error);
+  });
+
   
   
     
