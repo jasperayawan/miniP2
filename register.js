@@ -2,6 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebas
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -14,21 +15,25 @@ const firebaseConfig = {
 };
 
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth()
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig); 
+
+const Auth = getAuth();
+const db = getDatabase();
 
   const firstName = document.getElementById('fname')
   const lastName = document.getElementById('lname')
   const email = document.getElementById('email')
   const pass = document.getElementById('pass')
   const cpass = document.getElementById('cpass')
-
   const submit = document.getElementById('submit')
+
+
 
   submit.addEventListener('click', function(e){
     e.preventDefault(); 
-    
+  
     const obj = {
         FirstName: firstName.value,
         LastName: lastName.value,
@@ -36,13 +41,19 @@ const firebaseConfig = {
         Password: pass.value,
         Cpassword: cpass.value,
     };
-    createUserWithEmailAndPassword(auth, obj.Email, obj.Password)
+    createUserWithEmailAndPassword(Auth, obj.Email, obj.Password)
         .then(() => {
-            alert('signup successfully')
-            window.location.assign('index.html')
+            set(ref(db, 'signups/' + obj.Email.replace('.', ',')), obj)
+            .then(() => {
+              alert('signup successfully')
+              window.location.assign('index.html')
+            })
+            .catch((error) => {
+              alert(error)
+            })
         })
         .catch((error) => {
             alert(error)
         })
-        console.log(obj)
+    console.log(obj)
   })
