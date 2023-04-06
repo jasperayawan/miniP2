@@ -52,32 +52,25 @@
           })
     })
   
-    function addUserDataToDatabase(user, userData) {
-        const databaseRef = ref(db, `users/${user.uid}`); // Replace 'users' with the path to your users data in the database
-        update(databaseRef, userData)
+
+    function addDataToDatabase(data) {
+        const databaseRef = ref(db, 'path/to/data'); // Replace 'path/to/data' with the path to your data in the database
+        set(databaseRef, data)
           .then(() => {
-            console.log('User data added to database successfully!');
+            console.log('Data added to database successfully!');
           })
           .catch((error) => {
-            console.error('Error adding user data to database:', error);
+            console.error('Error adding data to database:', error);
           });
       }
 
-      signInWithEmailAndPassword(Auth, obj.email, obj.password)
-  .then((userCredential) => {
-    const user = userCredential.user;
-    const userData = {
-      name: 'John Doe',
-      email: 'johndoe@example.com',
-      password: 'password123'
-    };
-    addUserDataToDatabase(user, userData);
-    alert('login successfully!');
-    window.location.assign('home.html');
-  })
-  .catch((error) => {
-    alert(error);
-  });
+      const data = {
+        name: 'John Doe',
+        age: 30,
+        email: 'johndoe@example.com'
+      };
+      
+      addDataToDatabase(data);
 
   
   
