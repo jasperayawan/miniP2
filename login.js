@@ -52,26 +52,31 @@
           })
     })
   
-
-    function addDataToDatabase(data) {
-        const databaseRef = ref(db, 'path/to/data'); // Replace 'path/to/data' with the path to your data in the database
-        set(databaseRef, data)
-          .then(() => {
-            console.log('Data added to database successfully!');
-          })
-          .catch((error) => {
-            console.error('Error adding data to database:', error);
-          });
-      }
-
-      const data = {
-  name: 'John Doe',
-  age: 30,
-  email: 'johndoe@example.com'
-};
-
-addDataToDatabase(data);
-
+// Listen for changes in the user's authentication state
+Auth.onAuthStateChanged((user) => {
+    if (user) {
+      // User is authenticated, get their user data
+      const userData = {
+        uid: user.uid,
+        email: user.email,
+        displayName: user.displayName,
+        photoURL: user.photoURL,
+      };
+  
+      // Store the user data in the Realtime Database
+      const userRef = ref(db, `users/${user.uid}`);
+      set(userRef, userData)
+        .then(() => {
+          console.log('User data added to database successfully!');
+        })
+        .catch((error) => {
+          console.error('Error adding user data to database:', error);
+        });
+    } else {
+      // User is not authenticated
+      console.log('User is not authenticated');
+    }
+  });
   
   
     
