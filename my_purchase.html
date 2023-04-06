@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/3ce7f5ba6a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="my_purchase.css">
+</head>
+<body>
+    <div class="container-body">
+        <div class="navigation_container">
+            <div class="logo d-flex justify-content-center align-items-center py-4">
+                <div class="logo_container position-relative d-flex flex-row gap-2">
+                    <img src="assets/prof.png" alt="" width="50" height="50">
+                    <div class="name_container d-block">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p class="fw-bold">jasperayawan</p>
+                        </div>
+                        <div class="editprofile d-flex justify-content-start align-items-center">
+                            <ion-icon name="pencil-outline"></ion-icon>
+                            <span>Edit Profile</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lisy_container d-flex justify-content-center align-items-center">
+                <ul class="list-unstyled">
+                    <li class="d-flex justify-content-center align-items-center gap-2">
+                    <ion-icon name="person-outline"></ion-icon>
+                        <a href="#" class="text-decoration-none text-dark">My Account</a></li>
+                    <li class="d-flex justify-content-end">
+                        <a href="customer-portal.html" class="text-decoration-none text-secondary">Profile</a>
+                    </li>
+                    <li class="d-flex justify-content-center align-items-center gap-2">
+                    <ion-icon name="reader-outline"></ion-icon>
+                        <a href="my_purchase.html" class="text-decoration-none text-dark">My Purchase</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="topbar px-5 shadow-sm">
+               <ul class="list-unstyled d-flex justify-content-between align-items-center py-3">
+                <li><a href="#" class="text-decoration-none text-dark">All</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">To Pay</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">To Ship</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">To Recieve</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Completed</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Cancelled</a></li>
+                <li><a href="#" class="text-decoration-none text-dark">Return Refund</a></li>
+               </ul>
+            </div>
+            
+            <div class="product_container">
+                <div class="product bg-light px-5 my-3 py-3">
+                    <div class="product_content d-flex justify-content-between align-items-center gap-2">
+                        <div class="productNameWithImage d-flex gap-2">
+                            <div class="image-container">
+                                <img src="assets/eggs.jpeg" alt="Product 2"/>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center align-items-start">
+                                <h5>Organic egg</h5>
+                                <p>x1</p>
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            <p>Php 280/dozen</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="orderTotal d-flex justify-content-end">
+                        <p>Order Total: <span>Php380</span></p>
+                    </div>
+                    <div class="cancelledAndRecieve d-flex justify-content-between align-items-center">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p>Cancelled automatically by harvesthub system</p>
+                        </div>
+                        <div class="">
+                            <button class="btn buy_again_btn">Buy Again</button>
+                            <button class="btn contact_seller_btn">Contact Seller</button>
+                            <button class="btn cancel_detail_btn">Cancel Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product bg-light px-5 my-3 py-3">
+                    <div class="product_content d-flex justify-content-between align-items-center gap-2">
+                        <div class="productNameWithImage d-flex gap-2">
+                            <div class="image-container">
+                                <img src="assets/eggs.jpeg" alt="Product 2"/>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center align-items-start">
+                                <h5>Organic egg</h5>
+                                <p>x1</p>
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            <p>Php 280/dozen</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="orderTotal d-flex justify-content-end">
+                        <p>Order Total: <span>Php380</span></p>
+                    </div>
+                    <div class="cancelledAndRecieve d-flex justify-content-between align-items-center">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p>Cancelled automatically by harvesthub system</p>
+                        </div>
+                        <div class="">
+                            <button class="btn buy_again_btn">Buy Again</button>
+                            <button class="btn contact_seller_btn">Contact Seller</button>
+                            <button class="btn cancel_detail_btn">Cancel Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product bg-light px-5 my-3 py-3">
+                    <div class="product_content d-flex justify-content-between align-items-center gap-2">
+                        <div class="productNameWithImage d-flex gap-2">
+                            <div class="image-container">
+                                <img src="assets/eggs.jpeg" alt="Product 2"/>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center align-items-start">
+                                <h5>Organic egg</h5>
+                                <p>x1</p>
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            <p>Php 280/dozen</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="orderTotal d-flex justify-content-end">
+                        <p>Order Total: <span>Php380</span></p>
+                    </div>
+                    <div class="cancelledAndRecieve d-flex justify-content-between align-items-center">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p>Cancelled automatically by harvesthub system</p>
+                        </div>
+                        <div class="">
+                            <button class="btn buy_again_btn">Buy Again</button>
+                            <button class="btn contact_seller_btn">Contact Seller</button>
+                            <button class="btn cancel_detail_btn">Cancel Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product bg-light px-5 my-3 py-3">
+                    <div class="product_content d-flex justify-content-between align-items-center gap-2">
+                        <div class="productNameWithImage d-flex gap-2">
+                            <div class="image-container">
+                                <img src="assets/eggs.jpeg" alt="Product 2"/>
+                            </div>
+                            <div class="d-flex flex-column justify-content-center align-items-start">
+                                <h5>Organic egg</h5>
+                                <p>x1</p>
+                            </div>
+                        </div>
+
+                        <div class="price">
+                            <p>Php 280/dozen</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="orderTotal d-flex justify-content-end">
+                        <p>Order Total: <span>Php380</span></p>
+                    </div>
+                    <div class="cancelledAndRecieve d-flex justify-content-between align-items-center">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p>Cancelled automatically by harvesthub system</p>
+                        </div>
+                        <div class="">
+                            <button class="btn buy_again_btn">Buy Again</button>
+                            <button class="btn contact_seller_btn">Contact Seller</button>
+                            <button class="btn cancel_detail_btn">Cancel Details</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="customer-portal.js"></script>
+</body>
+</html>

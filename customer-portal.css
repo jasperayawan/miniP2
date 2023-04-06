@@ -19,7 +19,7 @@ body{
 .navigation_container{
     position: fixed;
     width: 300px;
-    background-color: var(--grey);
+    background-color: var(--green);
     height: 100vh;
     position: relative;
     transition: 0.5s all;
