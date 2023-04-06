@@ -65,12 +65,12 @@
       }
 
       const data = {
-        name: 'John Doe',
-        age: 30,
-        email: 'johndoe@example.com'
-      };
-      
-      addDataToDatabase(data);
+  name: 'John Doe',
+  age: 30,
+  email: 'johndoe@example.com'
+};
+
+addDataToDatabase(data);
 
   
   
