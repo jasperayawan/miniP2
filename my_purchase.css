@@ -8,7 +8,7 @@
     --white: #fff;
     --black: #101010;
     --green: #5bbb1f;
-    --grey: #eeecec;
+    --grey: #ebe7e7;
 }
 
 body{
@@ -17,12 +17,15 @@ body{
 }
 
 .navigation_container{
-    background: #5bbb1f;
+    background: var(--grey);
     height: 100vh;
     position: fixed;
     width: 300px;
     top: 0;
     left: 0;
+}
+.logo_container img{
+    border-radius: 50%;
 }
 .main{
     position: absolute;
@@ -30,17 +33,17 @@ body{
     top: 0;
     left: 300px;
     min-height: 100vh;
-    background: var(--white);
+    background: var(--grey);
     transition: 0.5s;
 }
 .topbar{
-    background: #fff;
+    background: var(--white);
 }
 .image-container{
     width: 90px;
     height: 90px;
     position: relative;
-    border: 1px solid #101010;
+    border: 1px solid #d6d5d5;
 }
 .image-container img{
     width: 100%;
@@ -58,7 +61,7 @@ body{
     border: 1px solid #949393;
 }
 .orderTotal span{
-    font-size: 30px;
+    font-size: 20px;
     color: var(--green);
 }
 .cancel_detail_btn{
