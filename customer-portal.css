@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Montserrat:wght@700&family=Open+Sans&family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap");
 *{
     margin: 0;
     padding: 0;
@@ -14,9 +15,126 @@
 body{
     min-height: 100vh;
     overflow-x: hidden;
+    font-family: "Maven Pro", sans-serif;
 }
 
 
+.header {
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: top 0.2s ease-in-out;
+    z-index: 100;
+  }
+  #logo {
+    color: var(--text-dark-color);
+    font-size: 22px;
+    font-family: "Montserrat", sans-serif;
+  }
+  #logo > span {
+    color: var(--green);
+    font-size: 24px;
+  }
+  .navbar-nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 550;
+  }
+  .navbar-nav li > a {
+    color: rgb(68, 68, 68);
+  }
+  .navbar-nav li > a:hover {
+    color: var(--text-dark-color);
+    border-bottom: 1px solid var(--background-color);
+  }
+  .navbar-nav li a.active {
+    border-bottom: 1px solid var(--background-color);
+  }
+  .dropdown {
+    position: relative;
+    cursor: pointer;
+  }
+  .dropdown > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    color: var(--text-color);
+  }
+  .dropdown a > p {
+    margin-left: 0.2rem;
+  }
+  .dropdown:hover .menu {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+  }
+  .menu > a {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+  .menu > a:hover {
+    background-color: rgb(222, 224, 224);
+  }
+  .menu {
+    position: absolute;
+    top: 40px;
+    right: -20px;
+    display: grid;
+    width: 180px;
+    padding: 8px 0;
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0 40px 40px rgb(0 0 0 / 6%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s;
+  }
+  .menu::before {
+    content: "";
+    background: inherit;
+    border-top: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    position: absolute;
+    top: -7px;
+    right: 22px;
+    width: 12px;
+    height: 12px;
+    rotate: -45deg;
+  }
+  .profileIcon {
+    border: none;
+    background: none;
+  }
+  .profile_List {
+    display: none;
+    position: absolute;
+    background: var(--grey);
+    border-radius: 5px;
+    top: 2.5rem;
+    right: 0;
+    padding: 1rem;
+    width: 200px;
+    justify-content: center;
+  }
+  
+  .signLogin_container #signupButton {
+    border: 1px solid var(--background-color);
+    color: var(--background-color);
+    font-size: 13px;
+    margin-right: 5px;
+  }
+  .signLogin_container #loginButton {
+    background-color: var(--green);
+    color: #fff;
+    font-size: 13px;
+  }
+  
 
 .navigation_container{
     position: fixed;
@@ -37,12 +155,14 @@ body{
     min-height: 100vh;
     background: var(--white);
     transition: 0.5s;
+    z-index: 0;
 }
 .form-container{
     min-height: 100vh;
 }
 .profile_right{
     border-left: 1px solid #8a8888;
+    padding-left: 6rem;
 }
 
 .saveBtn{
