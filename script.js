@@ -24,28 +24,17 @@ function nextSlide() {
 }
 
 
+function toggleBtn() {
+  let displayHandling = document.getElementById("profile_List");
 
-
-function toggleBtn(){
-    let displayHandling = document.getElementById('profile_List')
-
-    if(displayHandling.style.display === 'block'){
-        displayHandling.classList.add('toggle_kist')
-    } else{
-        displayHandling.style.display = 'block'
-        displayHandling.style.width = '200px'
-    }
-    closeButton()
+  if (displayHandling.style.display === "block") {
+    displayHandling.style.display = "none";
+    displayHandling.style.width = '200px'
+  } else {
+    displayHandling.style.display = "block";
+  }
 }
 
-function closeButton(){
-    const btnCloseHandling = document.getElementById('btn-close')
-
-    btnCloseHandling.addEventListener('click', () => {
-    let btnclose = document.getElementById('profile_List')
-    btnclose.style.display = 'none'
-    })
-}
 
 var prevScrollpos = window.pageYOffset;
 
