@@ -7,6 +7,7 @@
 
 :root {
   --background-color: #5bbb1f;
+  --white: #fff;
   /* --background-color: rgb(56, 216, 96); */
   --text-gray-color: rgb(68, 68, 68);
   --text-dark-color: rgb(12, 12, 12);
@@ -47,7 +48,7 @@ body {
   font-weight: 550;
 }
 .navbar-nav li > a {
-  color: #000;
+  color: #092540;
 }
 .navbar-nav li > a:hover {
   color: var(--text-dark-color);
@@ -65,7 +66,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2px;
-  color: var(--text-color);
+  color: #092540;
 }
 .dropdown a > p {
   margin-left: 0.2rem;
@@ -217,17 +218,13 @@ body {
 .proportion span {
   font-size: 40px;
   font-weight: 500;
-  color: var(--text-gray-color);
+  color: #081b2c;
 }
 
 /*--------------------------featured item styling--------------------------*/
 
 .about {
   position: relative;
-  background: rgba(33, 34, 34, 0.2) url('assets/pexels-wayan-prawira.jpg');
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: darken;
   padding-bottom: 2rem;
 }
 /* .circle1 {
@@ -241,6 +238,9 @@ body {
   z-index: -1;
  
 } */
+.about h3{
+  color: #092540;
+}
 .circle2 {
   position: absolute;
   width: 600px;
@@ -279,6 +279,9 @@ body {
   border-left: 3px solid var(--background-color);
   padding: 0 3px;
 }
+.featuredProducts h3{
+  color: var(--white);
+}
 .featured_item {
   width: 300px;
   height: 400px;
@@ -304,7 +307,7 @@ body {
 .layer {
   width: 100%;
   height: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), #90be74);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #88e74d);
   border-radius: 10px;
   position: absolute;
   left: 0;
@@ -418,6 +421,23 @@ body {
   backdrop-filter: blur(5px);
 }
 /*--------------------testomial from consumers---------------------*/
+
+.customer-saying img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}.customer-saying-b img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.right-t{
+  background-color: #ffc400;
+}
+.shareWithHashtag span{
+  color: var(--background-color);
+  font-size: 20px;
+}
 
 .client {
   background-color: #fff;
@@ -719,7 +739,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 300px);
   justify-content: center;
-  background: rgba(201, 226, 101, 0.2);
+  background: var(--white);
 }
 
 /*---------------------------for media query-------------------*/
