@@ -429,7 +429,13 @@ body {
   object-fit: cover;
 }
 .right-t{
-  background-color: #ffc400;
+  background-color: var(--background-color);
+}
+.left-t{
+  background: #1a1a1a;
+}
+.right-t p{
+  color: #000;
 }
 .shareWithHashtag span{
   color: var(--background-color);
