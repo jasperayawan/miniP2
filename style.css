@@ -434,6 +434,9 @@ body {
 .left-t{
   background: #1a1a1a;
 }
+.left-t p{
+  color: #a3a1a1;
+}
 .right-t p{
   color: #000;
 }
@@ -714,6 +717,16 @@ footer {
 @media (max-width: 767px) {
   .footer-container {
     flex-direction: column;
+  }
+  .content__home{
+    width: 100%;
+  }
+  .main-title {
+    width: 100%;
+    background-color:transparent;
+    -webkit-backdrop-filter:none;
+    backdrop-filter: none;
+    opacity: none;
   }
 
   .quick-links,
