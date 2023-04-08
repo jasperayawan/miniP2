@@ -119,7 +119,7 @@ body {
   position: absolute;
   background: #fff;
   width: 200px;
-  top: 6rem;
+  top: 4rem;
   right: 1rem;
   padding: 1rem;
   justify-content: center;
@@ -753,7 +753,19 @@ footer {
   .section-page{
     grid-template-columns: repeat(2, 1fr);
   }
-  
+  .profile_List {
+    display: none;
+    position: absolute;
+    background: #fff;
+    width: 200px;
+    top: 3rem;
+    right: 0;
+    padding: 1rem;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
 
   /*-----------------Become a vendor---------------*/
 
