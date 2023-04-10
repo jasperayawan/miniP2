@@ -16,6 +16,7 @@
       })
       .catch((error) => console.error("Error!", error.message));
   });
+  
 
   var acc = document.getElementsByClassName("accordion");
   var i;
