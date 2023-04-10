@@ -32,22 +32,45 @@ const db = getDatabase();
 const email = document.getElementById('email')
 const password = document.getElementById('password')
 const loginBtn = document.getElementById('login')
+const role = document.getElementById('role')
 
 loginBtn.addEventListener('click', function(e){
   e.preventDefault()
 
   const obj = {
       email: email.value,
-      password: password.value
+      password: password.value,
+      role: role.value
   }
-  signInWithEmailAndPassword(Auth, obj.email, obj.password)
+  if(obj.role == 'user'){
+    signInWithEmailAndPassword(Auth, obj.email, obj.password)
       .then(() => {
+        if(obj.email == 'admin@gmail.com' && obj.password == 'admin123'){
+          alert('wrong email and password!')
+        }
+        else{
           alert('login successfully!')
-          window.location.assign('home.html')
+          window.location.href = 'home.html'
+        }
       })
       .catch((error) => {
           alert(error)
       })
+  }else if(obj.role == 'admin'){
+    signInWithEmailAndPassword(Auth, obj.email, obj.password)
+      .then(() => {
+        if(obj.email == 'admin@gmail.com' && obj.password == 'admin123'){
+          alert('login successfully!')
+          window.location.href = 'admin-dashboard.html'
+        }
+        else{
+          alert('wrong email and password!')
+        }
+      })
+      .catch((error) => {
+          alert(error)
+      })
+  }
 })
 
 // Listen for changes in the user's authentication state
