@@ -66,6 +66,6 @@ function logoutPopup(){
 
 
 function logout(){
-    window.location.href = "logout.html"
+    window.location.href = "login.html"
 }
 
