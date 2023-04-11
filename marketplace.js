@@ -460,6 +460,8 @@ function resetWishlist() {
   }
 }
 
+
+
 const resetBtn = document.getElementById("reset-wishlist");
 resetBtn.addEventListener("click", resetWishlist);
 
