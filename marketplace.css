@@ -31,7 +31,32 @@ body {
   left: 0;
   right: 0;
   transition: top 0.2s ease-in-out;
-  z-index: 100;
+  z-index: 2;
+}
+.messageAppear {
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  background: #fff;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 1rem;
+}
+.messageAppear h5 {
+  color: #79db40;
+  text-align: center;
+}
+.messageAppear button {
+  background: #79db40;
+  border-radius: 5px;
+  padding: 0.3rem 0.6rem;
+  color: #fff;
+  border: none;
+}
+.messageAppear .loginfirst_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 }
 #logo {
   color: var(--text-dark-color);
@@ -49,13 +74,10 @@ body {
   font-weight: 550;
 }
 .navbar-nav li > a {
-  color: #092540;
+  color: rgb(68, 68, 68);
 }
 .navbar-nav li > a:hover {
   color: var(--text-dark-color);
-  border-bottom: 1px solid var(--background-color);
-}
-.navbar-nav li a.active {
   border-bottom: 1px solid var(--background-color);
 }
 .dropdown {
@@ -67,7 +89,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2px;
-  color: #092540;
+  color: var(--text-color);
 }
 .dropdown a > p {
   margin-left: 0.2rem;
@@ -111,6 +133,10 @@ body {
   height: 12px;
   rotate: -45deg;
 }
+.profile {
+  margin-left: 1rem;
+}
+
 .profileIcon {
   border: none;
   background: none;
