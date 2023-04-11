@@ -59,5 +59,5 @@ function logoutPopup(){
 }
 
 function logout(){
-    window.location.href = "index.html"
+    window.location.href = "logout.html"
 }
