@@ -21,6 +21,7 @@
  const auth = getAuth();
  const logout = document.getElementById('logoutButton')
  const loginbtn = document.querySelectorAll('loginButton') 
+ const addtocart = document.querySelectorAll('.add-to-cart')
 
  logout.addEventListener('click', () => {
  auth.signOut()
@@ -39,5 +40,13 @@ auth.onAuthStateChanged((user) => {
    document.getElementById('signupButton').style.display = 'none'
  }else{
    logout.style.display = 'none'
+
+    addtocart.forEach((e) => {
+        e.addEventListener('click', function(){
+            alert('login first')
+            window.location.href = "login.html"
+        })
+    })
  }
 })
+
