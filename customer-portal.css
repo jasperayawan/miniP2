@@ -114,25 +114,39 @@ body{
   .profile_List {
     display: none;
     position: absolute;
-    background: var(--grey);
-    border-radius: 5px;
-    top: 2.5rem;
-    right: 0;
-    padding: 1rem;
+    background: #fff;
     width: 200px;
+    top: 4rem;
+    right: 1rem;
+    padding: 1rem;
     justify-content: center;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .btn-close {
+    font-size: 14px;
   }
   
-  .signLogin_container #signupButton {
-    border: 1px solid var(--background-color);
-    color: var(--background-color);
-    font-size: 13px;
-    margin-right: 5px;
-  }
-  .signLogin_container #loginButton {
+  
+  .profile_List #signupButton {
     background-color: var(--green);
     color: #fff;
     font-size: 13px;
+  }
+  .profile_List #loginButton {
+    background-color: var(--green);
+    color: #fff;
+    font-size: 13px;
+  }
+  .profile_List #logoutButton{
+    background-color: var(--green);
+    color: #fff;
+    font-size: 13px
+  }
+  .profile_List #myaccountButton{
+    background-color: var(--green);
+    color: #fff;
+    font-size: 13px
   }
   
 
