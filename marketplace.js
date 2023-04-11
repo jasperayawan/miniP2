@@ -73,21 +73,18 @@ function btnLogout(){
 
 
 //Function 1 Add item to SHOPPING CART
-function addItemToCart(name, price, quantity, code, orderId) {
-  // Check if item is already in cart
-  for (let i = 0; i < cartItems.length; i++) {
-    if (cartItems[i].name === name && cartItems[i].code === code) {
-      cartItems[i].quantity += quantity;
-      return;
-
-    }
+function addItemToCart(name, price, quantity, code) {
+  // Check if the item is already in the cart
+  const existingItem = cartItems.find(item => item.code === code);
+  if (existingItem) {
+    // If the item is already in the cart, update the quantity
+    existingItem.quantity += quantity;
+  } else {
+    // If the item is not in the cart, add it
+    cartItems.push({ name, price, quantity, code });
   }
-  // Add item to cart
-  cartItems.push({ name, price, quantity, code, orderId });
-       // show a success message
-       alert("Product added to cart!");
-       
-
+  // Display an alert message
+  alert(`${name} has been added to your cart!`);
 }
 
 //FUNCTION 2 Update cart
