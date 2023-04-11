@@ -51,13 +51,21 @@ function logoutPopup(){
     popUpContainer.appendChild(span)
 
     span.innerHTML = `are you sure do you want to logout? 
-                        <button class="btnPopUp" onclick="logout()">Yes</button><button class="btnPopUp" onclick="nogout()">No</button>`
+                        <button class="btnPopUp" onclick="logout()">Yes</button><button class="btnPopUp" id="removePop">No</button>`
 
     log.appendChild(logoutPopupMessage)
 
+   
+    const removepop = document.getElementById('removePop')
 
+    removepop.addEventListener('click', () => {
+        removepop.parentElement.parentElement.remove()
+    })
 }
+
+
 
 function logout(){
     window.location.href = "logout.html"
 }
+
