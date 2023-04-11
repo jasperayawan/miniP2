@@ -46,7 +46,7 @@ const db = getDatabase();
             set(ref(db, 'signups/' + obj.Email.replace('.', ',')), obj)
             .then(() => {
               alert('signup successfully')
-              window.location.assign('index.html')
+              window.location.assign('logout.html')
             })
             .catch((error) => {
               alert(error)

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login form</title>
+    <link rel="stylesheet" href="form.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="main-parent row d-flex flex-row">
+      <div
+        class="col position-relative left_content_form w-100 d-flex justify-content-center flex-column py-4 px-5"
+      >
+        <h2>Welcome Back!</h2>
+        <p>You can sign in to access with your existing account.</p>
+        <img
+          src="assets/dots-6.png"
+          alt=""
+          class="dots_icon"
+          width="100"
+          height="100"
+        />
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+        <div class="dot3"></div>
+        <div class="dot4"></div>
+      </div>
+      <div class="col form-wrap px-5">
+        <form action="">
+          <h1>Login</h1>
+          <div class="single-input">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email address"
+              required
+            />
+          </div>
+          <div class="single-input">
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="Submit-button">
+            <button class="button" id="login">Login</button>
+          </div>
+          <div>
+            <label for="role">Role:</label>
+            <select id="role" name="role">
+              <option value="user">User</option>
+              <option value="user">Vendor</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
+          <div class="account-have">
+            <a href="#">Forget Password?</a>
+            <a href="Register.html">Create an Account.</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="login.js"></script>
+  </body>
+</html>

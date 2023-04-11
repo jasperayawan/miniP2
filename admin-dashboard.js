@@ -61,7 +61,3 @@ function logoutPopup(){
 function logout(){
     window.location.href = "index.html"
 }
-
-function nogout(){
-    
-}
