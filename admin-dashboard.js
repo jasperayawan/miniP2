@@ -35,7 +35,33 @@ function activeLi(){
 
 
 const logoutDashboard = document.getElementById('logout')
+const log = document.querySelector('.main')
 
-logoutDashboard.addEventListener('click', (e) => {
-    window.location.href = "index.html"
+logoutDashboard.addEventListener('click', () => {
+    logoutPopup() 
 })
+
+function logoutPopup(){
+    const logoutPopupMessage = document.createElement('div')
+    logoutPopupMessage.classList.add('popup')
+    const popUpContainer = document.createElement('div')
+    popUpContainer.classList.add('popcontainer')
+    const span = document.createElement('span')
+    logoutPopupMessage.appendChild(popUpContainer)
+    popUpContainer.appendChild(span)
+
+    span.innerHTML = `are you sure do you want to logout? 
+                        <button class="btnPopUp" onclick="logout()">Yes</button><button class="btnPopUp" onclick="nogout()">No</button>`
+
+    log.appendChild(logoutPopupMessage)
+
+
+}
+
+function logout(){
+    window.location.href = "index.html"
+}
+
+function nogout(){
+    
+}

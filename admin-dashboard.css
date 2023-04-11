@@ -358,6 +358,40 @@ body {
     color: var(--white);
 }
 
+
+
+
+
+/*--------------------------js popup logout-------------------*/
+
+.popup{
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    background: var(--white);
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.1);
+}
+.popup .popcontainer{
+   position: relative;
+}
+.popup .popcontainer span{
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+.popup .popcontainer span button{
+    border: none;
+    background: var(--background-color);
+    color: #fff;
+    width: 100px;
+    margin: 0 auto;
+}
+
+
+
+
 /*-------------------responsive area----------------*/
 
 @media (max-width:991px){
