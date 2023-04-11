@@ -61,7 +61,7 @@
           </button>
 
           <!-----------navbar list for Laptop size--------->
-          
+
           <div
             class="collapse navbar-collapse gap-4"
             id="navbarToggleExternalContent"
@@ -122,36 +122,32 @@
               </button>
             </div>
             <div class="profile_List rounded" id="profile_List">
-                <div class="dashboard_container">
-                  <h2 style="color: black">Dashboard</h2>
-                </div>
+              <div class="dashboard_container">
+                <h2 style="color: black">Dashboard</h2>
+              </div>
 
-                <a
-                  href="customer-portal.html"
-                  class="text-decoration-none btn"
-                  id="myaccountButton"
-                  >My Account</a
-                >
-                
-                <a
-                  href="Register.html"
-                  class="text-decoration-none btn loginbutton"
-                  id="signupButton"
-                  >Signup</a
-                >
-                <a
-                  href="login.html"
-                  class="text-decoration-none btn mt-2 loginbutton"
-                  id="loginButton"
-                  >Login</a
-                >
-                <a
-                  href=""
-                  class="text-decoration-none btn mt-2"
-                  id="logoutButton"
-                  >logout</a
-                >
-                <p class="text-dark m-0" id="user">user</p>
+              <a
+                href="customer-portal.html"
+                class="text-decoration-none btn"
+                id="myaccountButton"
+                >My Account</a
+              >
+
+              <a
+                href="Register.html"
+                class="text-decoration-none btn loginbutton"
+                id="signupButton"
+                >Signup</a
+              >
+              <a
+                href="login.html"
+                class="text-decoration-none btn mt-2 loginbutton"
+                id="loginButton"
+                >Login</a
+              >
+              <a href="" class="text-decoration-none btn mt-2" id="logoutButton"
+                >Logout</a
+              >
             </div>
           </div>
         </div>
@@ -179,13 +175,13 @@
           About Us
           <br />
         </h1>
-        <span 
-            >Making Impact, Changing Lives!</span
-          >
+        <span>Making Impact, Changing Lives!</span>
       </div>
 
       <div class="container MS_Container">
-        <div class="row position-relative mb-lg-5 d-flex flex-column flex-md-row">
+        <div
+          class="row position-relative mb-lg-5 d-flex flex-column flex-md-row"
+        >
           <div class="col">
             <div class="mission_container my-5 d-flex flex-column">
               <h2>Our Mission</h2>
@@ -205,7 +201,9 @@
           </div>
         </div>
 
-        <div class="row position-relative d-flex flex-column-reverse flex-md-row">
+        <div
+          class="row position-relative d-flex flex-column-reverse flex-md-row"
+        >
           <div class="col">
             <div
               class="vision-img-container d-flex justify-content-center align-items-center"
@@ -653,15 +651,15 @@
 
       var prevScrollpos = window.pageYOffset;
 
-    window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.querySelector("header").style.top = "0";
-      } else {
-        document.querySelector("header").style.top = "-7.2rem";
-      }
-      prevScrollpos = currentScrollPos;
-    }
+      window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.querySelector("header").style.top = "0";
+        } else {
+          document.querySelector("header").style.top = "-7.2rem";
+        }
+        prevScrollpos = currentScrollPos;
+      };
     </script>
     <script type="module" src="logout.js"></script>
   </body>
