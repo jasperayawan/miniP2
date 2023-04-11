@@ -53,3 +53,4 @@ window.onscroll = function() {
 function goToPage(url) {
   window.location.href = url;
 }
+

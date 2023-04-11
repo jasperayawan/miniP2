@@ -45,7 +45,7 @@ body {
   font-weight: 550;
 }
 .navbar-nav li > a {
-  color: rgb(68, 68, 68);
+  color: #092540;
 }
 .navbar-nav li > a:hover {
   color: var(--text-dark-color);
@@ -54,7 +54,59 @@ body {
 .navbar-nav li a.active {
   border-bottom: 1px solid var(--background-color);
 }
-
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+.dropdown > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  color: #092540;
+}
+.dropdown a > p {
+  margin-left: 0.2rem;
+}
+.dropdown:hover .menu {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+.menu > a {
+  font-size: 14px;
+  padding: 8px 20px;
+}
+.menu > a:hover {
+  background-color: rgb(222, 224, 224);
+}
+.menu {
+  position: absolute;
+  top: 40px;
+  right: -20px;
+  display: grid;
+  width: 180px;
+  padding: 8px 0;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e1e1e1;
+  box-shadow: 0 40px 40px rgb(0 0 0 / 6%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s;
+}
+.menu::before {
+  content: "";
+  background: inherit;
+  border-top: 1px solid #e1e1e1;
+  border-right: 1px solid #e1e1e1;
+  position: absolute;
+  top: -7px;
+  right: 22px;
+  width: 12px;
+  height: 12px;
+  rotate: -45deg;
+}
 .profileIcon {
   border: none;
   background: none;
@@ -63,24 +115,40 @@ body {
   display: none;
   position: absolute;
   background: #fff;
-  top: 2.5rem;
-  right: 0;
-  padding: 1rem;
   width: 200px;
+  top: 4rem;
+  right: 1rem;
+  padding: 1rem;
   justify-content: center;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.btn-close {
+  font-size: 14px;
 }
 
-.signLogin_container #signupButton {
-  border: 1px solid var(--background-color);
-  color: var(--background-color);
-  font-size: 13px;
-  margin-right: 5px;
-}
-.signLogin_container #loginButton {
+
+.profile_List #signupButton {
   background-color: var(--background-color);
   color: #fff;
   font-size: 13px;
 }
+.profile_List #loginButton {
+  background-color: var(--background-color);
+  color: #fff;
+  font-size: 13px;
+}
+.profile_List #logoutButton{
+  background-color: var(--background-color);
+  color: #fff;
+  font-size: 13px
+}
+.profile_List #myaccountButton{
+  background-color: var(--background-color);
+  color: #fff;
+  font-size: 13px
+}
+
 
 /*----------------------farmersstyling---------------------*/
 

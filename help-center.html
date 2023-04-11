@@ -128,16 +128,37 @@
                   </svg>
                 </button>
               </div>
-              <div class="profile_List" id="profile_List">
-                <div class="signLogin_container d-flex">
-                  <a
-                    href="logout.html"
-                    class="text-decoration-none btn"
-                    id="loginButton"
-                    >Logout</a
-                  >
+              <div class="profile_List rounded" id="profile_List">
+                <div class="dashboard_container">
+                  <h2 style="color: black">Dashboard</h2>
                 </div>
-              </div>
+
+                <a
+                  href="customer-portal.html"
+                  class="text-decoration-none btn"
+                  id="myaccountButton"
+                  >My Account</a
+                >
+                
+                <a
+                  href="Register.html"
+                  class="text-decoration-none btn loginbutton"
+                  id="signupButton"
+                  >Signup</a
+                >
+                <a
+                  href="login.html"
+                  class="text-decoration-none btn mt-2 loginbutton"
+                  id="loginButton"
+                  >Login</a
+                >
+                <a
+                  href=""
+                  class="text-decoration-none btn mt-2"
+                  id="logoutButton"
+                  >logout</a
+                >
+            </div>
             </div>
           </div>
         </div>
@@ -584,5 +605,6 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="logout.js"></script>
   </body>
 </html>

@@ -25,9 +25,9 @@
     <link rel="stylesheet" href="about-us.css" />
   </head>
   <body>
-    <header class="sticky-top w-100 shadow-lg header">
-      <nav class="navbar navbar-expand-lg bg-light py-4">
-        <div class="container-fluid container-md container-md-fluid w-100">
+    <header class="sticky-top w-100 position-fixed text-white header">
+      <nav class="navbar navbar-expand-lg py-1 py-md-2 py-lg-4">
+        <div class="container navbarContainer container-md-fluid w-100">
           <!-----------------logo-------------->
           <div class="fw-bold" id="logo">
             <i class="fa-solid fa-tractor"></i>
@@ -37,7 +37,7 @@
           </div>
           <!------------------menu icon--------------->
           <button
-            class="navbar-toggler border-0"
+            class="navbar-toggler border-0 ms-auto"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarToggleExternalContent"
@@ -61,18 +61,19 @@
           </button>
 
           <!-----------navbar list for Laptop size--------->
+          
           <div
             class="collapse navbar-collapse gap-4"
             id="navbarToggleExternalContent"
           >
             <ul class="navbar-nav gap-4 ms-auto">
               <li class="nav-item">
-                <a href="index.html" class="text-decoration-none active"
+                <a href="index.html" class="text-decoration-none" id="about"
                   >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a href="about-us.html" class="text-decoration-none active"
+                <a href="about-us.html" class="text-decoration-none" id="about"
                   >About Us</a
                 >
               </li>
@@ -99,38 +100,57 @@
               </li>
               <li class="nav-item"></li>
             </ul>
-
             <!------------------sign up area------------->
-            <div class="profileLogo_Container position-relative">
-              <div class="profile">
-                <button onclick="toggleBtn()" class="profileIcon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="23"
-                    height="23"
-                    fill="currentColor"
-                    class="bi bi-person-circle"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                    <path
-                      fill-rule="evenodd"
-                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div class="profile_List" id="profile_List">
-                <div class="signLogin_container d-flex">
-                 
-                  <a
-                    href="logout.html"
-                    class="text-decoration-none btn"
-                    id="loginButton"
-                    >Logout</a
-                  >
+          </div>
+          <div class="profileLogo_Container position-relative">
+            <div class="profile">
+              <button onclick="toggleBtn()" class="profileIcon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="23"
+                  height="23"
+                  fill="currentColor"
+                  class="bi bi-person-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="profile_List rounded" id="profile_List">
+                <div class="dashboard_container">
+                  <h2 style="color: black">Dashboard</h2>
                 </div>
-              </div>
+
+                <a
+                  href="customer-portal.html"
+                  class="text-decoration-none btn"
+                  id="myaccountButton"
+                  >My Account</a
+                >
+                
+                <a
+                  href="Register.html"
+                  class="text-decoration-none btn loginbutton"
+                  id="signupButton"
+                  >Signup</a
+                >
+                <a
+                  href="login.html"
+                  class="text-decoration-none btn mt-2 loginbutton"
+                  id="loginButton"
+                  >Login</a
+                >
+                <a
+                  href=""
+                  class="text-decoration-none btn mt-2"
+                  id="logoutButton"
+                  >logout</a
+                >
             </div>
           </div>
         </div>
@@ -642,5 +662,6 @@
       prevScrollpos = currentScrollPos;
     }
     </script>
+    <script type="module" src="logout.js"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
 import {
     getDatabase,
     ref,
@@ -33,6 +33,8 @@ const email = document.getElementById('email')
 const password = document.getElementById('password')
 const loginBtn = document.getElementById('login')
 const role = document.getElementById('role')
+const loginButton = document.querySelectorAll('.loginbutton')
+const logout = document.getElementById('logoutButton')
 
 loginBtn.addEventListener('click', function(e){
   e.preventDefault()
@@ -73,6 +75,8 @@ loginBtn.addEventListener('click', function(e){
   }
 })
 
+
+
 // Listen for changes in the user's authentication state
 Auth.onAuthStateChanged((user) => {
 if (user) {
@@ -83,7 +87,7 @@ if (user) {
     displayName: user.displayName,
     photoURL: user.photoURL,
   };
-
+  
   // Store the user data in the Realtime Database
   const userRef = ref(db, `users/${user.uid}`);
   set(userRef, userData)
@@ -98,3 +102,5 @@ if (user) {
   console.log('User is not authenticated');
 }
 });
+
+

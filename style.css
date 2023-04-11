@@ -132,15 +132,24 @@ body {
 
 
 .profile_List #signupButton {
-  border: 1px solid var(--background-color);
-  color: var(--background-color);
+  background-color: var(--background-color);
+  color: #fff;
   font-size: 13px;
-  margin-right: 5px;
 }
 .profile_List #loginButton {
   background-color: var(--background-color);
   color: #fff;
   font-size: 13px;
+}
+.profile_List #logoutButton{
+  background-color: var(--background-color);
+  color: #fff;
+  font-size: 13px
+}
+.profile_List #myaccountButton{
+  background-color: var(--background-color);
+  color: #fff;
+  font-size: 13px
 }
 
 /* ---------------------Home styling------------------ */
