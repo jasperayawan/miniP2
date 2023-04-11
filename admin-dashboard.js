@@ -31,3 +31,11 @@ function activeLi(){
     list.forEach(e => e.classList.remove('actives'));
     this.classList.add('actives')
 }
+
+
+
+const logoutDashboard = document.getElementById('logout')
+
+logoutDashboard.addEventListener('click', (e) => {
+    window.location.href = "index.html"
+})
