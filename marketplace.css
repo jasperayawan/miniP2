@@ -142,7 +142,7 @@ body {
   background: none;
   color: #000;
 }
-.profileIcon:hover{
+.profileIcon:hover {
   background: none;
 }
 .profile_List {
@@ -157,14 +157,12 @@ body {
   flex-direction: column;
   gap: 0.6rem;
 }
-.profile_List img{
+.profile_List img {
   border-radius: 50%;
-  
 }
 .btn-close {
   font-size: 14px;
 }
-
 
 .profile_List #signupButton {
   background-color: var(--background-color);
@@ -176,17 +174,16 @@ body {
   color: #fff;
   font-size: 13px;
 }
-.profile_List #logoutButton{
+.profile_List #logoutButton {
   background-color: var(--background-color);
   color: #fff;
-  font-size: 13px
+  font-size: 13px;
 }
-.profile_List #myaccountButton{
+.profile_List #myaccountButton {
   background-color: var(--background-color);
   color: #fff;
-  font-size: 13px
+  font-size: 13px;
 }
-
 
 /*----------------------banner marketplace styling---------------------*/
 
