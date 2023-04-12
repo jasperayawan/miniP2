@@ -29,8 +29,6 @@ const db = getDatabase();
   const cpass = document.getElementById('cpass')
   const submit = document.getElementById('submit')
 
-
-
   submit.addEventListener('click', function(e){
     e.preventDefault(); 
   
@@ -38,15 +36,15 @@ const db = getDatabase();
         FirstName: firstName.value,
         LastName: lastName.value,
         Email: email.value,
-        Password: pass.value,
-        Cpassword: cpass.value,
     };
-    createUserWithEmailAndPassword(Auth, obj.Email, obj.Password)
+    createUserWithEmailAndPassword(Auth, obj.Email, pass.value)
         .then(() => {
+            delete obj.Password;
+            delete obj.Cpassword;
             set(ref(db, 'signups/' + obj.Email.replace('.', ',')), obj)
             .then(() => {
               alert('signup successfully')
-              window.location.assign('logout.html')
+              window.location.assign('login.html')
             })
             .catch((error) => {
               alert(error)
