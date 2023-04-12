@@ -59,6 +59,10 @@ body {
   flex-direction: column;
   gap: 0.6rem;
 }
+.profile_List img{
+  border-radius: 50%;
+  
+}
 .btn-close {
   font-size: 14px;
 }
