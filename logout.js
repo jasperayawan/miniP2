@@ -56,6 +56,7 @@ auth.onAuthStateChanged((user) => {
         })
     })
     loginfirstBeforeCheckout()
+    localStorage.clear()
  }
 })
 
