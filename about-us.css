@@ -309,6 +309,9 @@ body {
   width: 200px;
   height: 200px;
 }
+.leaderLeft img{
+  border-radius: 50%;
+}
 .co_workers {
   width: 150px;
   height: 150px;
@@ -322,6 +325,7 @@ body {
   font-weight: bold;
   color: #5bbb1f;
 }
+
 
 /*----------------------become a vendor--------------------*/
 
