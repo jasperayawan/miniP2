@@ -58,7 +58,22 @@ loginBtn.addEventListener('click', function(e){
       .catch((error) => {
           alert(error)
       })
-  }else if(obj.role == 'admin'){
+  }else if(obj.role == 'vendor'){
+    signInWithEmailAndPassword(Auth, obj.email, obj.password)
+      .then(() => {
+        if(obj.email == 'admin@gmail.com' && obj.password == 'admin123'){
+          alert('wrong email and password!')
+        }
+        else{
+          alert('login successfully!')
+          window.location.href = 'farmer-dashboard.html'
+        }
+      })
+      .catch((error) => {
+          alert(error)
+      })
+  }
+  else if(obj.role == 'admin'){
     signInWithEmailAndPassword(Auth, obj.email, obj.password)
       .then(() => {
         if(obj.email == 'admin@gmail.com' && obj.password == 'admin123'){
