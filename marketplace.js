@@ -278,11 +278,7 @@ function confirmOrder() {
     // Hide the Confirm button and show the payment form
     confirmButton.style.display = 'none';
     paymentForm.style.display = 'block';
-    // Add items to cart with the order ID number
-    for (let i = 0; i < cartItems.length; i++) {
-      const cartItem = cartItems[i];
-      addItemToCart(cartItem.name, cartItem.price, cartItem.quantity, cartItem.code, orderId);
-    }
+    
   }
 }
 
