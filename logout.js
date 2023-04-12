@@ -51,6 +51,7 @@ auth.onAuthStateChanged((user) => {
         e.addEventListener('click', function(){
             alert('login first')
             window.location.href = "login.html"
+            
         })
     })
  }
