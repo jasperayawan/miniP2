@@ -34,6 +34,7 @@
  })
 })
 
+const checkout = document.getElementById('checkout')
 
 auth.onAuthStateChanged((user) => {
     
@@ -54,6 +55,14 @@ auth.onAuthStateChanged((user) => {
             
         })
     })
+    loginfirstBeforeCheckout()
  }
 })
 
+
+function loginfirstBeforeCheckout(){
+  checkout.addEventListener('click', () => {
+    alert('login first')
+    window.location.href = "login.html"
+  })
+}
