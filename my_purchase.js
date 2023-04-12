@@ -7,3 +7,18 @@ function toggleBtn() {
       displayHandling.style.display = "flex";
     }
   }
+
+  const buyAgain = document.querySelectorAll('.buy_again_btn')
+  const contactUs = document.querySelectorAll('.contact_seller_btn')
+
+  buyAgain.forEach((e) => {
+    e.addEventListener('click', function(){
+      window.location.href = "marketplace.html"
+    })
+  })
+  contactUs.forEach((e) => {
+    e.addEventListener('click', function(){
+      window.location.href = "help-center.html"
+    })
+  })
+

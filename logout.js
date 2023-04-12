@@ -39,11 +39,13 @@ const checkout = document.getElementById('checkout')
 auth.onAuthStateChanged((user) => {
     
  if(user){
+
    logout.style.display = 'block'
    document.getElementById('loginButton').style.display = 'none'
    document.getElementById('signupButton').style.display = 'none'
    document.getElementById('myaccountButton').style.display = 'block'
    document.getElementById('user').style.display = 'block'
+  
  }else{
    logout.style.display = 'none'
     document.getElementById('user').style.display = 'none'

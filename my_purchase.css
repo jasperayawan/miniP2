@@ -200,3 +200,6 @@ body{
     background: #fff;
     border: 1px solid #949393;
 }
+.btn:hover{
+  background: var(--green);
+}
