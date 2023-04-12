@@ -24,10 +24,7 @@
 
     <link rel="stylesheet" href="partner-us.css" />
 
-      <!--Google Sheet API-->
-
- 
-
+    <!--Google Sheet API-->
   </head>
   <body>
     <header class="sticky-top w-100 position-fixed text-white header">
@@ -66,7 +63,7 @@
           </button>
 
           <!-----------navbar list for Laptop size--------->
-          
+
           <div
             class="collapse navbar-collapse gap-4"
             id="navbarToggleExternalContent"
@@ -127,36 +124,33 @@
               </button>
             </div>
             <div class="profile_List rounded" id="profile_List">
-                <div class="dashboard_container">
-                  <h2 style="color: black">Dashboard</h2>
-                </div>
+              <div class="dashboard_container">
+                <h2 style="color: black">Dashboard</h2>
+              </div>
 
-                <a
-                  href="customer-portal.html"
-                  class="text-decoration-none btn"
-                  id="myaccountButton"
-                  >My Account</a
-                >
-                
-                <a
-                  href="Register.html"
-                  class="text-decoration-none btn loginbutton"
-                  id="signupButton"
-                  >Signup</a
-                >
-                <a
-                  href="login.html"
-                  class="text-decoration-none btn mt-2 loginbutton"
-                  id="loginButton"
-                  >Login</a
-                >
-                <a
-                  href=""
-                  class="text-decoration-none btn mt-2"
-                  id="logoutButton"
-                  >logout</a
-                >
-                <p class="text-dark m-0" id="user">user</p>
+              <a
+                href="customer-portal.html"
+                class="text-decoration-none btn"
+                id="myaccountButton"
+                >My Account</a
+              >
+
+              <a
+                href="Register.html"
+                class="text-decoration-none btn loginbutton"
+                id="signupButton"
+                >Signup</a
+              >
+              <a
+                href="login.html"
+                class="text-decoration-none btn mt-2 loginbutton"
+                id="loginButton"
+                >Login</a
+              >
+              <a href="" class="text-decoration-none btn mt-2" id="logoutButton"
+                >Logout</a
+              >
+              <p class="text-dark m-0" id="user">User Account</p>
             </div>
           </div>
         </div>
@@ -170,21 +164,19 @@
         <h1
           class="text-white"
           style="
-           background-color: rgba(85, 79, 79, 0.315);
-          -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-          text-align: center;
-          padding: 1% 3%;
-          opacity: 0.9;
-          border-radius: 10px;
-        "
+            background-color: rgba(85, 79, 79, 0.315);
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+            text-align: center;
+            padding: 1% 3%;
+            opacity: 0.9;
+            border-radius: 10px;
+          "
         >
           Partner With Us
           <br />
         </h1>
-        <span
-            >Together, we can build a sustainable food system.</span
-          >
+        <span>Together, we can build a sustainable food system.</span>
       </div>
     </section>
 
@@ -195,11 +187,9 @@
         <h2>Six-Easy-Steps to Become a Farmer Vendor</h2>
       </div>
       <div class="container text-center wrapper my-3">
-        
-          <button class="arrow prev"><</button>
-          <button class="arrow next">></button>
- 
-     
+        <button class="arrow prev"><</button>
+        <button class="arrow next">></button>
+
         <div class="card-wrapper">
           <div class="card-item">
             <img src="assets/step1.png" alt="" />
@@ -283,11 +273,6 @@
       </div>
     </section>
 
-
-    
-    
-
-    
     <!------------Benefits----------->
 
     <div class="my-5" style="text-align: center">
@@ -306,7 +291,9 @@
             </div>
           </div>
           <div class="d-flex flex-column gap-md-2">
-            <h3 class="" style="font-weight: 500">Direct Access to Customers</h3>
+            <h3 class="" style="font-weight: 500">
+              Direct Access to Customers
+            </h3>
             <p class="">
               As a farmer vendor, you have the opportunity to interact directly
               with your customers , which allows you to build relationships with
@@ -391,55 +378,113 @@
       </div>
     </section>
 
-            <!------------------FORM------------->
+    <!------------------FORM------------->
 
-            <section id="reg-form" class="my-5">
+    <section id="reg-form" class="my-5">
+      <div class="container my-5 text-center">
+        <h1>Be Part of our Growing Community!</h1>
+        <h3>
+          Show your intent to be a Farmer Vendor. Fill out the form below.
+        </h3>
+      </div>
 
-              <div class="container my-5 text-center">
-                <h1>Be Part of our Growing Community!</h1>
-                <h3>Show your intent to be a Farmer Vendor. Fill out the form below.</h3>
-              </div>
+      <div class="container registration-form">
+        <h2>Registration Form</h2>
 
-              <div class="container registration-form">
-                <h2>Registration Form</h2>
-               
-                <form name="submit-to-google-sheet">
-                  <input name="Email" type="email" placeholder="Email" class="r-form" required >
-                  <input name="Contact-Number" type="tel" placeholder="Phone Number" class="r-form" required >
-                  <input name="FirstName" type="text" placeholder="First Name" class="r-form" required>
-                  <input name="LastName" type="text" placeholder="Last Name" class="r-form" required>
-                 
-                  <label for="date">Preferred Interview Date</label>
-                  <input id="date" name="Call-Date" type="date" placeholder="Preferred Interview Schedule" class="r-form" required>
-                  <label for="time">Preferred Interview Time</label>
-                  <input id="time" name="Call-Time" type="time" placeholder="Preferred Interview Time" class="r-form" required>
-                  <label style="color: black; margin-top: 1%" for="subject"
-                  >Farm Description</label
-                >
-                <textarea id="subject" name="Farm-Details" minlength="100" placeholder="Please include Farm Name, Farm Location, and Major Products. (100 characters min)" style="height: 100px" required></textarea>
-                  <label style="color: black; margin-top: 1%" for="subject"
-                  >Tell us why you want to become a farmer vendor</label
-                >
-                <textarea id="subject" name="Message" minlength="250" placeholder="Write something (200 characters min)..." style="height: 120px" required></textarea>
-              
-                <button  type="submit" class="btn-submit my-3 rounded" name="submit">Submit</button>
-                </form>
-          
+        <form name="submit-to-google-sheet">
+          <input
+            name="Email"
+            type="email"
+            placeholder="Email"
+            class="r-form"
+            required
+          />
+          <input
+            name="Contact-Number"
+            type="tel"
+            placeholder="Phone Number"
+            class="r-form"
+            required
+          />
+          <input
+            name="FirstName"
+            type="text"
+            placeholder="First Name"
+            class="r-form"
+            required
+          />
+          <input
+            name="LastName"
+            type="text"
+            placeholder="Last Name"
+            class="r-form"
+            required
+          />
 
-                <span class="msg"></span>
-            
-                <div class="loading js-loading is-hidden">
-                  <div class="loading-spinner">
-                    <svg><circle cx="25" cy="25" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg>
-                  </div>
-                </div>
-  
-              </div>
-          
-        
-            </section>
+          <label for="date">Preferred Interview Date</label>
+          <input
+            id="date"
+            name="Call-Date"
+            type="date"
+            placeholder="Preferred Interview Schedule"
+            class="r-form"
+            required
+          />
+          <label for="time">Preferred Interview Time</label>
+          <input
+            id="time"
+            name="Call-Time"
+            type="time"
+            placeholder="Preferred Interview Time"
+            class="r-form"
+            required
+          />
+          <label style="color: black; margin-top: 1%" for="subject"
+            >Farm Description</label
+          >
+          <textarea
+            id="subject"
+            name="Farm-Details"
+            minlength="100"
+            placeholder="Please include Farm Name, Farm Location, and Major Products. (100 characters min)"
+            style="height: 100px"
+            required
+          ></textarea>
+          <label style="color: black; margin-top: 1%" for="subject"
+            >Tell us why you want to become a farmer vendor</label
+          >
+          <textarea
+            id="subject"
+            name="Message"
+            minlength="250"
+            placeholder="Write something (200 characters min)..."
+            style="height: 120px"
+            required
+          ></textarea>
 
-  
+          <button type="submit" class="btn-submit my-3 rounded" name="submit">
+            Submit
+          </button>
+        </form>
+
+        <span class="msg"></span>
+
+        <div class="loading js-loading is-hidden">
+          <div class="loading-spinner">
+            <svg>
+              <circle
+                cx="25"
+                cy="25"
+                r="20"
+                fill="none"
+                stroke-width="2"
+                stroke-miterlimit="10"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-------------------------CTA - FOOTER-------------------->
 
@@ -449,7 +494,9 @@
         "Join the Farm-to-Table Movement - Become a Farmer Vendor and Share Your
         Harvest with the World!"
       </p>
-      <a href="#reg-form" target="_blank" class="btn btn-shopnow">Partner With Us</a>
+      <a href="#reg-form" target="_blank" class="btn btn-shopnow"
+        >Partner With Us</a
+      >
     </div>
 
     <!-------------------------footer section area-------------------->
@@ -465,9 +512,7 @@
               >
             </li>
             <li class="nav-item mb-2">
-              <a
-                href="marketplace.html"
-                class="text-decoration-none text-dark"
+              <a href="marketplace.html" class="text-decoration-none text-dark"
                 >Marketplace</a
               >
             </li>
@@ -482,9 +527,7 @@
               >
             </li>
             <li class="nav-item">
-              <a
-                href="help-center.html"
-                class="text-decoration-none text-dark"
+              <a href="help-center.html" class="text-decoration-none text-dark"
                 >Help Center</a
               >
             </li>
@@ -547,7 +590,9 @@
         <div class="supported-orgs">
           <h5 class="" style="font-weight: 500">Supported By:</h5>
           <ul>
-            <li class="mb-2"><a href="#" class="text-dark">LGU - Isabela Province</a></li>
+            <li class="mb-2">
+              <a href="#" class="text-dark">LGU - Isabela Province</a>
+            </li>
             <li class="mb-2">
               <a href="#" class="text-dark">Force For Good</a>
             </li>
@@ -567,9 +612,20 @@
             seasonal specials, and promotions.
           </p>
           <form action="" class="input-group newsLetterForm">
-            <span class="d-flex justify-content-center align-items-center bg-white px-3 email-logo-container">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+            <span
+              class="d-flex justify-content-center align-items-center bg-white px-3 email-logo-container"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-envelope"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
+                />
               </svg>
             </span>
             <input
@@ -611,5 +667,37 @@
 
     <script src="partner-us.js"></script>
     <script type="module" src="logout.js"></script>
+
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "120653074289644");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v16.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
   </body>
 </html>

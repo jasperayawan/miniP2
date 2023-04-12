@@ -61,7 +61,7 @@
           </button>
 
           <!-----------navbar list for Laptop size--------->
-          
+
           <div
             class="collapse navbar-collapse gap-4"
             id="navbarToggleExternalContent"
@@ -122,36 +122,33 @@
               </button>
             </div>
             <div class="profile_List rounded" id="profile_List">
-                <div class="dashboard_container">
-                  <h2 style="color: black">Dashboard</h2>
-                </div>
+              <div class="dashboard_container">
+                <h2 style="color: black">Dashboard</h2>
+              </div>
 
-                <a
-                  href="customer-portal.html"
-                  class="text-decoration-none btn"
-                  id="myaccountButton"
-                  >My Account</a
-                >
-                
-                <a
-                  href="Register.html"
-                  class="text-decoration-none btn loginbutton"
-                  id="signupButton"
-                  >Signup</a
-                >
-                <a
-                  href="login.html"
-                  class="text-decoration-none btn mt-2 loginbutton"
-                  id="loginButton"
-                  >Login</a
-                >
-                <a
-                  href=""
-                  class="text-decoration-none btn mt-2"
-                  id="logoutButton"
-                  >logout</a
-                >
-                <p class="text-dark m-0" id="user">user</p>
+              <a
+                href="customer-portal.html"
+                class="text-decoration-none btn"
+                id="myaccountButton"
+                >My Account</a
+              >
+
+              <a
+                href="Register.html"
+                class="text-decoration-none btn loginbutton"
+                id="signupButton"
+                >Signup</a
+              >
+              <a
+                href="login.html"
+                class="text-decoration-none btn mt-2 loginbutton"
+                id="loginButton"
+                >Login</a
+              >
+              <a href="" class="text-decoration-none btn mt-2" id="logoutButton"
+                >Logout</a
+              >
+              <p class="text-dark m-0" id="user">User Account</p>
             </div>
           </div>
         </div>
@@ -179,13 +176,13 @@
           About Us
           <br />
         </h1>
-        <span 
-            >Making Impact, Changing Lives!</span
-          >
+        <span>Making Impact, Changing Lives!</span>
       </div>
 
       <div class="container MS_Container">
-        <div class="row position-relative mb-lg-5 d-flex flex-column flex-md-row">
+        <div
+          class="row position-relative mb-lg-5 d-flex flex-column flex-md-row"
+        >
           <div class="col">
             <div class="mission_container my-5 d-flex flex-column">
               <h2>Our Mission</h2>
@@ -205,7 +202,9 @@
           </div>
         </div>
 
-        <div class="row position-relative d-flex flex-column-reverse flex-md-row">
+        <div
+          class="row position-relative d-flex flex-column-reverse flex-md-row"
+        >
           <div class="col">
             <div
               class="vision-img-container d-flex justify-content-center align-items-center"
@@ -388,21 +387,29 @@
         >
           <div class="position-relative d-grid gap-4">
             <div class="position-relative d-block leaderLeft">
-              <img src="assets/prof.png" alt="leader 1" class="w-100 h-100" />
+              <img
+                src="assets/profile pic.jpg"
+                alt="leader 1"
+                class="w-100 h-100"
+              />
             </div>
             <div class="d-flex flex-column text-center">
-              <h5>Name</h5>
-              <p>position</p>
+              <h5 class="name_of_team">John Smith</h5>
+              <p>Founder</p>
             </div>
           </div>
 
           <div class="position-relative d-grid gap-4">
             <div class="position-relative d-block leaderLeft">
-              <img src="assets/prof.png" alt="leader 1" class="w-100 h-100" />
+              <img
+                src="assets/profile pic.jpg"
+                alt="leader 1"
+                class="w-100 h-100"
+              />
             </div>
             <div class="d-flex flex-column text-center">
-              <h5>Name</h5>
-              <p>position</p>
+              <h5 class="name_of_team">Sam Smith</h5>
+              <p>President</p>
             </div>
           </div>
         </div>
@@ -415,38 +422,38 @@
               <img src="assets/jass.jpg" alt="worker1" />
             </div>
             <div class="d-flex flex-column text-center">
-              <h5 class="name_of_team">Jasper Pinoliad Ayawan</h5>
-              <p>Assiociate Software Engineer</p>
+              <h5 class="name_of_team">Jasper Ayawan</h5>
+              <p>Software Engineer</p>
             </div>
           </div>
 
           <div class="d-flex flex-column align-items-center gap-2">
             <div class="co_workers position-relative d-block">
-              <img src="assets/jayson.jpg" alt="worker1" />
+              <img src="assets/profile pic.jpg" alt="worker1" />
             </div>
             <div class="d-flex flex-column text-center">
               <h5 class="name_of_team">Jayson Uao</h5>
-              <p>Chemical Engineer / Supply Chain Engineer</p>
+              <p>Chemical Engineer</p>
             </div>
           </div>
 
           <div class="d-flex flex-column align-items-center gap-2">
             <div class="co_workers position-relative d-block">
-              <img src="assets/prof.png" alt="worker1" />
+              <img src="assets/profile pic.jpg" alt="worker1" />
             </div>
             <div class="d-flex flex-column text-center">
-              <h5>Name</h5>
-              <p>position</p>
+              <h5 class="name_of_team">Juan DC</h5>
+              <p>Supply Engineer</p>
             </div>
           </div>
 
           <div class="d-flex flex-column align-items-center gap-2">
             <div class="co_workers position-relative d-block">
-              <img src="assets/prof.png" alt="worker1" />
+              <img src="assets/profile pic.jpg" alt="worker1" />
             </div>
             <div class="d-flex flex-column text-center">
-              <h5>Name</h5>
-              <p>position</p>
+              <h5 class="name_of_team">John Doe</h5>
+              <p>Marketing Head</p>
             </div>
           </div>
         </div>
@@ -653,16 +660,48 @@
 
       var prevScrollpos = window.pageYOffset;
 
-    window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.querySelector("header").style.top = "0";
-      } else {
-        document.querySelector("header").style.top = "-7.2rem";
-      }
-      prevScrollpos = currentScrollPos;
-    }
+      window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.querySelector("header").style.top = "0";
+        } else {
+          document.querySelector("header").style.top = "-7.2rem";
+        }
+        prevScrollpos = currentScrollPos;
+      };
     </script>
     <script type="module" src="logout.js"></script>
+
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "120653074289644");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v16.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
   </body>
 </html>
