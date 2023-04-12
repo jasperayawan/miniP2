@@ -43,8 +43,8 @@ submit.addEventListener('click', function(e){
           delete obj.Cpassword;
           set(ref(db, 'signups/' + obj.Email.replace('.', ',')), obj)
           .then(() => {
-            alert('signup successfully')
-            window.location.assign('logout.html')
+            alert('SIGNUP SUCCESSFUL!')
+            window.location.assign('login.html')
           })
           .catch((error) => {
             alert(error)
