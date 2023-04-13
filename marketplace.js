@@ -443,10 +443,6 @@ modal.addEventListener('click', (event) => {
 
 
 
-
-
-
-
 // Wishlist (Add sa counter and update if may naremove)
 const wishlistBtns = document.querySelectorAll(".add-to-wishlist");
 
@@ -538,13 +534,8 @@ function resetWishlist() {
   }
 }
 
-
-
 const resetBtn = document.getElementById("reset-wishlist");
 resetBtn.addEventListener("click", resetWishlist);
-
-
-
 
 
 
@@ -679,19 +670,7 @@ form.addEventListener('submit', (event) => {
   alert('You are now subscribed to our newsletter!');
 });
 
-function addDeliveryAddressToOrders() {
-  const orders = JSON.parse(localStorage.getItem('orders')) || [];
-  const deliveryAddress = {
-    barangay: document.querySelector('#barangay').value,
-    townCity: document.querySelector('#town-city').value,
-    province: document.querySelector('#province').value,
-    zipCode: document.querySelector('#zip-code').value
-  };
-  orders.forEach(order => {
-    order.deliveryAddress = deliveryAddress;
-  });
-  localStorage.setItem('orders', JSON.stringify(orders));
-}
+
 
 
 
