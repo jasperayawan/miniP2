@@ -17,7 +17,7 @@ body {
   font-family: "Maven Pro", sans-serif;
   overflow-x: hidden;
 }
-.logout{
+.logout {
   display: none;
 }
 /* --------------------header styling---------------- */
@@ -126,14 +126,12 @@ body {
   flex-direction: column;
   gap: 0.6rem;
 }
-.profile_List img{
+.profile_List img {
   border-radius: 50%;
-  
 }
 .btn-close {
   font-size: 14px;
 }
-
 
 .profile_List #signupButton {
   background-color: var(--background-color);
@@ -145,15 +143,15 @@ body {
   color: #fff;
   font-size: 13px;
 }
-.profile_List #logoutButton{
+.profile_List #logoutButton {
   background-color: var(--background-color);
   color: #fff;
-  font-size: 13px
+  font-size: 13px;
 }
-.profile_List #myaccountButton{
+.profile_List #myaccountButton {
   background-color: var(--background-color);
   color: #fff;
-  font-size: 13px
+  font-size: 13px;
 }
 
 /* ---------------------Home styling------------------ */
@@ -185,7 +183,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.content__home{
+.content__home {
   width: 50%;
 }
 .main-title {
@@ -237,7 +235,7 @@ body {
   position: relative;
   padding-bottom: 2rem;
 }
-.about h3{
+.about h3 {
   color: #092540;
 }
 .circle2 {
@@ -265,11 +263,11 @@ body {
   margin-bottom: 7%;
 }
 
-.featuredtitle{
+.featuredtitle {
   border-left: 3px solid var(--background-color);
   padding: 0 3px;
 }
-.featuredProducts h3{
+.featuredProducts h3 {
   color: var(--white);
 }
 .featured_item {
@@ -411,28 +409,29 @@ body {
 }
 /*--------------------testomial from consumers---------------------*/
 
-.customer-saying img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}.customer-saying-b img{
+.customer-saying img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.right-t{
+.customer-saying-b img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.right-t {
   background-color: var(--background-color);
 }
-.left-t{
+.left-t {
   background: #1a1a1a;
 }
-.left-t p{
+.left-t p {
   color: #a3a1a1;
 }
-.right-t p{
+.right-t p {
   color: #000;
 }
-.shareWithHashtag span{
+.shareWithHashtag span {
   color: var(--background-color);
   font-size: 20px;
 }
@@ -477,7 +476,7 @@ body {
 /* This will Clear floats after the columns */
 
 /* Style the counter cards */
-.section-page{
+.section-page {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   position: relative;
@@ -493,7 +492,7 @@ body {
   width: 100%;
   height: 100%;
 }
-.section-1{
+.section-1 {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -554,9 +553,9 @@ body {
     margin-top: 3%;
   }
 }
-@media (max-width:991px){
-  .section-page{
-      grid-template-columns: repeat(2, 1fr);
+@media (max-width: 991px) {
+  .section-page {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -702,13 +701,13 @@ footer {
   .footer-container {
     flex-direction: column;
   }
-  .content__home{
+  .content__home {
     width: 100%;
   }
   .main-title {
     width: 100%;
-    background-color:transparent;
-    -webkit-backdrop-filter:none;
+    background-color: transparent;
+    -webkit-backdrop-filter: none;
     backdrop-filter: none;
     opacity: none;
   }
@@ -753,17 +752,17 @@ footer {
   .about {
     overflow: hidden;
   }
-  .content__home{
+  .content__home {
     width: 100%;
   }
   .main-title {
     width: 100%;
-    background-color:transparent;
-    -webkit-backdrop-filter:none;
+    background-color: transparent;
+    -webkit-backdrop-filter: none;
     backdrop-filter: none;
     opacity: none;
   }
-  .section-page{
+  .section-page {
     grid-template-columns: repeat(2, 1fr);
   }
   .profile_List {
@@ -778,7 +777,6 @@ footer {
     flex-direction: column;
     gap: 0.6rem;
   }
-
 
   /*-----------------Become a vendor---------------*/
 

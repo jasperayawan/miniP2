@@ -712,20 +712,24 @@ data-category="local"
             <div class="form-group my-3">
               <h5 style="text-align: center;">Delivery Address</h5>
               <label for="delivery-address">Please enter your complete delivery address.</label>
-              <input type="text" id="delivery-address" name="delivery-address" placeholder="i.e. Unit 416, Brgy Centro East, Cabatuan, Isabela 3315" required>
+              <input type="text" id="barangay" name="barangay" placeholder="Barangay" required>
+              <input type="text" id="town-city" name="town-city" placeholder="Town/City" required>
+              <input type="text" id="province" name="province" placeholder="Province" required>
+              <input type="text" id="zipcode" name="zipcode" placeholder="Zipcode" required>
             </div>
+
             <div class="form-group mt-5">
               <h5 style="text-align: center;">Bank Card / Credit Card Details</h5>
               <label for="card-number">Card Number</label>
-              <input type="text" id="card-number" name="card-number" minlength="16" required>
+              <input type="text" id="card-number" name="card-number" minlength="16" placeholder="Please enter your 16-digit card number." required>
             </div>
             <div class="form-group">
               <label for="expiration-date">Expiration Date</label>
-              <input type="text" id="expiration-date" name="expiration-date" required>
+              <input type="text" id="expiration-date" name="expiration-date" placeholder="i.e. 07/2026" required>
             </div>
             <div class="form-group">
               <label for="cvv">CVV</label>
-              <input type="text" id="cvv" name="cvv" maxlength="3" required>
+              <input type="text" id="cvv" name="cvv" maxlength="3" placeholder="Please enter your 3-digit CVV." required>
             </div>
         
             <div class="my-3" style="text-align: center;">
