@@ -672,6 +672,28 @@ form.addEventListener('submit', (event) => {
 
 
 
+// Get the search button and add an event listener
+const searchBtn = document.getElementById('search-btn');
+searchBtn.addEventListener('click', filterProductsByLocation);
+
+// Define the filterProductsByLocation function
+function filterProductsByLocation(event) {
+  event.preventDefault(); // prevent the form from submitting
+
+  // Get the user's location from the input field
+  const userLocation = document.getElementById('location').value;
+
+  // Filter the products based on their data-location attribute
+  const products = document.querySelectorAll('.product');
+  products.forEach(product => {
+    const productLocation = product.dataset.location;
+    if (productLocation !== userLocation) {
+      product.style.display = 'none';
+    } else {
+      product.style.display = 'block';
+    }
+  });
+}
 
 
 

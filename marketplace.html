@@ -231,14 +231,15 @@
 
     <section class="my-3">
       <form class="search-farmer">
-        <h5>Find a Local Product Nearby</h5>
+        <h5>Shop by Location</h5>
+        <p>Find a Local Product Nearby</p>
         <input
           type="text"
           id="location"
           name="location"
           placeholder="Enter Your Zipcode"
         />
-        <button type="submit">Search</button>
+        <button type="submit" id="search-btn">Search</button>
       
       </form>
     </section> 
@@ -302,6 +303,7 @@
             data-price="280"
             data-code="P0816"
             data-category="poultry"
+            data-location="3315"
           >
             <div class="imageContainer">
                 <img src="assets/eggs.jpeg" alt="Product 2" />
@@ -328,6 +330,7 @@
             data-price="450"
             data-code="B0325"
             data-category="meat"
+            data-location="2563"
           >
             <div class="imageContainer">
                 <img src="assets/meat copy.jpg" alt="Product 3" />
@@ -352,6 +355,7 @@
             data-price="100"
             data-code="B0325"
             data-category="vegetables"
+            data-location="2563"
           >
             <div class="imageContainer">
                 <img src="assets/carrots.jpg" alt="Product 4" />
@@ -376,6 +380,7 @@
             data-price="20"
             data-code="T0325"
             data-category="vegetables"
+            data-location="3318"
           >
             <div class="imageContainer">
                 <img src="assets/tomatoes.webp.crdownload" alt="Product 5" />
@@ -400,6 +405,7 @@
             data-price="150"
             data-code="C0325"
             data-category="poultry"
+            data-location="3315"
           >
             <div class="imageContainer">
                 <img src="assets/chicken.webp" alt="Product 6" />
@@ -425,6 +431,7 @@
           data-price="30"
           data-code="A0325"
           data-category="vegetables"
+          data-location="2563"
         >
           <div class="imageContainer">
               <img src="assets/vegetable-ampalaya.jpg" alt="Product 7" />
@@ -449,6 +456,7 @@
         data-price="250"
         data-code="RB0325"
         data-category="meat"
+        data-location="3318"
       >
         <div class="imageContainer">
             <img src="assets/meat-beef.jpg" alt="Product 8" />
@@ -473,6 +481,7 @@
       data-price="50"
       data-code="SQ0325"
       data-category="vegetables"
+      data-location="3315"
     >
       <div class="imageContainer">
           <img src="assets/vegetable-kalabasa.jpg" alt="Product 9" />
@@ -499,6 +508,7 @@
     data-price="120"
     data-code="SQ0325"
     data-category="dairy"
+    data-location="3318"
   >
     <div class="imageContainer">
         <img src="assets/dairy-freshmilk.webp" alt="Product 10" />
@@ -524,6 +534,7 @@
   data-price="55"
   data-code="PA0325"
   data-category="fruits"
+  data-location="3315"
 >
   <div class="imageContainer">
       <img src="assets/fruit-pineapple.jpg" alt="Product 11" />
@@ -548,6 +559,7 @@ data-name="Banana"
 data-price="60"
 data-code="BA325"
 data-category="fruits"
+data-location="3315"
 >
 <div class="imageContainer">
     <img src="assets/fruit-banana.jpg" alt="Product 12" />
@@ -572,6 +584,7 @@ data-name="Beef Shanks"
 data-price="320"
 data-code="BS325"
 data-category="meat"
+data-location="3318"
 >
 <div class="imageContainer">
     <img src="assets/meat-crosscutbeef-shanks.jpeg" alt="Product 13" />
@@ -596,6 +609,7 @@ data-name="String Beans"
 data-price="20"
 data-code="SB325"
 data-category="vegetables"
+data-location="3315"
 >
 <div class="imageContainer">
     <img src="assets/vegetable- string beans.webp.crdownload" alt="Product 14" />
@@ -620,6 +634,7 @@ data-name="Dried Mangoes"
 data-price="120"
 data-code="DM12345"
 data-category="local"
+data-location="3315"
 >
 <div class="imageContainer">
     <img src="assets/other-driedmangoes.webp" alt="Product 15" />
@@ -644,6 +659,7 @@ data-name="Glazed Pili NUts"
 data-price="120"
 data-code="PL12345"
 data-category="local"
+data-location="3315"
 >
 <div class="imageContainer">
     <img src="assets/other-glazedpili.jpg" alt="Product 16" />
