@@ -27,7 +27,6 @@ if (localStorage.getItem('cartItems')) {
 
 // Add event listener for add to cart button, you can change the click and clickevent depende kung ano gusto mo
 const headerNav = document.querySelector('body');
-
 const Email = sessionStorage.getItem("Email");
 const Password = sessionStorage.getItem('Password');
 
@@ -44,7 +43,6 @@ productsContainer.addEventListener('click', (clickeventObject) => {
     pop_up_message.innerHTML += `<h5>Oops!, you're not login!</h5>
       <div class="loginfirst_container"> <button onclick ="goToMarketplace()">Login now!</button> </div>
     `
-
   }
   else if (clickeventObject.target.classList.contains('add-to-cart')) {
     const product = clickeventObject.target.closest('.product');
@@ -59,6 +57,7 @@ productsContainer.addEventListener('click', (clickeventObject) => {
   }
 
 });
+
 
 function goToMarketplace() {
   window.location.assign('login.html');
@@ -201,27 +200,6 @@ checkoutButton.addEventListener('click', () => {
 
 
 
-// FUNCTION 5 to save the order to local storage
-function saveOrderToLocalStorage() {
-  // Get the current date and time
-  const now = new Date();
-  // Generate a random order ID number
-  const orderId = generateOrderId();
-  // Create a new order object with the current date and time, cart items, total price, and order ID
-  const order = {
-    id: orderId,
-    date: now.toLocaleString(),
-    items: cartItems,
-    total: getTotalPrice()
-  };
-  // Get the existing orders from local storage
-  const orders = JSON.parse(localStorage.getItem('orders')) || [];
-  // Add the new order to the orders array
-  orders.push(order);
-  // Save the updated orders array to local storage
-  localStorage.setItem('orders', JSON.stringify(orders));
-}
-
 function generateOrderId() {
   const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   let result = '';
@@ -239,8 +217,6 @@ function getTotalPrice() {
   });
   return total;
 }
-
-
 
 
 
