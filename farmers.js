@@ -51,3 +51,13 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
+const form = document.querySelector('.newsLetterForm');
+const emailInput = form.querySelector('input[type="email"]');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const email = emailInput.value;
+  localStorage.setItem('newsletterEmail', email);
+  emailInput.value = '';
+  alert('You are now subscribed to our newsletter!');
+});

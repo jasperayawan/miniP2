@@ -122,8 +122,16 @@
               </button>
             </div>
             <div class="profile_List rounded" id="profile_List">
-              <div class="d-flex justify-content-center align-items-center gap-2 mb-3">
-                <img src="assets/profile pic.jpg" alt="worker1" width="50" height="50" id="user_img"/>
+              <div
+                class="d-flex justify-content-center align-items-center gap-2 mb-3"
+              >
+                <img
+                  src="assets/profile pic.jpg"
+                  alt="worker1"
+                  width="50"
+                  height="50"
+                  id="user_img"
+                />
                 <p class="text-dark m-0" id="user">User_Name</p>
               </div>
               <a
@@ -641,6 +649,19 @@
         >.
       </div>
     </section>
+
+    <script>
+      const form = document.querySelector(".newsLetterForm");
+      const emailInput = form.querySelector('input[type="email"]');
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const email = emailInput.value;
+        localStorage.setItem("newsletterEmail", email);
+        emailInput.value = "";
+        alert("You are now subscribed to our newsletter!");
+      });
+    </script>
 
     <script>
       function toggleBtn() {
