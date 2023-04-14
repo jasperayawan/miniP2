@@ -362,7 +362,6 @@ form input {
 footer {
   background-color: #fff;
   color: black;
-  padding: 30px 0;
 }
 
 .footer-container {
@@ -514,16 +513,16 @@ footer {
   .mission-img-container img{
     width: 330px;
   }
+  .co_workers {
+    width: 120px;
+    height: 120px;
+  }
   
 }
 /*----------------------final footer styling---------------------*/
 
 .final-footer {
-  padding: 1% 4%;
-  display: grid;
-  grid-template-columns: repeat(3, 300px);
-  justify-content: center;
-  background: rgba(201, 226, 101, 0.2);
+
 }
 
 @media screen and (max-width: 600px) {
