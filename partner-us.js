@@ -193,10 +193,10 @@ window.onscroll = function() {
 }
 
 
-const form = document.querySelector('.newsLetterForm');
+const forms = document.querySelector('.newsLetterForm');
 const emailInput = form.querySelector('input[type="email"]');
 
-form.addEventListener('submit', (event) => {
+forms.addEventListener('submit', (event) => {
   event.preventDefault();
   const email = emailInput.value;
   localStorage.setItem('newsletterEmail', email);
