@@ -231,14 +231,15 @@
 
     <section class="my-3">
       <form class="search-farmer">
-        <h5>Find a Local Product Nearby</h5>
+        <h5>Shop by Location</h5>
+        <p>Find a Local Product Nearby</p>
         <input
           type="text"
           id="location"
           name="location"
           placeholder="Enter Your Zipcode"
         />
-        <button type="submit">Search</button>
+        <button type="submit" id="search-btn">Search</button>
       
       </form>
     </section> 
@@ -302,6 +303,7 @@
             data-price="280"
             data-code="P0816"
             data-category="poultry"
+            data-location="3315"
           >
             <div class="imageContainer">
                 <img src="assets/eggs.jpeg" alt="Product 2" />
@@ -328,6 +330,7 @@
             data-price="450"
             data-code="B0325"
             data-category="meat"
+            data-location="2563"
           >
             <div class="imageContainer">
                 <img src="assets/meat copy.jpg" alt="Product 3" />
@@ -352,6 +355,7 @@
             data-price="100"
             data-code="B0325"
             data-category="vegetables"
+            data-location="2563"
           >
             <div class="imageContainer">
                 <img src="assets/carrots.jpg" alt="Product 4" />
@@ -376,6 +380,7 @@
             data-price="20"
             data-code="T0325"
             data-category="vegetables"
+            data-location="3318"
           >
             <div class="imageContainer">
                 <img src="assets/tomatoes.webp.crdownload" alt="Product 5" />
@@ -400,6 +405,7 @@
             data-price="150"
             data-code="C0325"
             data-category="poultry"
+            data-location="3315"
           >
             <div class="imageContainer">
                 <img src="assets/chicken.webp" alt="Product 6" />
@@ -425,6 +431,7 @@
           data-price="30"
           data-code="A0325"
           data-category="vegetables"
+          data-location="2563"
         >
           <div class="imageContainer">
               <img src="assets/vegetable-ampalaya.jpg" alt="Product 7" />
@@ -449,6 +456,7 @@
         data-price="250"
         data-code="RB0325"
         data-category="meat"
+        data-location="3318"
       >
         <div class="imageContainer">
             <img src="assets/meat-beef.jpg" alt="Product 8" />
@@ -473,6 +481,7 @@
       data-price="50"
       data-code="SQ0325"
       data-category="vegetables"
+      data-location="3315"
     >
       <div class="imageContainer">
           <img src="assets/vegetable-kalabasa.jpg" alt="Product 9" />
@@ -499,6 +508,7 @@
     data-price="120"
     data-code="SQ0325"
     data-category="dairy"
+    data-location="3318"
   >
     <div class="imageContainer">
         <img src="assets/dairy-freshmilk.webp" alt="Product 10" />
@@ -524,6 +534,7 @@
   data-price="55"
   data-code="PA0325"
   data-category="fruits"
+  data-location="3315"
 >
   <div class="imageContainer">
       <img src="assets/fruit-pineapple.jpg" alt="Product 11" />
@@ -548,6 +559,7 @@ data-name="Banana"
 data-price="60"
 data-code="BA325"
 data-category="fruits"
+data-location="3315"
 >
 <div class="imageContainer">
     <img src="assets/fruit-banana.jpg" alt="Product 12" />
@@ -572,6 +584,7 @@ data-name="Beef Shanks"
 data-price="320"
 data-code="BS325"
 data-category="meat"
+data-location="3318"
 >
 <div class="imageContainer">
     <img src="assets/meat-crosscutbeef-shanks.jpeg" alt="Product 13" />
@@ -596,6 +609,7 @@ data-name="String Beans"
 data-price="20"
 data-code="SB325"
 data-category="vegetables"
+data-location="3315"
 >
 <div class="imageContainer">
     <img src="assets/vegetable- string beans.webp.crdownload" alt="Product 14" />
@@ -620,6 +634,7 @@ data-name="Dried Mangoes"
 data-price="120"
 data-code="DM12345"
 data-category="local"
+data-location="3315"
 >
 <div class="imageContainer">
     <img src="assets/other-driedmangoes.webp" alt="Product 15" />
@@ -644,6 +659,7 @@ data-name="Glazed Pili NUts"
 data-price="120"
 data-code="PL12345"
 data-category="local"
+data-location="3315"
 >
 <div class="imageContainer">
     <img src="assets/other-glazedpili.jpg" alt="Product 16" />
@@ -708,6 +724,9 @@ data-category="local"
             <h2 >Order and Payment Confirmation</h2>
      
           </div>
+         
+
+
           <form class="payment-form">
             <div class="form-group my-3">
               <h5 style="text-align: center;">Delivery Address</h5>
@@ -715,27 +734,37 @@ data-category="local"
               <input type="text" id="barangay" name="barangay" placeholder="Barangay" required>
               <input type="text" id="town-city" name="town-city" placeholder="Town/City" required>
               <input type="text" id="province" name="province" placeholder="Province" required>
-              <input type="text" id="zipcode" name="zipcode" placeholder="Zipcode" required>
+              <input type="text" id="zip-code" name="zip-code" placeholder="Zipcode" required>
             </div>
-
-            <div class="form-group mt-5">
+          
+            <div>
+              <label>
+                <input type="radio" name="payment-method" value="cash-on-delivery" checked>
+                Cash On Delivery
+              </label>
+              <label>
+                <input type="radio" name="payment-method" value="credit-card">
+                Credit Card
+              </label>
+            </div>
+          
+            <div class="form-group mt-5 credit-card-form" style="display: none;">
               <h5 style="text-align: center;">Bank Card / Credit Card Details</h5>
               <label for="card-number">Card Number</label>
               <input type="text" id="card-number" name="card-number" minlength="16" placeholder="Please enter your 16-digit card number." required>
-            </div>
-            <div class="form-group">
               <label for="expiration-date">Expiration Date</label>
               <input type="text" id="expiration-date" name="expiration-date" placeholder="i.e. 07/2026" required>
-            </div>
-            <div class="form-group">
               <label for="cvv">CVV</label>
               <input type="text" id="cvv" name="cvv" maxlength="3" placeholder="Please enter your 3-digit CVV." required>
             </div>
-        
+       
+          
             <div class="my-3" style="text-align: center;">
               <button class="pay-now">Pay Now</button>
             </div>
           </form>
+
+
           <div class="my-3" >
             <button class="confirm-order text-center">Confirm Order</button>
           </div>
@@ -880,6 +909,7 @@ data-category="local"
               class="form-control"
               type="email"
               placeholder="Your Email Here"
+              required
             />
             <button class="btn">Subscribe</button>
           </form>

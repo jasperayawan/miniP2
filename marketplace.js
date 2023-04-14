@@ -18,7 +18,7 @@ let orderId = '';
 if (localStorage.getItem('cartItems')) {
   cartItems = JSON.parse(localStorage.getItem('cartItems'));
   updateCartCount();
-  updateCart(); 
+  updateCart();
 }
 
 //updateCart() para idisplay yung cart items
@@ -27,13 +27,12 @@ if (localStorage.getItem('cartItems')) {
 
 // Add event listener for add to cart button, you can change the click and clickevent depende kung ano gusto mo
 const headerNav = document.querySelector('body');
-
 const Email = sessionStorage.getItem("Email");
 const Password = sessionStorage.getItem('Password');
 
 
 productsContainer.addEventListener('click', (clickeventObject) => {
-  if(Email == "jasper@gmail.com" && Password == "jasper123"){
+  if (Email == "jasper@gmail.com" && Password == "jasper123") {
     // alert('login first', )
     // window.location.assign('login.html')
     // goToMarketplace()
@@ -44,29 +43,29 @@ productsContainer.addEventListener('click', (clickeventObject) => {
     pop_up_message.innerHTML += `<h5>Oops!, you're not login!</h5>
       <div class="loginfirst_container"> <button onclick ="goToMarketplace()">Login now!</button> </div>
     `
-    
-  } 
+  }
   else if (clickeventObject.target.classList.contains('add-to-cart')) {
-      const product = clickeventObject.target.closest('.product');
-      const name = product.dataset.name;
-      const price = Number(product.dataset.price);
-      const code = product.dataset.code;
-      const quantity = Number(product.querySelector('input[type="number"]').value);
-      addItemToCart(name, price, quantity, code);
-      updateCart();
-      updateCartCount();
-      saveCartItems();
-    }
-  
+    const product = clickeventObject.target.closest('.product');
+    const name = product.dataset.name;
+    const price = Number(product.dataset.price);
+    const code = product.dataset.code;
+    const quantity = Number(product.querySelector('input[type="number"]').value);
+    addItemToCart(name, price, quantity, code);
+    updateCart();
+    updateCartCount();
+    saveCartItems();
+  }
+
 });
+
 
 function goToMarketplace() {
   window.location.assign('login.html');
 }
- 
 
-function btnLogout(){
-  window.location.assign('login.html') 
+
+function btnLogout() {
+  window.location.assign('login.html')
 }
 
 
@@ -124,13 +123,13 @@ function updateCart() {
 
 //FUNCTION 3 Calculate the total quantity of all items in the cart
 function updateCartCount() {
-    let count = 0;
-    for (const item of cartItems) {
-      count += item.quantity;
-    }
-    // Update the cart count element with the new count
-    cartCount.textContent = count;
+  let count = 0;
+  for (const item of cartItems) {
+    count += item.quantity;
   }
+  // Update the cart count element with the new count
+  cartCount.textContent = count;
+}
 
 // Add event listener to change sa shopping cart (3-days ko ito nalaman, kaloka!)
 
@@ -142,7 +141,7 @@ cartItemsContainer.addEventListener('change', (changeeventObject) => {
     updateCart();
     updateCartCount();
     saveCartItems();
-    
+
   }
 });
 
@@ -170,7 +169,7 @@ cartItemsContainer.addEventListener('click', (removeitemObject) => {
 const clearCartButton = document.querySelector('.reset-cart');
 
 // Add an event listener to the button
-clearCartButton.addEventListener('click', function() {
+clearCartButton.addEventListener('click', function () {
 
   // Ask for confirmation before clearing the cart
   const confirmClear = confirm('Are you sure you want to remove ALL ITEMS on your cart?');
@@ -201,27 +200,6 @@ checkoutButton.addEventListener('click', () => {
 
 
 
-// FUNCTION 5 to save the order to local storage
-function saveOrderToLocalStorage() {
-  // Get the current date and time
-  const now = new Date();
-  // Generate a random order ID number
-  const orderId = generateOrderId();
-  // Create a new order object with the current date and time, cart items, total price, and order ID
-  const order = {
-    id: orderId,
-    date: now.toLocaleString(),
-    items: cartItems,
-    total: getTotalPrice()
-  };
-  // Get the existing orders from local storage
-  const orders = JSON.parse(localStorage.getItem('orders')) || [];
-  // Add the new order to the orders array
-  orders.push(order);
-  // Save the updated orders array to local storage
-  localStorage.setItem('orders', JSON.stringify(orders));
-}
-
 function generateOrderId() {
   const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   let result = '';
@@ -242,8 +220,6 @@ function getTotalPrice() {
 
 
 
-
-
 // Order and Payment Confirmation
 
 const close = document.querySelector('.close');
@@ -260,26 +236,34 @@ close.addEventListener('click', () => {
 });
 
 function confirmOrder() {
-  // Confirmation button click handler
-  if (confirm('Are you sure you want to confirm your order?')) {
-    // Generate a random order ID number
-    const orderId = generateOrderId();
-    // Create a new order object with the current date and time, cart items, total price, and order ID
-    const order = {
-      id: orderId,
-      date: new Date().toLocaleString(),
-      items: cartItems,
-      total: getTotalPrice()
-    };
-    // Save the order to local storage
-    saveOrderToLocalStorage(orderId, order);
-    // Display the order ID in the alert message
-    alert(`Your order has been confirmed with an Order ID: ${orderId}. Click OK to proceed to payment.`);
-    // Hide the Confirm button and show the payment form
-    confirmButton.style.display = 'none';
-    paymentForm.style.display = 'block';
-    
-  }
+  // Generate a random order ID number
+  const orderId = generateOrderId();
+  // Get the delivery address and payment method from the form
+  const deliveryAddress = {
+    barangay: document.querySelector('#barangay').value,
+    townCity: document.querySelector('#town-city').value,
+    province: document.querySelector('#province').value,
+    zipCode: document.querySelector('#zip-code').value
+  };
+  const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+  // Create a new order object with the current date and time, cart items, total price, order ID, delivery address, and payment method
+  const order = {
+    id: orderId,
+    date: new Date().toLocaleString(),
+    items: cartItems,
+    total: getTotalPrice(),
+    deliveryAddress,
+    paymentMethod
+  };
+  // Save the order to local storage
+  saveOrderToLocalStorage(orderId, order);
+  // Display the order ID in the alert message
+  alert(`Your order has been confirmed with an Order ID: ${orderId}. Click OK to proceed to payment.`);
+  // Hide the Confirm button and show the payment form
+  confirmButton.style.display = 'none';
+  paymentForm.style.display = 'block';
+  // Store the order ID in a variable to pass to the payNowButton event listener
+  currentOrderId = orderId;
 }
 
 function saveOrderToLocalStorage(orderId, order) {
@@ -289,6 +273,8 @@ function saveOrderToLocalStorage(orderId, order) {
   orders.push(order);
   // Save the updated orders array to local storage
   localStorage.setItem('orders', JSON.stringify(orders));
+  // Save the order to local storage using the same order ID
+  localStorage.setItem(orderId, JSON.stringify(order));
 }
 
 confirmButton.addEventListener('click', () => {
@@ -304,48 +290,145 @@ confirmButton.addEventListener('click', () => {
   confirmOrder();
 });
 
+
+const paymentMethodRadios = document.querySelectorAll('input[name="payment-method"]');
+const creditCardForm = document.querySelector('.credit-card-form');
+
+paymentMethodRadios.forEach(radio => {
+  radio.addEventListener('change', () => {
+    if (radio.value === 'credit-card') {
+      creditCardForm.style.display = 'block';
+    } else {
+      creditCardForm.style.display = 'none';
+    }
+  });
+});
+
+// Create an empty array to store all orders
+let allOrders = [];
+
 payNowButton.addEventListener('click', () => {
   // Payment button click handler
-  // Validate payment details entered by the user
-  const cardNumber = paymentForm.querySelector('#card-number').value;
-  const expirationDate = paymentForm.querySelector('#expiration-date').value;
-  const cvv = paymentForm.querySelector('#cvv').value;
+  // Check the selected payment method
+  const selectedPaymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
 
-  // Validate card number
-  if (cardNumber.length < 16) {
-    alert('Please enter a valid credit card number.');
-    return;
-  }
+  if (selectedPaymentMethod === 'cash-on-delivery') {
+    // Process the payment without any validation
+    if (confirm('Are you sure you want to proceed with the payment?')) {
+      // Validate input fields
+      const barangay = document.querySelector('#barangay').value;
+      const townCity = document.querySelector('#town-city').value;
+      const province = document.querySelector('#province').value;
+      const zipCode = document.querySelector('#zip-code').value;
 
-  // Validate expiration date
-  const today = new Date();
-  const [month, year] = expirationDate.split('/');
-  const expiration = new Date(year, month - 1);
-  if (expiration < today || isNaN(expiration.getTime())) {
-    alert('Please enter a valid expiration date.');
-    return;
+      if (!barangay || !townCity || !province || !zipCode) {
+        alert('Please fill in all required fields.');
+        return;
+      }
 
-  }
+      // Combine the order details into a single object
+      const orderDetails = {
+        cartItems,
+        deliveryAddress: {
+          barangay,
+          townCity,
+          province,
+          zipCode
+        },
+        paymentMethod: selectedPaymentMethod,
+        orderId: currentOrderId
+      };
 
-  // Validate CVV
-  if (cvv.length > 3) {
-    alert('Please enter a valid CVV.');
-    return;
-  }
+      // Add the order to the allOrders array
+      allOrders.push(orderDetails);
 
-  // Payment details are valid
-  if (confirm('Are you sure you want to proceed with the payment?')) {
-    alert('Payment successful!');
-    // Clear the cart items array and update the cart
-    cartItems = [];
-    updateCart();
-    updateCartCount();
-    // Clear the local storage
-    localStorage.removeItem('cartItems');
-    // Hide the modal
-    modal.style.display = 'none';
+      // Save all orders to local storage
+      localStorage.setItem('allOrders', JSON.stringify(allOrders));
+
+      alert('Payment successful!');
+      // Clear the cart items array and update the cart
+      cartItems = [];
+      updateCart();
+      updateCartCount();
+      // Clear the local storage
+      localStorage.removeItem('cartItems');
+      // Hide the modal
+      modal.style.display = 'none';
+    }
+  } else if (selectedPaymentMethod === 'credit-card') {
+    // Validate payment details entered by the user
+    const cardNumber = paymentForm.querySelector('#card-number').value;
+    const expirationDate = paymentForm.querySelector('#expiration-date').value;
+    const cvv = paymentForm.querySelector('#cvv').value;
+
+    // Validate card number
+    if (cardNumber.length < 16) {
+      alert('Please enter a valid credit card number.');
+      return;
+    }
+
+    // Validate expiration date
+    const today = new Date();
+    const [month, year] = expirationDate.split('/');
+    const expiration = new Date(year, month - 1);
+    if (expiration < today || isNaN(expiration.getTime())) {
+      alert('Please enter a valid expiration date.');
+      return;
+    }
+
+    // Validate CVV
+    if (cvv.length > 3) {
+      alert('Please enter a valid CVV.');
+      return;
+    }
+
+    // Validate input fields
+    const barangay = document.querySelector('#barangay').value;
+    const townCity = document.querySelector('#town-city').value;
+    const province = document.querySelector('#province').value;
+    const zipCode = document.querySelector('#zip-code').value;
+
+    if (!barangay || !townCity || !province || !zipCode) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+
+    // Combine the order details into a single object
+    const orderDetails = {
+      cartItems,
+      deliveryAddress: {
+        barangay,
+        townCity,
+        province,
+        zipCode
+      },
+      paymentMethod: selectedPaymentMethod,
+      orderId: currentOrderId
+    };
+
+    // Add the order to the allOrders array
+    allOrders.push(orderDetails);
+
+    // Save all orders to local storage
+    localStorage.setItem('allOrders', JSON.stringify(allOrders));
+
+    // Payment details are valid
+    if (confirm('Are you sure you want to proceed with the payment?')) {
+      alert('Payment successful!');
+      // Clear the cart items array and update the cart
+      cartItems = [];
+      updateCart();
+      updateCartCount();
+      // Clear the local storage
+      localStorage.removeItem('cartItems');
+      // Hide the modal
+      modal.style.display = 'none';
+    }
   }
 });
+
+// Retrieve all orders from local storage
+allOrders = JSON.parse(localStorage.getItem('allOrders')) || [];
 
 // Show the Confirm button initially
 confirmButton.style.display = 'block';
@@ -357,11 +440,6 @@ modal.addEventListener('click', (event) => {
     event.stopPropagation();
   }
 });
-
-
-
-
-
 
 
 
@@ -456,13 +534,8 @@ function resetWishlist() {
   }
 }
 
-
-
 const resetBtn = document.getElementById("reset-wishlist");
 resetBtn.addEventListener("click", resetWishlist);
-
-
-
 
 
 
@@ -496,29 +569,29 @@ popUpMessage.style.justifyContent = "center";
 popUpMessage.style.alignItems = "center";
 headerNav.append(popUpMessage);
 
-document.querySelector('.btn--close-cookie').addEventListener('click', function(){
-    // popUpMessage.parentElement.removeChild(popUpMessage)
-    popUpMessage.remove();
+document.querySelector('.btn--close-cookie').addEventListener('click', function () {
+  // popUpMessage.parentElement.removeChild(popUpMessage)
+  popUpMessage.remove();
 })
 
 
 
-function toggleBtn(){
+function toggleBtn() {
   let displayHandling = document.getElementById('profile_List')
-  
-  if(displayHandling.style.display === 'flex'){
-      displayHandling.style.display = 'none'
-  } else{
-      displayHandling.style.display = 'flex'
+
+  if (displayHandling.style.display === 'flex') {
+    displayHandling.style.display = 'none'
+  } else {
+    displayHandling.style.display = 'flex'
   }
 }
 
 const cartIcon = document.getElementById('cart-icon')
 
-cartIcon.addEventListener('click', function(){
+cartIcon.addEventListener('click', function () {
   let cartcontainer = document.querySelector('.cart_container')
 
-  if(cartcontainer.style.display === 'block'){
+  if (cartcontainer.style.display === 'block') {
     cartcontainer.style.display = 'none';
   } else {
     cartcontainer.style.display = 'block'
@@ -526,7 +599,7 @@ cartIcon.addEventListener('click', function(){
   closeContainercart()
 })
 
-function closeContainercart(){
+function closeContainercart() {
   const closeBtn = document.getElementById('btn_close')
 
   closeBtn.addEventListener('click', () => {
@@ -541,7 +614,7 @@ const wishlistItemsContainer = document.querySelector('.wishlist-items-container
 wishlistIcon.addEventListener('click', () => {
   let cartcontainer = document.querySelector('.cart_container')
 
-  if(cartcontainer.style.display === 'block'){
+  if (cartcontainer.style.display === 'block') {
     cartcontainer.style.display = 'none';
   } else {
     cartcontainer.style.display = 'block'
@@ -549,7 +622,7 @@ wishlistIcon.addEventListener('click', () => {
   closeContainercart()
 })
 
-function closeContainercart(){
+function closeContainercart() {
   const closeBtn = document.getElementById('btn_close')
 
   closeBtn.addEventListener('click', () => {
@@ -562,12 +635,12 @@ function closeContainercart(){
 
 var prevScrollpos = window.pageYOffset;
 
-window.onscroll = function() {
+window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.querySelector("header").style.top = "0";
   } else {
-     document.querySelector("header").style.top = "-7.2rem";
+    document.querySelector("header").style.top = "-7.2rem";
   }
   prevScrollpos = currentScrollPos;
 }
@@ -585,6 +658,32 @@ categorySelect.addEventListener('change', () => {
     }
   });
 });
+
+
+
+
+// Get the search button and add an event listener
+const searchBtn = document.getElementById('search-btn');
+searchBtn.addEventListener('click', filterProductsByLocation);
+
+// Define the filterProductsByLocation function
+function filterProductsByLocation(event) {
+  event.preventDefault(); // prevent the form from submitting
+
+  // Get the user's location from the input field
+  const userLocation = document.getElementById('location').value;
+
+  // Filter the products based on their data-location attribute
+  const products = document.querySelectorAll('.product');
+  products.forEach(product => {
+    const productLocation = product.dataset.location;
+    if (productLocation !== userLocation) {
+      product.style.display = 'none';
+    } else {
+      product.style.display = 'block';
+    }
+  });
+}
 
 const form = document.querySelector('.newsLetterForm');
 const emailInput = form.querySelector('input[type="email"]');
@@ -606,7 +705,3 @@ form.addEventListener('submit', (event) => {
 
 
 
-
-  
-
-  
