@@ -20,7 +20,7 @@
       src="https://kit.fontawesome.com/3ce7f5ba6a.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="adminOrder.css" />
+    <link rel="stylesheet" href="adminUsers.css" />
   </head>
   <body>
     <div class="container_body position-relative w-100">
@@ -132,7 +132,7 @@
         <div class="details">
             <div class="recentOrders">
               <div class="cardHeader">
-                <h2>Orders</h2>
+                <h2>Users</h2>
                 <a href="" class="btn">View all</a>
               </div>
   
@@ -140,43 +140,144 @@
                 <thead>
                   <tr>
                     <td class="fw-bold">ID</td>
-                    <td class="fw-bold">Name</td>
-                    <td class="fw-bold">Price</td>
-                    <td class="fw-bold">Payment</td>
+                    <td class="fw-bold">User</td>
+                    <td class="fw-bold">Email</td>
+                    <td class="fw-bold">Age</td>
                     <td class="fw-bold">Status</td>
+                    <td class="fw-bold">Action</td>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>#281</td>
-                    <td>Highland Pork</td>
-                    <td>₱450</td>
-                    <td>Paid</td>
-                    <td><span class="status delivered">Delivered</span></td>
+                    <td>
+                        <input type="checkbox" id="ckeck">
+                        1
+                    </td>
+                    <td >
+                        <div class="table-img d-flex justify-content-between align-items-center gap-2">
+                            <img src="assets/profile pic.jpg" alt="">
+                            <span>Snow</span>
+                        </div>
+                    </td>
+                    <td>snow@gmail.com</td>
+                    <td>35</td>
+                    <td><span class="status active">active</span></td>
+                    <td><button class="btn-delete">Delete</button></td>
                   </tr>
   
                   <tr>
-                    <td>#758</td>
-                    <td>Carrots</td>
-                    <td>₱100</td>
-                    <td>Due</td>
-                    <td><span class="status pending">Pending</span></td>  
+                    <td>
+                        <input type="checkbox" id="ckeck">
+                        2
+                    </td>
+                    <td >
+                        <div class="table-img d-flex justify-content-between align-items-center gap-2">
+                            <img src="assets/profile pic.jpg" alt="">
+                            <span>Jammie Lannister</span>
+                        </div>
+                    </td>
+                    <td>jammie@gmail.com</td>
+                    <td>34</td>
+                     <td><span class="status passive">passive</span></td>
+                     <td><button class="btn-delete">Delete</button></td>
                   </tr>
   
                   <tr>
-                    <td>#391</td>
-                    <td>Tomatoes</td>
-                    <td>₱20</td>
-                    <td>Paid</td>
-                    <td><span class="status return">Return</span></td>
+                    <td>
+                        <input type="checkbox" id="check">
+                        3
+                    </td>
+                    <td >
+                        <div class="table-img d-flex justify-content-between align-items-center gap-2">
+                            <img src="assets/profile pic.jpg" alt="">
+                            <span>Stark</span>
+                        </div>
+                    </td>
+                    <td>stark@gmail.com</td>
+                    <td>26</td>
+                    <td><span class="status pending">pending</span></td>
+                    <td><button class="btn-delete">Delete</button></td>
                   </tr>
   
                   <tr>
-                    <td>#957</td>
-                    <td>Chicken</td>
-                    <td>₱150</td>
-                    <td>Due</td>
-                    <td><span class="status inProgress">In progress</span></td>
+                    <td>
+                        <input type="checkbox" id="check">
+                        4
+                    </td>
+                    <td >
+                        <div class="table-img d-flex justify-content-between align-items-center gap-2">
+                            <img src="assets/profile pic.jpg" alt="">
+                            <span>Clifford</span>
+                        </div>
+                    </td>
+                    <td>clifford@gmail.com</td>
+                    <td>33</td>
+                   <td><span class="status active">active</span></td>
+                   <td><button class="btn-delete">Delete</button></td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="check">
+                        5
+                    </td>
+                    <td >
+                        <div class="table-img d-flex justify-content-between align-items-center gap-2">
+                            <img src="assets/profile pic.jpg" alt="">
+                            <span>Mark yu</span>
+                        </div>
+                    </td>
+                    <td>mark@gmail.com</td>
+                    <td>24</td>
+                    <td><span class="status passive">passive</span></td>
+                    <td><button class="btn-delete">Delete</button></td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="check">
+                        6
+                    </td>
+                    <td >
+                        <div class="table-img d-flex justify-content-between align-items-center gap-2">
+                            <img src="assets/profile pic.jpg" alt="">
+                            <span>David Smaith</span>
+                        </div>
+                    </td>
+                    <td>david@gmail.com</td>
+                    <td>30</td>
+                    <td><span class="status active">active</span></td>
+                    <td><button class="btn-delete">Delete</button></td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="check">
+                        7
+                    </td>
+                    <td >
+                        <div class="table-img d-flex justify-content-between align-items-center gap-2">
+                            <img src="assets/profile pic.jpg" alt="">
+                            <span>Rosalie Ayawan</span>
+                        </div>
+                    </td>
+                    <td>rosalie@gmail.com</td>
+                    <td>38</td>
+                    <td><span class="status passive">passive</span></td>
+                    <td><button class="btn-delete">Delete</button></td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="check">
+                        8
+                    </td>
+                    <td >
+                        <div class="table-img d-flex justify-content-between align-items-center gap-2">
+                            <img src="assets/profile pic.jpg" alt="">
+                            <span>Raymond Legaria</span>
+                        </div>
+                    </td>
+                    <td>raymond@gmail.com</td>
+                    <td>23</td>
+                    <td><span class="status pending">pending</span></td>
+                    <td><button class="btn-delete">Delete</button></td>
                   </tr>
                 </tbody>
               </table>
@@ -189,7 +290,7 @@
 
     <!--------------------main-------------------->
 
-    <script src="adminOrder.js"></script>
+    <script src="adminUsers.js"></script>
 
     <!-----------icon script----->
     <script
