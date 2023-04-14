@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/3ce7f5ba6a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="adminProducts.css" />
+  </head>
+  <body>
+    <div class="container_body position-relative w-100">
+        <div class="navigation_container position-fixed h-100">
+            <ul class="position-absolute w-100 list-unstyled">
+              <li class="position-relative w-100 nav-item">
+                <a href="index.html" class="harvest_logo">
+                  <span class="icon">
+                    <i class="fa-solid fa-tractor"></i>
+                  </span>
+                  <span class="title d-block position-relative text-start"
+                    ><span>H</span>arvest <span>H</span>ub</span
+                  >
+                </a>
+              </li>
+              <li class="position-relative w-100 nav-item">
+                <a href="admin-dashboard.html">
+                  <span class="icon">
+                    <ion-icon name="home-outline"></ion-icon>
+                  </span>
+                  <span class="title d-block position-relative text-start"
+                    >Dashboard</span
+                  >
+                </a>
+              </li>
+              <li class="position-relative w-100 nav-item">
+                <a href="#">
+                  <span class="icon">
+                    <ion-icon name="people-outline"></ion-icon>
+                  </span>
+                  <span class="title d-block position-relative text-start"
+                    >Users</span
+                  >
+                  <div
+                    class="greaterThan_icon d-flex justify-content-center align-items-center"
+                  >
+                    <ion-icon
+                      name="chevron-forward-outline"
+                      class="greater"
+                    ></ion-icon>
+                  </div>
+                </a>
+                <ul class="sub-menu list-unstyled">
+                  <li><a href="#">user1</a></li>
+                  <li><a href="#">user2</a></li>
+                  <li><a href="#">user3</a></li>
+                </ul>
+              </li>
+              <li class="position-relative w-100 nav-item">
+                <a href="#">
+                  <span class="icon">
+                    <ion-icon name="chatbubble-outline"></ion-icon>
+                  </span>
+                  <span class="title d-block position-relative text-start"
+                    >Reviews</span
+                  >
+                  <div
+                    class="greaterThan_icon d-flex justify-content-center align-items-center"
+                  >
+                    <ion-icon
+                      name="chevron-forward-outline"
+                      class="greater"
+                      id="greater"
+                    ></ion-icon>
+                  </div>
+                </a>
+                <ul class="sub-menu list-unstyled">
+                  <li><a href="#">reviews1</a></li>
+                  <li><a href="#">reviews2</a></li>
+                  <li><a href="#">reviews3</a></li>
+                </ul>
+              </li>
+              <li class="position-relative w-100 nav-item">
+                <a href="#">
+                  <span class="icon">
+                    <ion-icon name="people-outline"></ion-icon>
+                  </span>
+                  <span class="title d-block position-relative text-start"
+                    >Farmer Vendors</span
+                  >
+                </a>
+              </li>
+              <li class="position-relative w-100 nav-item">
+                <a href="adminProduct.html">
+                  <span class="icon">
+                    <ion-icon name="cube-outline"></ion-icon>
+                  </span>
+                  <span class="title d-block position-relative text-start"
+                    >Products</span
+                  >
+                </a>
+              </li>
+              <li class="position-relative w-100 nav-item">
+                <a href="adminOrder.html">
+                  <span class="icon">
+                    <ion-icon name="cart-outline"></ion-icon>
+                  </span>
+                  <span class="title d-block position-relative text-start"
+                    >Orders</span
+                  >
+                </a>
+              </li>
+              <!-- <li class="position-relative w-100 nav-item">
+                <a href="#">
+                  <span class="icon">
+                    <ion-icon name="settings-outline"></ion-icon>
+                  </span>
+                  <span class="title d-block position-relative text-start"
+                    >Settings</span
+                  >
+                </a>
+              </li> -->
+              <li class="position-relative w-100 nav-item">
+                <a href="#">
+                  <span class="icon">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                  </span>
+                  <span class="title d-block position-relative text-start"
+                    id="logout">Sign Out</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+
+      <div class="main position-absolute">
+        <div
+          class="topbar d-flex w-100 justify-content-between align-items-center"
+        >
+          <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+          <div class="search">
+            <label>
+              <input type="text" placeholder="Search here" />
+              <ion-icon name="search-outline"></ion-icon>
+            </label>
+          </div>
+          <div class="user">
+            <img src="assets/profile pic.jpg" alt="worker1" width="50" height="50" id="user_img"/>
+          </div>
+        </div>
+
+        
+        <!-------------------------edit profile-------------->
+
+        <div class="details">
+            <div class="recentOrders">
+              <div class="cardHeader">
+                <h2>Products</h2>
+                <a href="" class="btn">View all</a>
+              </div>
+  
+              <table>
+                <thead>
+                  <tr>
+                    <td class="fw-bold">ID</td>
+                    <td class="fw-bold">Images</td>
+                    <td class="fw-bold">Name</td>
+                    <td class="fw-bold">Price</td>
+                    <td class="fw-bold">Category</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="ckeck">
+                        281
+                    </td>
+                    <td >
+                        <div class="table-img">
+                            <img src="assets/meat copy.jpg" alt="">
+                        </div>
+                    </td>
+                    <td>Highland Pork</td>
+                    <td>₱450</td>
+                    <td>Meat Products</td>
+                
+                  </tr>
+  
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="ckeck">
+                        758
+                    </td>
+                    <td >
+                        <div class="table-img">
+                            <img src="assets/carrots.jpg" alt="">
+                        </div>
+                    </td>
+                    <td>Carrots</td>
+                    <td>₱100</td>
+                    <td>Vegetables</td>
+                     
+                  </tr>
+  
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="check">
+                        391
+                    </td>
+                    <td >
+                        <div class="table-img">
+                            <img src="assets/tomatoes.webp.crdownload" alt="">
+                        </div>
+                    </td>
+                    <td>Tomatoes</td>
+                    <td>₱20</td>
+                    <td>Vegetables</td>
+               
+                  </tr>
+  
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="check">
+                        957
+                    </td>
+                    <td >
+                        <div class="table-img">
+                            <img src="assets/chicken.webp" alt="">
+                        </div>
+                    </td>
+                    <td>Chicken</td>
+                    <td>₱150</td>
+                    <td>Poultry Products</td>
+                   
+                  </tr>
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="check">
+                        957
+                    </td>
+                    <td >
+                        <div class="table-img">
+                            <img src="assets/vegetable-ampalaya.jpg" alt="">
+                        </div>
+                    </td>
+                    <td>Ampalaya</td>
+                    <td>₱30/kilo</td>
+                    <td>Vegetables</td>
+                   
+                  </tr>
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="check">
+                        957
+                    </td>
+                    <td >
+                        <div class="table-img">
+                            <img src="assets/meat-beef.jpg" alt="">
+                        </div>
+                    </td>
+                    <td>Regular Beef</td>
+                    <td>₱250/kilo</td>
+                    <td>Meat Products</td>
+                   
+                  </tr>
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="check">
+                        957
+                    </td>
+                    <td >
+                        <div class="table-img">
+                            <img src="assets/vegetable-kalabasa.jpg" alt="">
+                        </div>
+                    </td>
+                    <td>Squash</td>
+                    <td>₱50/kilo</td>
+                    <td>Vegetables</td>
+                   
+                  </tr>
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="check">
+                        957
+                    </td>
+                    <td >
+                        <div class="table-img">
+                            <img src="assets/fruit-pineapple.jpg" alt="">
+                        </div>
+                    </td>
+                    <td>Pineapple</td>
+                    <td>₱55</td>
+                    <td>Fruits</td>
+                   
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--------------------main-------------------->
+
+    <script src="adminProduct.js"></script>
+
+    <!-----------icon script----->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

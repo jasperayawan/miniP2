@@ -5,7 +5,8 @@ imageInput.addEventListener('change', function(){
     const reader = new FileReader();
     reader.addEventListener('load', () => {
         uploadImage = reader.result;
-        document.getElementById('display_image').style.backgroundImage = `url(${uploadImage})`
+        const displayProfile = document.getElementById('display_image').style.backgroundImage = `url(${uploadImage})`
+        localStorage.setItem('Image', displayProfile)
     });
     reader.readAsDataURL(this.files[0]);
 })
@@ -19,3 +20,12 @@ function toggleBtn() {
       displayHandling.style.display = "flex";
     }
   }
+
+  const userImg = document.getElementById('tableBanner')
+
+  const saveBtn = document.getElementById('saveBtn')
+
+  saveBtn.addEventListener('click', (e) => {
+  
+    alert('successfully saved')
+  })

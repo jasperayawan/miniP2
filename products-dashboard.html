@@ -20,7 +20,7 @@
       src="https://kit.fontawesome.com/3ce7f5ba6a.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="farmer-dashboard.css" />
+    <link rel="stylesheet" href="products-dashboard.css" />
   </head>
   <body>
     <div class="container_body position-relative w-100">
@@ -37,7 +37,7 @@
             </a>
           </li>
           <li class="position-relative w-100 nav-item">
-            <a href="#">
+            <a href="farmer-dashboard.html">
               <span class="icon">
                 <ion-icon name="home-outline"></ion-icon>
               </span>
@@ -129,165 +129,154 @@
           </div>
         </div>
 
-        <!----------cards------------>
-
-        <div class="cardBox">
-          <div class="card">
-            <div>
-              <div class="numbers">1,504</div>
-              <div class="cardName">Daily Views</div>
-            </div>
-
-            <div class="iconBx">
-              <ion-icon name="eye-outline"></ion-icon>
-            </div>
-          </div>
-          <div class="card">
-            <div>
-              <div class="numbers">80</div>
-              <div class="cardName">Sales</div>
-            </div>
-
-            <div class="iconBx">
-              <ion-icon name="cart-outline"></ion-icon>
-            </div>
-          </div>
-          <div class="card">
-            <div>
-              <div class="numbers">284</div>
-              <div class="cardName">Reviews</div>
-            </div>
-
-            <div class="iconBx">
-              <ion-icon name="chatbubble-outline"></ion-icon>
-            </div>
-          </div>
-          <div class="card">
-            <div>
-              <div class="numbers">Php 107,822</div>
-              <div class="cardName">Earning</div>
-            </div>
-
-            <div class="iconBx">
-              <ion-icon name="cash-outline"></ion-icon>
-            </div>
-          </div>
-        </div>
-
-        <!----------order details list------->
+        
+        <!-------------------------edit profile-------------->
 
         <div class="details">
-          <div class="recentOrders">
-            <div class="cardHeader">
-              <h2>Recent Orders</h2>
-              <a href="" class="btn">View all</a>
+            <div class="recentOrders">
+              <div class="cardHeader">
+                <h2>Products</h2>
+                <a href="" class="btn">View all</a>
+              </div>
+  
+              <table>
+                <thead>
+                  <tr>
+                    <td class="fw-bold">ID</td>
+                    <td class="fw-bold">Images</td>
+                    <td class="fw-bold">Name</td>
+                    <td class="fw-bold">Price</td>
+                    <td class="fw-bold">Category</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="ckeck">
+                        281
+                    </td>
+                    <td >
+                        <div class="table-img">
+                            <img src="assets/meat copy.jpg" alt="">
+                        </div>
+                    </td>
+                    <td>Highland Pork</td>
+                    <td>₱450</td>
+                    <td>Meat Products</td>
+                
+                  </tr>
+  
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="ckeck">
+                        758
+                    </td>
+                    <td >
+                        <div class="table-img">
+                            <img src="assets/carrots.jpg" alt="">
+                        </div>
+                    </td>
+                    <td>Carrots</td>
+                    <td>₱100</td>
+                    <td>Vegetables</td>
+                     
+                  </tr>
+  
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="check">
+                        391
+                    </td>
+                    <td >
+                        <div class="table-img">
+                            <img src="assets/tomatoes.webp.crdownload" alt="">
+                        </div>
+                    </td>
+                    <td>Tomatoes</td>
+                    <td>₱20</td>
+                    <td>Vegetables</td>
+               
+                  </tr>
+  
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="check">
+                        957
+                    </td>
+                    <td >
+                        <div class="table-img">
+                            <img src="assets/chicken.webp" alt="">
+                        </div>
+                    </td>
+                    <td>Chicken</td>
+                    <td>₱150</td>
+                    <td>Poultry Products</td>
+                   
+                  </tr>
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="check">
+                        957
+                    </td>
+                    <td >
+                        <div class="table-img">
+                            <img src="assets/vegetable-ampalaya.jpg" alt="">
+                        </div>
+                    </td>
+                    <td>Ampalaya</td>
+                    <td>₱30/kilo</td>
+                    <td>Vegetables</td>
+                   
+                  </tr>
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="check">
+                        957
+                    </td>
+                    <td >
+                        <div class="table-img">
+                            <img src="assets/meat-beef.jpg" alt="">
+                        </div>
+                    </td>
+                    <td>Regular Beef</td>
+                    <td>₱250/kilo</td>
+                    <td>Meat Products</td>
+                   
+                  </tr>
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="check">
+                        957
+                    </td>
+                    <td >
+                        <div class="table-img">
+                            <img src="assets/vegetable-kalabasa.jpg" alt="">
+                        </div>
+                    </td>
+                    <td>Squash</td>
+                    <td>₱50/kilo</td>
+                    <td>Vegetables</td>
+                   
+                  </tr>
+                  <tr>
+                    <td>
+                        <input type="checkbox" id="check">
+                        957
+                    </td>
+                    <td >
+                        <div class="table-img">
+                            <img src="assets/fruit-pineapple.jpg" alt="">
+                        </div>
+                    </td>
+                    <td>Pineapple</td>
+                    <td>₱55</td>
+                    <td>Fruits</td>
+                   
+                  </tr>
+                </tbody>
+              </table>
             </div>
-
-            <table>
-              <thead>
-                <tr>
-                  <td class="fw-bold">Name</td>
-                  <td class="fw-bold">Price</td>
-                  <td class="fw-bold">Payment</td>
-                  <td class="fw-bold">Status</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Highland Pork</td>
-                  <td>₱450</td>
-                  <td>Paid</td>
-                  <td><span class="status delivered">Delivered</span></td>
-                </tr>
-
-                <tr>
-                  <td>Carrots</td>
-                  <td>₱100</td>
-                  <td>Due</td>
-                  <td><span class="status pending">Pending</span></td>
-                </tr>
-
-                <tr>
-                  <td>Tomatoes</td>
-                  <td>₱20</td>
-                  <td>Paid</td>
-                  <td><span class="status return">Return</span></td>
-                </tr>
-
-                <tr>
-                  <td>Chicken</td>
-                  <td>₱150</td>
-                  <td>Due</td>
-                  <td><span class="status inProgress">In progress</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!----------new customers------------->
-
-          <div class="recentCustomers">
-            <div class="cardHeader">
-              <h2>Recent Customers</h2>
-            </div>
-
-            <table>
-              <tr>
-                <td width="60px">
-                  <div class="imgBx">
-                    <img src="assets/prof.png" alt="" />
-                  </div>
-                </td>
-                <td>
-                  <h4>
-                    jasper <br />
-                    <span>Pitogo</span>
-                  </h4>
-                </td>
-              </tr>
-
-              <tr>
-                <td width="60px">
-                  <div class="imgBx">
-                    <img src="assets/prof.png" alt="" />
-                  </div>
-                </td>
-                <td>
-                  <h4>
-                    jasper <br />
-                    <span>Pitogo</span>
-                  </h4>
-                </td>
-              </tr>
-
-              <tr>
-                <td width="60px">
-                  <div class="imgBx">
-                    <img src="assets/prof.png" alt="" />
-                  </div>
-                </td>
-                <td>
-                  <h4>
-                    jayson <br />
-                    <span>Pitogo</span>
-                  </h4>
-                </td>
-              </tr>
-
-              <tr>
-                <td width="60px">
-                  <div class="imgBx">
-                    <img src="assets/prof.png" alt="" />
-                  </div>
-                </td>
-                <td>
-                  <h4>
-                    jasper <br />
-                    <span>Pitogo</span>
-                  </h4>
-                </td>
-              </tr>
-            </table>
+  
           </div>
         </div>
       </div>
@@ -295,7 +284,7 @@
 
     <!--------------------main-------------------->
 
-    <script src="farmer-dashboard.js"></script>
+    <script src="products-dashboard.js"></script>
 
     <!-----------icon script----->
     <script
