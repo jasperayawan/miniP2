@@ -434,6 +434,12 @@ footer {
     margin-right: 0;
   }
 }
+@media (max-width: 600px){
+  .partner_img {
+    height: 100%;
+    width: 100%;
+  }
+}
 
 /*----------------------final footer styling---------------------*/
 
@@ -449,7 +455,6 @@ footer {
 .registration-form {
   position: relative;
   background: #fff;
-  padding: 2rem;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
