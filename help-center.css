@@ -269,10 +269,7 @@ input[type="submit"]:hover {
 /* Style the container/contact section */
 .contact-us {
   border-radius: 5px;
-  padding: 2% 8%;
   justify-content: center;
-  min-height: 100%;
-  width: 100vw;
   opacity: 0.95;
 }
 
@@ -348,7 +345,6 @@ form input {
 footer {
   background-color: #fff;
   color: black;
-  padding: 30px 0;
 }
 
 .footer-container {
@@ -432,6 +428,17 @@ footer {
 
   .supported-orgs {
     margin-right: 0;
+  }
+}
+@media (max-width: 600px){
+  .faqs {
+    /* min-height: 100%;
+    width: 100vw; */
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding: 0 1rem;
   }
 }
 
