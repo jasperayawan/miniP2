@@ -218,7 +218,7 @@
     </div>
     </section>
 
-    <!--PRODUCT PAGE AREA-->
+    <!-- PRODUCT PAGE AREA -->
 
     <div>
       <h3 style="text-align: center">
@@ -229,25 +229,22 @@
       </h4>
     </div>
 
-    <section class="my-3">
-      <form class="search-farmer">
+    <section class="container-fluid px-md-5 my-3 search-farmer_section">
+      <form class="search-farmer d-flex flex-column justify-content-end align-items-end">
         <h5>Shop by Location</h5>
         <p>Find a Local Product Nearby</p>
-        <input
-          type="text"
-          id="location"
-          name="location"
-          placeholder="Enter Your Zipcode"
-        />
-        <button type="submit" id="search-btn">Search</button>
-      
+        <div class="d-flex flex-row gap-2">
+          <input type="text" id="location" name="location" placeholder="Enter Your Zipcode"/>
+          <button type="submit" id="search-btn">Search</button>
+        </div>
       </form>
     </section> 
 
-    <section class="row d-flex flex-column flex-md-row marketplace-area my-5 px-3">
-      <div class="col-2 container search-area">
+    <section class="position-relative container-fluid d-flex justify-content-center align-items-center flex-column">
+    <section class="row">
+      <div class="col-lg-2 py-2 py-md-0 container search-area">
   
-        <div class="container my-5">
+        <div class="container my-1 my-md-5">
           <h5>Shop by Category</h5>
           <hr />
           <select id="category-select">
@@ -265,8 +262,8 @@
       
       <!--PRODUCT LISTING-->
 
-      <div class="col container">
-        <div class="products">
+      <div class="col position-relative">
+        <div class="products w-100 gap-2">
           <!--PRODUCT 1-->
 
           <div
@@ -684,6 +681,7 @@ data-location="3315"
         </div>
       </div>
     </section>
+  </section>
   
 
     <!--PRODUCT LISTING-->
@@ -787,7 +785,7 @@ data-location="3315"
       <a href="" target="_blank" class="btn btn-shopnow">Shop Now</a>
     </div>
 
-    <footer class="py-5 bg-light">
+    <footer class="bg-light">
       <div class="footer-container px-3">
         <div class="quick-links">
           <h5 class="" style="font-weight: 500">Quick Links</h5>
@@ -917,8 +915,7 @@ data-location="3315"
       </div>
     </footer>
 
-    <section class="final-footer py-md-5 bg-light">
-      <div class="item item1"></div>
+    <section class="final-footer py-5 bg-light">
       <div class="item item2 text-center">
         <i class="fa-solid fa-tractor"></i>
         <a href="index.html" class="text-decoration-none" id="logo"
